@@ -22,21 +22,18 @@
     {
       "extent": [
         -77.02398662533315,
-        -5.6973217756899155,
+        -5.697321686302131,
         29.675159457337436,
-        38.920901248283485
+        38.920901318173705
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select * from planet_osm_polygon where ((tags->'protected_area') = 'redd')) as data\n",
+        "table": "(select * from planet_osm_polygon where ((tags->'protected_area') = 'redd')) as data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
-        "extent": "-8574270.97,-635270.72,3303423.64,4710347.68",
-        "host": "localhost",
-        "user": "openstreetmap",
-        "password": "openstreetmap",
-        "dbname": "tiles"
+        "extent": "-8574270.97,-635270.71,3303423.64,4710347.69",
+        "dbname": "moabi"
       },
       "id": "redd",
       "class": "",
