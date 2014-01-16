@@ -31,7 +31,7 @@
   polygon-opacity:0.6;
   polygon-comp-op: multiply;
   polygon-fill:@l_green;
-  line-color:black;
+  line-color:darken(@l_green, 50%);
   line-width:0.6;
   line-opacity:0.4;
   [zoom <= 3]{ line-width: 0.3; }
