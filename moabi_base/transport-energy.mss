@@ -129,6 +129,8 @@
 #aetransmission {
   line-color: @energy;
   line-smooth: 0.3;
+  line-join: round;
+  line-cap: round;
     [zoom <= 2]{ line-width: 0.5; }
     [zoom = 3]{ line-width: 0.5; }
     [zoom = 4]{ line-width: 0.6; }

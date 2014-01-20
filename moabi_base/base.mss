@@ -27,8 +27,6 @@
 @red: #c02535; //#C1404B;
 @maroon: #6B292B;
 
-Map{ background-color: white; }
-
 #redd {
   polygon-opacity:0.6;
   polygon-comp-op: multiply;

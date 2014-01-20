@@ -1,0 +1,498 @@
+{
+  "bounds": [
+    12.0245,
+    -13.5445,
+    31.4484,
+    5.5668
+  ],
+  "center": [
+    22.8296,
+    -2.8772,
+    6
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 9,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "base.mss",
+    "transport-energy.mss",
+    "palm-logging.mss",
+    "mining-oil.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "raster",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "terrain",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_raster/SR_HR/SR_HR.tif",
+        "band": "1"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "terrain",
+      "status": "off"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        9.999583454395179,
+        -15.000416545624999,
+        45.00041678772851,
+        10.000416787708337
+      ],
+      "id": "terrain_highzoom",
+      "class": "terrain",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_hillshade.tif",
+        "band": "1"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "terrain_highzoom",
+      "status": "off"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        11.101065418106307,
+        -14.029423658559,
+        31.923889794630075,
+        5.395932176368847
+      ],
+      "id": "facet",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Projects/world_bank/extractives/drc/FACET/map.tif",
+        "band": "1"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=sinu +lon_0=20 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "facet",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999999999994,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "ocean",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_physical/ne_10m_ocean/ne_10m_ocean.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ocean",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.9999999999999,
+        -85.051,
+        180,
+        83.63410065300015
+      ],
+      "id": "shadow",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_0_countries/ne_10m_admin_0_countries.shp",
+        "id": "shadow",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "shadow",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -139.06020662199992,
+        -49.25087001999992,
+        178.448622268,
+        81.12853131600008
+      ],
+      "id": "admin1",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
+        "id": "admin1",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "admin1",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -141.0055486389999,
+        -55.120923766999944,
+        140.97762699400005,
+        70.07531036400012
+      ],
+      "id": "admin0",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_0_boundary_lines_land/ne_10m_admin_0_boundary_lines_land.shp",
+        "id": "admin0",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "admin0",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.27373550502737,
+        -10.917725695848821,
+        31.42175523748592,
+        5.158278739500458
+      ],
+      "id": "lakes",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/WRI_Data/Hydrographie/RDC_hydro_surface_2009.shp",
+        "id": "lakes",
+        "project": "moabi_base",
+        "srs": "",
+        "encoding": "LATIN1"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {
+        "encoding": "LATIN1"
+      },
+      "name": "lakes",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.229011154208719,
+        -11.832948194415977,
+        30.257901263305204,
+        5.388336188125172
+      ],
+      "id": "protected",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/PROTECTED AREA/Protected_Area_2013/DRC_Protected_Area_JULY_2013.shp",
+        "id": "protected",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "protected",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        13.07437020018141,
+        -5.697321839751337,
+        29.675159454174185,
+        1.5495358255334237
+      ],
+      "id": "redd",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/REDD_PROJECT/REDD_Project_Novembre 2013/DRC_REDD_Pilot_Project.shp",
+        "id": "redd",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "redd",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
+      ],
+      "id": "cities",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "cities",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        16.673398735067025,
+        -8.271836355187874,
+        30.135363214953106,
+        4.767638206481617
+      ],
+      "id": "indigenous",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/PA_TERRITORIES/PA/PA_territories.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "indigenous",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.27373550502737,
+        -10.917725695848821,
+        31.42175523748592,
+        5.158278739500458
+      ],
+      "id": "rivers_major",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/WRI_Data/Hydrographie/RDC_hydro_surface_2009.shp",
+        "id": "rivers_major",
+        "project": "moabi_base",
+        "srs": "",
+        "encoding": "LATIN1"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {
+        "encoding": "LATIN1"
+      },
+      "name": "rivers_major"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        12.412920000380504,
+        -12.753799999666075,
+        31.026930000192763,
+        4.341359999740816
+      ],
+      "id": "road",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/TRANSPORT/DRC_Road_Project_Nov2013.shp",
+        "id": "road",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "road"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        12.401153867,
+        -5.9617046119999,
+        30.265312858,
+        4.4167
+      ],
+      "id": "dams",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/Energy/Dams/geo_data_all1342551706.shp",
+        "id": "dams",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "dams",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.911401896479346,
+        -15.050247836369225,
+        31.061324711298454,
+        4.297628078912186
+      ],
+      "id": "aetransmission",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Projects/moabi/project_shp/AE_Transmission.shp",
+        "id": "aetransmission",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "aetransmission",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        13.675914349475736,
+        -12.16816503740499,
+        30.04853239843218,
+        4.143868055120656
+      ],
+      "id": "ae_hydro",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Projects/moabi/project_shp/AE_Hydro.shp",
+        "id": "ae_hydro",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ae_hydro",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.87778701415466,
+        -5.573450520069404,
+        29.384977522547498,
+        3.162442491636969
+      ],
+      "id": "timber_concessions",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/LOGGING PERMITS/Logging_permits_aout2013.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "timber_concessions",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        12.660924595679836,
+        -5.6047208772736905,
+        26.748881428209444,
+        3.7640647146320845
+      ],
+      "id": "timber_artisanal",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/DRC_Artisanal_logging_permits_2013/DRC_Artisanal_logging_permits_2013.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "timber_artisanal",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        18.296065053946112,
+        -4.3140675701438145,
+        26.083668089813447,
+        3.24791613607346
+      ],
+      "id": "palm-oil",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/PALM_OIL/Plantation_mars2013/Plantation.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "palm-oil",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.206629753560435,
+        -8.253687858507703,
+        31.302780000097066,
+        2.2534299999946743
+      ],
+      "id": "oil_concessions",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/OIL_BLOC/MINHYDRO_Nov2013/DRC_OIL_GAS_BLOC.shp",
+        "id": "oil_concessions",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "oil_concessions",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.483333300091886,
+        -13.45567600004722,
+        30.8083333003417,
+        5.033333299692198
+      ],
+      "id": "mining",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/MINING/CAMI_Novembre2013/Minning.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "mining",
+      "status": "off"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Moabi Transport",
+  "description": "",
+  "attribution": ""
+}
