@@ -445,8 +445,7 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "palm-oil",
-      "status": "off"
+      "name": "palm-oil"
     },
     {
       "geometry": "polygon",

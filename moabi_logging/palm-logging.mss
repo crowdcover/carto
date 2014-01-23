@@ -40,11 +40,11 @@
 /***********************************************/
 /*******************Palm Oil********************/
 /***********************************************/
-@palm: darken(@forest_green, 6); //@d_orange;
+@palm: spin(@forest_green, 10); //@d_orange;
 
-#palm-oil [zoom < 8]{
+#palm-oil /*[zoom < 8]*/{
   marker-fill: @palm;
-  marker-fill-opacity: 0.7;
+  marker-fill-opacity: 0.5;
   marker-line-opacity: 0.4;
   marker-line-width: 0.6;
   [zoom <= 3]{ marker-width: 2.0; }
@@ -52,8 +52,11 @@
   [zoom = 5]{ marker-width: 5.0; }
   [zoom = 6]{ marker-width: 6.0 }
   [zoom = 7]{ marker-width: 7.0; }
+  [zoom = 8]{ marker-width: 8.5; }
+  [zoom = 9]{ marker-width: 10.0; }
+  [zoom >= 10]{ marker-width: 11.0; }
 }
-
+/*
 #palm-oil [zoom >= 8]{
   polygon-opacity:0.8;
   polygon-fill:@palm;
@@ -68,4 +71,4 @@
   [zoom = 8]{ line-width: 0.6; }
   [zoom = 9]{ line-width: 0.7; }
   [zoom >= 10]{ line-width:0.8; }
-}
+}*/

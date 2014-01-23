@@ -13,7 +13,7 @@
   "format": "png",
   "interactivity": false,
   "minzoom": 0,
-  "maxzoom": 9,
+  "maxzoom": 11,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "base.mss",
@@ -223,47 +223,6 @@
     {
       "geometry": "polygon",
       "extent": [
-        13.07437020018141,
-        -5.697321839751337,
-        29.675159454174185,
-        1.5495358255334237
-      ],
-      "id": "redd",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/REDD_PROJECT/REDD_Project_Novembre 2013/DRC_REDD_Pilot_Project.shp",
-        "id": "redd",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "redd",
-      "status": "off"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        -179.58997888396897,
-        -85.051,
-        179.38330358817018,
-        82.48332318035943
-      ],
-      "id": "cities",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "cities",
-      "status": "off"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
         16.673398735067025,
         -8.271836355187874,
         30.135363214953106,
@@ -278,6 +237,25 @@
       "srs": "",
       "advanced": {},
       "name": "indigenous",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.483333300091886,
+        -13.45567600004722,
+        30.8083333003417,
+        5.033333299692198
+      ],
+      "id": "mining",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/MINING/CAMI_Novembre2013/Minning.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "mining",
       "status": "off"
     },
     {
@@ -471,22 +449,44 @@
       "status": "off"
     },
     {
-      "geometry": "polygon",
+      "geometry": "point",
       "extent": [
-        12.483333300091886,
-        -13.45567600004722,
-        30.8083333003417,
-        5.033333299692198
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
       ],
-      "id": "mining",
+      "id": "cities",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/MINING/CAMI_Novembre2013/Minning.shp"
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
       },
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "mining",
+      "name": "cities",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        13.07437020018141,
+        -5.697321839751337,
+        29.675159454174185,
+        1.5495358255334237
+      ],
+      "id": "redd",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/REDD_PROJECT/REDD_Project_Novembre 2013/DRC_REDD_Pilot_Project.shp",
+        "id": "redd",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "redd",
       "status": "off"
     }
   ],
