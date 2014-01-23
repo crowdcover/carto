@@ -1,4 +1,4 @@
-from fabric.api import local, run, cd, puts, settings, hide
+from fabric.api import local, run, cd, settings, hide
 from fabric.contrib import files
 from ConfigParser import RawConfigParser
 from StringIO import StringIO
