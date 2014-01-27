@@ -291,7 +291,8 @@
       "advanced": {
         "encoding": "LATIN1"
       },
-      "name": "rivers_major"
+      "name": "rivers_major",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -312,7 +313,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "road"
+      "name": "road",
+      "status": "off"
     },
     {
       "geometry": "point",
