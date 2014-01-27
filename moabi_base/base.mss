@@ -27,6 +27,8 @@
 @red: #c02535; //#C1404B;
 @maroon: #6B292B;
 
+Map { buffer-size: 512; }
+
 #redd {
   polygon-opacity:0.6;
   polygon-comp-op: multiply;
@@ -144,7 +146,7 @@
 
 
 /**************** ADMIN ***************************/
-@sans: "Helvetica Neue Medium", "Helvetica Neue Regular", "Helvetica Neue Light", "Helvetica Neue Thin";
+@sans: "Helvetica Neue Regular", "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin";
 @sans_bold:"Helvetica Neue Bold";
 
 @admin0_label: #222222;

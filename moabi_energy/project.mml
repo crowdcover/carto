@@ -359,9 +359,9 @@
       "id": "ae_hydro",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/moabi/project_shp/AE_Hydro.shp",
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/ENERGY/AE_shpfiles/AE_Hydro.shp",
         "id": "ae_hydro",
-        "project": "moabi_base",
+        "project": "moabi_energy",
         "srs": ""
       },
       "srs-name": "autodetect",

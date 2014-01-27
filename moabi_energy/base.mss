@@ -1,5 +1,4 @@
 //base
-//energy
 @forest_green: #79750A;
 @wood_brown: #976A2F;
 @muted_blue: #7FA67A;
@@ -27,6 +26,8 @@
 @yellow: #f1dd06; //#E7D500;
 @red: #c02535; //#C1404B;
 @maroon: #6B292B;
+
+Map { buffer-size: 512; }
 
 #redd {
   polygon-opacity:0.6;
@@ -145,7 +146,7 @@
 
 
 /**************** ADMIN ***************************/
-@sans: "Helvetica Neue Medium", "Helvetica Neue Regular", "Helvetica Neue Light", "Helvetica Neue Thin";
+@sans: "Helvetica Neue Regular", "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin";
 @sans_bold:"Helvetica Neue Bold";
 
 @admin0_label: #222222;

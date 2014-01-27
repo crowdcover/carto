@@ -1,5 +1,5 @@
-@country_casing: darken(@d_orange, 15);
-@country_fill: @l_yellow;
+@road_casing: darken(@d_orange, 15);
+@road_fill: @l_yellow;
 
 //@water_blue: desaturate(darken(@l_blue, 15), 35);
 @water_blue: desaturate(@l_blue, 10);
@@ -27,7 +27,7 @@
     line-cap: round;
     line-join: round;
     line-simplify: 1.0;
-    line-color: @country_casing;
+    line-color: @road_casing;
     [zoom = 5] { line-width: 0; line-opacity: 0.7; }
     [zoom = 6] { line-width: 2.1; line-opacity: 0.7; }
     [zoom = 7] { line-width: 2.4; line-opacity: 0.7; }
@@ -40,9 +40,9 @@
     line-cap: round;
     line-join: round;
     line-simplify: 1.0;
-    line-color: @country_fill;
+    line-color: @road_fill;
     line-opacity: 1;
-    [zoom = 5] { line-width: 0.7; line-color: darken(@country_fill, 20); line-gamma: 0.75; }
+    [zoom = 5] { line-width: 0.7; line-color: darken(@road_fill, 20); line-gamma: 0.75; }
     [zoom = 6] { line-width: 1.1; line-gamma: 0.75; }
     [zoom = 7] { line-width: 1.4; line-gamma: 0.75; }
     [zoom = 8] { line-width: 1.7; line-gamma: 0.75; }
@@ -51,6 +51,20 @@
     [zoom >= 11] { line-width: 5.0; line-gamma: 0.75; }
   }
 }
+
+#road::label[zoom >= 6][NOM != ""]{
+  shield-name: "[NOM]";
+  shield-size: 9;
+  shield-face-name: @sans_bold;
+  shield-fill: @city_label;
+  shield-file: url(../img/shield-primary-3.png);
+  [zoom = 6]{ shield-min-distance: 50; }
+  [zoom = 7]{ shield-min-distance: 55; }
+  [zoom = 8]{ shield-min-distance: 60; }
+  [zoom = 9]{ shield-min-distance: 70; }
+  [zoom >= 10]{ shield-min-distance: 80; }
+}
+
 
 /***********************************************/
 /*******************Energy**********************/
@@ -111,6 +125,51 @@
     [zoom = 9]{ marker-width: 12; marker-line-width: 1.3; }
     [zoom = 10]{ marker-width: 13; marker-line-width: 1.4; }
     [zoom >= 11]{ marker-width: 14; marker-line-width: 1.5; }
+  }
+
+#ae_hydro::label[zoom >= 5]{
+  [status = 'existing']{ 
+    text-name: "[name]";
+    text-face-name: @sans_bold; 
+    text-fill: @energy; 
+    text-halo-fill: @label_halo;
+    text-halo-radius: 1.2;
+    text-placement-type: simple;
+    text-placements: "E,W,N,S";
+    text-dx: 7;
+    text-dy: 7;
+    text-wrap-width: 20;
+    text-wrap-before: true;
+    text-wrap-character: ";";
+    text-character-spacing: 1;
+  [zoom = 5]{ text-size: 8; }
+  [zoom = 6]{ text-size: 10; }
+  [zoom = 7]{ text-size: 12; }
+  [zoom = 8]{ text-size: 13; }
+  [zoom = 9]{ text-size: 14; }
+  [zoom >= 10]{ text-size: 15; }
+  }
+  [status = 'future']{ 
+    text-name: "[name]";
+    text-face-name: @sans; 
+    text-fill: desaturate(lighten(@energy, 5), 5);
+    text-halo-fill: @label_halo;
+    text-halo-radius: 1.2;
+    text-placement-type: simple;
+    text-placements: "E,W,N,S";
+    text-dx: 7;
+    text-dy: 7;
+    text-wrap-width: 40;
+    text-wrap-before: true;
+    text-wrap-character: ";";
+    text-character-spacing: 1;
+  [zoom = 5]{ text-size: 8; }
+  [zoom = 6]{ text-size: 10; }
+  [zoom = 7]{ text-size: 12; }
+  [zoom = 8]{ text-size: 13; }
+  [zoom = 9]{ text-size: 14; }
+  [zoom >= 10]{ text-size: 15; }
+  }
 }
 
 #dams::circle {

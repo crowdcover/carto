@@ -291,8 +291,7 @@
       "advanced": {
         "encoding": "LATIN1"
       },
-      "name": "rivers_major",
-      "status": "off"
+      "name": "rivers_major"
     },
     {
       "geometry": "linestring",
@@ -356,7 +355,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "aetransmission"
+      "name": "aetransmission",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -369,7 +369,7 @@
       "id": "ae_hydro",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/moabi/project_shp/AE_Hydro.shp",
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/ENERGY/AE_shpfiles/AE_Hydro.shp",
         "id": "ae_hydro",
         "project": "moabi_base",
         "srs": ""
@@ -377,7 +377,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "ae_hydro"
+      "name": "ae_hydro",
+      "status": "off"
     },
     {
       "geometry": "polygon",
