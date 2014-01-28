@@ -1,9 +1,9 @@
 {
   "bounds": [
-    12.0245,
-    -13.5445,
-    31.4484,
-    5.5668
+    -7.1356,
+    -31.7702,
+    54.212,
+    21.6523
   ],
   "center": [
     22.8296,
@@ -262,22 +262,31 @@
       "status": "off"
     },
     {
-      "geometry": "polygon",
       "extent": [
-        16.673398735067025,
-        -8.271836355187874,
-        30.135363214953106,
-        4.767638206481617
+        -77.0390025941279,
+        -13.455675940967357,
+        31.30277999987542,
+        38.920901318173705
       ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT boundary, way FROM planet_osm_polygon WHERE boundary='indigenous' ) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
+        "dbname": "moabi",
+        "id": "indigenous_psql",
+        "project": "moabi_base",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
       "id": "indigenous",
       "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/PA_TERRITORIES/PA/PA_territories.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "indigenous",
+      "geometry": "linestring",
       "status": "off"
     },
     {
@@ -372,25 +381,56 @@
       "status": "off"
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        -77.0269901424856,
+        -15.050247715190558,
+        31.061324709265847,
+        38.926643473348015
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT name, power, (tags -> 'proposed' ) as proposed, way FROM planet_osm_line WHERE power = 'line' OR (power = 'proposed' AND (tags -> 'proposed') = 'line')) AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
+        "dbname": "moabi"
+      },
+      "id": "transmission_lines",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "transmission_lines",
+      "status": "off"
+    },
+    {
       "geometry": "point",
       "extent": [
-        13.675914349475736,
-        -12.16816503740499,
-        30.04853239843218,
-        4.143868055120656
+        -77.01841913669675,
+        -12.393698444856394,
+        30.048532347419965,
+        38.91296889756999
       ],
-      "id": "ae_hydro",
-      "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/moabi/project_shp/AE_Hydro.shp",
-        "id": "ae_hydro",
+        "type": "postgis",
+        "table": "(SELECT name, waterway, (tags -> 'proposed') AS proposed, way FROM planet_osm_point WHERE waterway='dam' OR (waterway='proposed' AND (tags-> 'proposed') = 'dam')) as data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8573651.2,-1390546.93,3344987.32,4709212.77",
+        "dbname": "moabi",
+        "id": "hydropower",
         "project": "moabi_base",
-        "srs": ""
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "id": "hydropower",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "ae_hydro",
+      "name": "hydropower",
       "status": "off"
     },
     {
@@ -451,23 +491,28 @@
       "status": "off"
     },
     {
-      "geometry": "polygon",
       "extent": [
-        12.206629753560435,
-        -8.253687858507703,
-        31.302780000097066,
-        2.2534299999946743
+        -77.0390025941279,
+        -13.455675940967357,
+        31.30277999987542,
+        38.920901318173705
       ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT name, landuse, (tags -> 'industrial') AS industrial, way FROM planet_osm_polygon WHERE landuse='concession' AND (tags -> 'industrial') = 'oil') AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
+        "dbname": "moabi",
+        "id": "oil-concessions",
+        "project": "moabi_base",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
       "id": "oil_concessions",
       "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/OIL_BLOC/MINHYDRO_Nov2013/DRC_OIL_GAS_BLOC.shp",
-        "id": "oil_concessions",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "oil_concessions"
     },
@@ -493,7 +538,7 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "name": "Moabi Oil and Gas",
+  "name": "Moabi Oil",
   "description": "",
   "attribution": ""
 }
