@@ -1,23 +1,23 @@
-from fabric.api import local, run, cd, settings, hide
+from fabric.api import run, cd, settings, hide
 from fabric.contrib import files
 from ConfigParser import RawConfigParser
 from StringIO import StringIO
 
 def pull():
 	# Pull changes into server.
-	with cd('carto'):
+	with cd('/home/sajjad/carto'):
 		run('git pull')
 
 def create_xml(project):
 	# Create mapnik xml from carto.
 	# Update the mapnil-style directory with the new xml.
-	with cd('carto'):
+	with cd('/home/sajjad/carto'):
 		run('/home/sajjad/node_modules/carto/bin/carto %s/project.local.mml > /home/sajjad/%s.xml' % (project, project))
 		run('mv /home/sajjad/%s.xml /home/sajjad/src/mapnik-style' % (project, project))
 
 def create_local_mml(project):
 	# Use CartoCC and create project.local.mml
-	with cd('carto/%s' % project):
+	with cd('/home/sajjad/carto/%s' % project):
 		run('/home/mikel/bin/CartoCC/bin/cartocc project.mml /home/mikel/bin/CartoCC/moabi.json > project.local.mml')
 
 def update_renderd_conf(project):
