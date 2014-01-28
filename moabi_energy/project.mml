@@ -1,9 +1,9 @@
 {
   "bounds": [
-    12.0245,
-    -13.5445,
-    31.4484,
-    5.5668
+    -7.1356,
+    -31.7702,
+    54.212,
+    21.6523
   ],
   "center": [
     22.8296,
@@ -223,6 +223,47 @@
     {
       "geometry": "polygon",
       "extent": [
+        13.07437020018141,
+        -5.697321839751337,
+        29.675159454174185,
+        1.5495358255334237
+      ],
+      "id": "redd",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/REDD_PROJECT/REDD_Project_Novembre 2013/DRC_REDD_Pilot_Project.shp",
+        "id": "redd",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "redd",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
+      ],
+      "id": "cities",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "cities",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
         16.673398735067025,
         -8.271836355187874,
         30.135363214953106,
@@ -237,25 +278,6 @@
       "srs": "",
       "advanced": {},
       "name": "indigenous",
-      "status": "off"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        12.483333300091886,
-        -13.45567600004722,
-        30.8083333003417,
-        5.033333299692198
-      ],
-      "id": "mining",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/MINING/CAMI_Novembre2013/Minning.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "mining",
       "status": "off"
     },
     {
@@ -346,28 +368,59 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "aetransmission"
+      "name": "aetransmission",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -77.0269901424856,
+        -15.050247715190558,
+        31.061324709265847,
+        38.926643473348015
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT name, power, (tags -> 'proposed' ) as proposed, way FROM planet_osm_line WHERE power = 'line' OR (power = 'proposed' AND (tags -> 'proposed') = 'line')) AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
+        "dbname": "moabi"
+      },
+      "id": "transmission_lines",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "transmission_lines"
     },
     {
       "geometry": "point",
       "extent": [
-        13.675914349475736,
-        -12.16816503740499,
-        30.04853239843218,
-        4.143868055120656
+        -77.01841913669675,
+        -12.393698444856394,
+        30.048532347419965,
+        38.91296889756999
       ],
-      "id": "ae_hydro",
-      "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/ENERGY/AE_shpfiles/AE_Hydro.shp",
-        "id": "ae_hydro",
-        "project": "moabi_energy",
-        "srs": ""
+        "type": "postgis",
+        "table": "(SELECT name, waterway, (tags -> 'proposed') AS proposed, way FROM planet_osm_point WHERE waterway='dam' OR (waterway='proposed' AND (tags-> 'proposed') = 'dam')) as data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8573651.2,-1390546.93,3344987.32,4709212.77",
+        "dbname": "moabi",
+        "id": "hydropower",
+        "project": "moabi_base",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "id": "hydropower",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "ae_hydro"
+      "name": "hydropower"
     },
     {
       "geometry": "polygon",
@@ -449,44 +502,22 @@
       "status": "off"
     },
     {
-      "geometry": "point",
-      "extent": [
-        -179.58997888396897,
-        -85.051,
-        179.38330358817018,
-        82.48332318035943
-      ],
-      "id": "cities",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "cities",
-      "status": "off"
-    },
-    {
       "geometry": "polygon",
       "extent": [
-        13.07437020018141,
-        -5.697321839751337,
-        29.675159454174185,
-        1.5495358255334237
+        12.483333300091886,
+        -13.45567600004722,
+        30.8083333003417,
+        5.033333299692198
       ],
-      "id": "redd",
+      "id": "mining",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/REDD_PROJECT/REDD_Project_Novembre 2013/DRC_REDD_Pilot_Project.shp",
-        "id": "redd",
-        "project": "moabi_base",
-        "srs": ""
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/MINING/CAMI_Novembre2013/Minning.shp"
       },
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "redd",
+      "name": "mining",
       "status": "off"
     }
   ],
