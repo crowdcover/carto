@@ -1,7 +1,6 @@
 from fabric.api import run, cd, settings, hide, sudo
 from fabric.contrib import files
-from ConfigParser import RawConfigParser
-from StringIO import StringIO
+from string import Template
 
 def pull():
   # Pull changes into server.
@@ -22,23 +21,15 @@ def create_local_mml(project):
 
 def update_renderd_conf(project):
   # Update renderd.conf with the config for the new tileset.
+  # URI=/redd/
+  # TILEDIR=/var/lib/mod_tile
+  # XML=/home/sajjad/src/mapnik-style/REDD.xml
+  # HOST=localhost
+  # TILESIZE=256
   with cd('/usr/local/etc/'):
-    config = RawConfigParser()
-    config.optionxform = str
-    # URI=/redd/
-    # TILEDIR=/var/lib/mod_tile
-    # XML=/home/sajjad/src/mapnik-style/REDD.xml
-    # HOST=localhost
-    # TILESIZE=256
-    config.add_section(project)
-    config.set(project, 'URI', '/%s/' % project)
-    config.set(project, 'TILEDIR', '/var/lib/mod_tile')
-    config.set(project, 'XML', '/home/moabi/src/mapnik-style/%s.xml' % project)
-    config.set(project, 'HOST', 'localhost')
-    config.set(project, 'TILESIZE', '256')
-    buffer = StringIO()
-    config.write(buffer)
-    files.append('renderd.conf', buffer.getvalue(), use_sudo=True)
+    template = Template("[$project]\nURI=/$project/\nTILEDIR=/var/lib/mod_tile\nXML=/home/moabi/src/mapnik-style/$project\nHOST=localhost\nTILESIZE=256\n")
+    config = template.substitute(project=project)
+    files.append('renderd.conf', config, use_sudo=True)
 
 def update_cron(project):
   # Update crontab
