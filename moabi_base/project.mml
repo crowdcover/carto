@@ -251,22 +251,31 @@
       "name": "cities"
     },
     {
-      "geometry": "polygon",
       "extent": [
-        16.673398735067025,
-        -8.271836355187874,
-        30.135363214953106,
-        4.767638206481617
+        -77.0390025941279,
+        -13.455675940967357,
+        31.30277999987542,
+        38.920901318173705
       ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT boundary, way FROM planet_osm_polygon WHERE boundary='indigenous' ) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
+        "dbname": "moabi",
+        "id": "indigenous_psql",
+        "project": "moabi_base",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
       "id": "indigenous",
       "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/PA_TERRITORIES/PA/PA_territories.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "indigenous",
+      "geometry": "linestring",
       "status": "off"
     },
     {
@@ -382,7 +391,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "transmission_lines"
+      "name": "transmission_lines",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -409,7 +419,31 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "hydropower"
+      "name": "hydropower",
+      "status": "off"
+    },
+    {
+      "extent": [
+        -77.0390025941279,
+        -13.455675940967357,
+        31.30277999987542,
+        38.920901318173705
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT landuse, (tags -> 'trees') as trees, way FROM planet_osm_polygon WHERE landuse = 'orchard' AND (tags -> 'trees') = 'oil_palms') as data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
+        "dbname": "moabi"
+      },
+      "id": "palm_oil",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "palm_oil"
     },
     {
       "geometry": "polygon",
@@ -450,61 +484,52 @@
       "status": "off"
     },
     {
-      "geometry": "polygon",
       "extent": [
-        18.296065053946112,
-        -4.3140675701438145,
-        26.083668089813447,
-        3.24791613607346
+        -77.0390025941279,
+        -13.455675940967357,
+        31.30277999987542,
+        38.920901318173705
       ],
-      "id": "palm-oil",
-      "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/PALM_OIL/Plantation_mars2013/Plantation.shp"
+        "type": "postgis",
+        "table": "(SELECT name, landuse, (tags -> 'industrial') AS industrial, way FROM planet_osm_polygon WHERE landuse='concession' AND (tags -> 'industrial') = 'oil') AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
+        "dbname": "moabi",
+        "id": "oil-concessions",
+        "project": "moabi_base",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "palm-oil",
-      "status": "off"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        12.206629753560435,
-        -8.253687858507703,
-        31.302780000097066,
-        2.2534299999946743
-      ],
       "id": "oil_concessions",
       "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/OIL_BLOC/MINHYDRO_Nov2013/DRC_OIL_GAS_BLOC.shp",
-        "id": "oil_concessions",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "oil_concessions",
       "status": "off"
     },
     {
-      "geometry": "polygon",
       "extent": [
-        12.483333300091886,
-        -13.45567600004722,
-        30.8083333003417,
-        5.033333299692198
+        -77.0390025941279,
+        -13.455675940967357,
+        31.30277999987542,
+        38.920901318173705
       ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT landuse, (tags -> 'industrial') as industrial, operator, way FROM planet_osm_polygon WHERE (tags -> 'industrial') = 'mining') AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
+        "dbname": "moabi"
+      },
       "id": "mining",
       "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/MINING/CAMI_Novembre2013/Minning.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "mining",
       "status": "off"
