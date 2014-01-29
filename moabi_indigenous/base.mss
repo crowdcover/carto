@@ -146,8 +146,11 @@ Map { buffer-size: 512; }
 
 
 /**************** ADMIN ***************************/
-@sans: "Helvetica Neue Regular", "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin";
-@sans_bold:"Helvetica Neue Bold";
+//@sans: "Helvetica Neue Regular", "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin";
+//@sans_bold:"Helvetica Neue Bold";
+
+@sans: "DejaVu Sans Condensed", "DejaVu Sans Book"; 
+@sans_bold: "DejaVu Sans Condensed Bold", "DejaVu Sans Bold";
 
 @admin0_label: #222222;
 @admin1_label: #747474;
