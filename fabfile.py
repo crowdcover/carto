@@ -27,7 +27,7 @@ def update_renderd_conf(project):
   # HOST=localhost
   # TILESIZE=256
   with cd('/usr/local/etc/'):
-    template = Template("[$project]\nURI=/$project/\nTILEDIR=/var/lib/mod_tile\nXML=/home/moabi/src/mapnik-style/$project\nHOST=localhost\nTILESIZE=256\n")
+    template = Template("[$project]\nURI=/$project/\nTILEDIR=/var/lib/mod_tile\nXML=/home/moabi/src/mapnik-style/$project.xml\nHOST=localhost\nTILESIZE=256\n")
     config = template.substitute(project=project)
     files.append('renderd.conf', config, use_sudo=True)
 
