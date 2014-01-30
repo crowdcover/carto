@@ -34,12 +34,14 @@
       "class": "",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_raster/SR_HR/SR_HR.tif",
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "name": "terrain"
     },
@@ -55,12 +57,14 @@
       "class": "terrain",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_hillshade.tif",
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "name": "terrain_highzoom"
     },
@@ -76,12 +80,14 @@
       "class": "",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Projects/world_bank/extractives/drc/FACET/map.tif",
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
-      "srs-name": "WGS84",
+      "srs-name": "custom",
       "srs": "+proj=sinu +lon_0=20 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs",
       "advanced": {
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "name": "facet"
     },
