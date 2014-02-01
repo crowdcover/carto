@@ -13,7 +13,7 @@
   "format": "png",
   "interactivity": false,
   "minzoom": 0,
-  "maxzoom": 9,
+  "maxzoom": 30,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "base.mss",
@@ -34,12 +34,14 @@
       "class": "",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_raster/SR_HR/SR_HR.tif",
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "name": "terrain",
       "status": "off"
@@ -56,12 +58,14 @@
       "class": "terrain",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_hillshade.tif",
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "name": "terrain_highzoom",
       "status": "off"
@@ -78,12 +82,14 @@
       "class": "",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Projects/world_bank/extractives/drc/FACET/map.tif",
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
-      "srs-name": "WGS84",
+      "srs-name": "custom",
       "srs": "+proj=sinu +lon_0=20 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs",
       "advanced": {
-        "band": "1"
+        "band": "1",
+        "estimate_extent": "true"
       },
       "name": "facet",
       "status": "off"
@@ -221,28 +227,6 @@
       "status": "off"
     },
     {
-      "geometry": "polygon",
-      "extent": [
-        13.07437020018141,
-        -5.697321839751337,
-        29.675159454174185,
-        1.5495358255334237
-      ],
-      "id": "redd",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/REDD_PROJECT/REDD_Project_Novembre 2013/DRC_REDD_Pilot_Project.shp",
-        "id": "redd",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "redd",
-      "status": "off"
-    },
-    {
       "geometry": "point",
       "extent": [
         -179.58997888396897,
@@ -259,6 +243,34 @@
       "srs": "",
       "advanced": {},
       "name": "cities",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -77.0269901424856,
+        -15.050247715190558,
+        31.061324709265847,
+        38.926643473348015
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT name, way FROM planet_osm_polygon WHERE (tags -> 'protected_area') = 'redd') AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
+        "dbname": "moabi",
+        "id": "redd",
+        "project": "moabi_base",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "redd",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "redd",
       "status": "off"
     },
     {
@@ -317,67 +329,29 @@
     {
       "geometry": "linestring",
       "extent": [
-        12.412920000380504,
-        -12.753799999666075,
-        31.026930000192763,
-        4.341359999740816
+        -77.0269901424856,
+        -15.050247715190558,
+        31.061324709265847,
+        38.926643473348015
       ],
-      "id": "road",
-      "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/TRANSPORT/DRC_Road_Project_Nov2013.shp",
+        "type": "postgis",
+        "table": "(SELECT name, ref, highway, (tags -> 'proposed') as proposed, way FROM planet_osm_line WHERE highway = 'proposed') AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
+        "dbname": "moabi",
         "id": "road",
         "project": "moabi_base",
-        "srs": ""
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "id": "road",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "road",
-      "status": "off"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        12.401153867,
-        -5.9617046119999,
-        30.265312858,
-        4.4167
-      ],
-      "id": "dams",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/Energy/Dams/geo_data_all1342551706.shp",
-        "id": "dams",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "dams",
-      "status": "off"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        11.911401896479346,
-        -15.050247836369225,
-        31.061324711298454,
-        4.297628078912186
-      ],
-      "id": "aetransmission",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/moabi/project_shp/AE_Transmission.shp",
-        "id": "aetransmission",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "aetransmission",
       "status": "off"
     },
     {
@@ -457,20 +431,25 @@
       "name": "palm_oil"
     },
     {
-      "geometry": "polygon",
       "extent": [
-        12.87778701415466,
-        -5.573450520069404,
-        29.384977522547498,
-        3.162442491636969
+        -77.0390025941279,
+        -13.455675940967357,
+        31.30277999987542,
+        38.920901318173705
       ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT operator, way FROM planet_osm_polygon WHERE (tags -> 'industrial') = 'logging') AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
+        "dbname": "moabi"
+      },
       "id": "timber_concessions",
       "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/LOGGING PERMITS/Logging_permits_aout2013.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "timber_concessions",
       "status": "off"
@@ -478,18 +457,24 @@
     {
       "geometry": "point",
       "extent": [
-        12.660924595679836,
-        -5.6047208772736905,
-        26.748881428209444,
-        3.7640647146320845
+        -77.01841913669675,
+        -12.393698444856394,
+        30.048532347419965,
+        38.91296889756999
       ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT operator, way FROM planet_osm_point WHERE (tags -> 'industrial') = 'logging' AND (tags -> 'artisanal') = 'yes') AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8573651.2,-1390546.93,3344987.32,4709212.77",
+        "dbname": "moabi"
+      },
       "id": "timber_artisanal",
       "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/DRC_Artisanal_logging_permits_2013/DRC_Artisanal_logging_permits_2013.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "timber_artisanal",
       "status": "off"

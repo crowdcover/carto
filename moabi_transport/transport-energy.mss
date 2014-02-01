@@ -52,8 +52,8 @@
   }
 }
 
-#road::label[zoom >= 6][NOM != ""]{
-  shield-name: "[NOM]";
+#road::label[zoom >= 6][ref != ""]{
+  shield-name: "[ref]";
   shield-size: 9;
   shield-face-name: @sans_bold;
   shield-fill: @city_label;

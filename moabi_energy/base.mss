@@ -1,4 +1,4 @@
-//base
+//energy
 @forest_green: #79750A;
 @wood_brown: #976A2F;
 @muted_blue: #7FA67A;
