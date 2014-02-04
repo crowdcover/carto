@@ -57,7 +57,7 @@
   shield-size: 9;
   shield-face-name: @sans_bold;
   shield-fill: @city_label;
-  shield-file: url(../img/shield-primary-3.png);
+  shield-file: url(../img/shield_primary/shield-primary-3.png);
   [zoom = 6]{ shield-min-distance: 50; }
   [zoom = 7]{ shield-min-distance: 55; }
   [zoom = 8]{ shield-min-distance: 60; }

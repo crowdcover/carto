@@ -57,7 +57,7 @@
   shield-size: 9;
   shield-face-name: @sans_bold;
   shield-fill: @city_label;
-  shield-file: url(../img/shield-primary-3.png);
+  shield-file: url(../img/shield_primary/shield-primary-3.png);
   [zoom = 6]{ shield-min-distance: 50; }
   [zoom = 7]{ shield-min-distance: 55; }
   [zoom = 8]{ shield-min-distance: 60; }
@@ -75,8 +75,8 @@
 //to integrate the dams shapefile, filter ae_hydro by adding [duplicate != y]
 
 @energy: @red; //#dd4f3a;
-/*
-#ae_hydro {
+
+#hydropower {
   marker-opacity: 0;
   marker-line-width: 0;
   marker-allow-overlap: true;
@@ -92,29 +92,13 @@
     [zoom >= 10]{ marker-width: 13; marker-line-width: 1.4; }
 }
 
-#dams {
-  marker-opacity: 0;
-  marker-line-width: 0;
-  marker-allow-overlap: true;
-  marker-comp-op: src-in;
-    [zoom <= 2]{ marker-width: 2;  marker-line-width: 0.5;}
-    [zoom = 3]{ marker-width: 2.5; marker-line-width: 0.5;}
-    [zoom = 4]{ marker-width: 3.5; marker-line-width: 0.5;}
-    [zoom = 5]{ marker-width: 4.5; marker-line-width: 0.7;}
-    [zoom = 6]{ marker-width: 6; marker-line-width: 0.9; }
-    [zoom = 7]{ marker-width: 8; marker-line-width: 1.0; }
-    [zoom = 8]{ marker-width: 10; marker-line-width: 1.2; }
-    [zoom = 9]{ marker-width: 12; marker-line-width: 1.3; }
-    [zoom >= 10]{ marker-width: 13; marker-line-width: 1.4; }
-}
-*/
-#ae_hydro::circle {
+#hydropower::circle {
   marker-allow-overlap: true;
   //marker-fill-opacity: 0;
   marker-fill: white;
   marker-line-width: 0;
   marker-line-color: @energy;
-  [status = 'existing'] { marker-fill: desaturate(lighten(@energy, 30), 20); }
+  [waterway = 'dam'] { marker-fill: desaturate(lighten(@energy, 30), 20); }
     [zoom <= 2]{ marker-width: 2;  marker-line-width: 0.5;}
     [zoom = 3]{ marker-width: 2.5; marker-line-width: 0.5;}
     [zoom = 4]{ marker-width: 3.5; marker-line-width: 0.5;}
@@ -127,8 +111,8 @@
     [zoom >= 11]{ marker-width: 14; marker-line-width: 1.5; }
   }
 
-#ae_hydro::label[zoom >= 5]{
-  [status = 'existing']{ 
+#hydropower::label[zoom >= 5]{
+  [waterway = 'dam']{ 
     text-name: "[name]";
     text-face-name: @sans_bold; 
     text-fill: @energy; 
@@ -149,7 +133,7 @@
   [zoom = 9]{ text-size: 14; }
   [zoom >= 10]{ text-size: 15; }
   }
-  [status = 'future']{ 
+  [waterway = 'proposed']{ 
     text-name: "[name]";
     text-face-name: @sans; 
     text-fill: desaturate(lighten(@energy, 5), 5);
@@ -172,25 +156,8 @@
   }
 }
 
-#dams::circle {
-  marker-allow-overlap: true;
-  marker-fill-opacity: 0;
-  marker-line-color: @energy;
-  marker-line-width: 0;
-    [zoom <= 2]{ marker-width: 2;  marker-line-width: 0.5;}
-    [zoom = 3]{ marker-width: 2.5; marker-line-width: 0.5;}
-    [zoom = 4]{ marker-width: 3.5; marker-line-width: 0.5;}
-    [zoom = 5]{ marker-width: 4.5; marker-line-width: 0.7;}
-    [zoom = 6]{ marker-width: 6; marker-line-width: 0.9; }
-    [zoom = 7]{ marker-width: 8; marker-line-width: 1.0; }
-    [zoom = 8]{ marker-width: 10; marker-line-width: 1.2; }
-    [zoom = 9]{ marker-width: 12; marker-line-width: 1.3; }
-    [zoom = 10]{ marker-width: 13; marker-line-width: 1.4; }
-    [zoom >= 11]{ marker-width: 14; marker-line-width: 1.5; }
-}
 
-
-#aetransmission {
+#transmission_lines {
   line-color: @energy;
   line-smooth: 0.3;
     [zoom <= 2]{ line-width: 0.5; }
@@ -203,7 +170,7 @@
     [zoom = 9]{ line-width: 3.5; }
     [zoom = 10]{ line-width: 3.5; }
     [zoom >= 11]{ line-width: 3.9; }
-  [status = 'planned']{
+  [power = 'proposed']{
     [zoom <= 2]{ line-dasharray: 0.4,0.9; }
     [zoom = 3]{ line-dasharray: 0.5,0.9; }
     [zoom = 4]{ line-dasharray: 0.6,1.0; }
