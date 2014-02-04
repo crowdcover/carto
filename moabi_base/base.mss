@@ -51,7 +51,7 @@ Map { buffer-size: 512; }
 #protected {
   polygon-opacity: 0;
   polygon-fill: @d_green;
-  polygon-smooth: 1;
+  polygon-smooth: 1; 
   [zoom > 10]{ 
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/large_stripe_d_green.png');
     polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/small.png');

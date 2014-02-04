@@ -104,8 +104,8 @@
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_physical/ne_10m_ocean/ne_10m_ocean.shp"
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "ocean"
     },
@@ -125,15 +125,15 @@
         "project": "moabi_base",
         "srs": ""
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "shadow"
     },
     {
       "geometry": "linestring",
       "extent": [
-        -139.06020662199992,
+        -139.0602066219999,
         -49.25087001999992,
         178.448622268,
         81.12853131600008
@@ -146,15 +146,15 @@
         "project": "moabi_base",
         "srs": ""
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "admin1"
     },
     {
       "geometry": "linestring",
       "extent": [
-        -141.0055486389999,
+        -141.00554863899987,
         -55.120923766999944,
         140.97762699400005,
         70.07531036400012
@@ -167,8 +167,8 @@
         "project": "moabi_base",
         "srs": ""
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "admin0"
     },
@@ -189,8 +189,8 @@
         "srs": "",
         "encoding": "LATIN1"
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "custom",
+      "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
       "advanced": {
         "encoding": "LATIN1"
       },
@@ -212,8 +212,8 @@
         "project": "moabi_base",
         "srs": ""
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "custom",
+      "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
       "advanced": {},
       "name": "protected"
     },
@@ -230,8 +230,8 @@
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "cities"
     },
@@ -307,8 +307,8 @@
         "srs": "",
         "encoding": "LATIN1"
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "custom",
+      "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
       "advanced": {
         "encoding": "LATIN1"
       },
