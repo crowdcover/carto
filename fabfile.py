@@ -38,6 +38,10 @@ def update_cron(project):
   new = current+' | /home/sajjad/src/mod_tile/render_expired --map=%s --min-zoom=8 --touch-from=10 >/dev/null' % project
   run("echo '%s'|sudo crontab -u sajjad -" % new)
 
+def copy_img():
+  with cd('carto'):
+    run('cp -r img/ /home/moabi/src')
+
 def prepare_server():
   pull()
 
@@ -55,11 +59,13 @@ def update(project):
   prepare_server()
   create_local_mml(project)
   create_xml(project)
+  copy_img()
   deploy(project)
 
 def create(project):
   prepare_server()
   create_local_mml(project)
+  copy_img()
   create_xml(project)
   update_renderd_conf(project)
   update_cron(project)
