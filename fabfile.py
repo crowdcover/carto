@@ -53,6 +53,7 @@ def deploy(project):
 
 def update(project):
   prepare_server()
+  create_local_mml(project)
   create_xml(project)
   deploy(project)
 
