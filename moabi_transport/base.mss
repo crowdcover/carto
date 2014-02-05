@@ -1,4 +1,4 @@
-//transport
+//base
 @forest_green: #79750A;
 @wood_brown: #976A2F;
 @muted_blue: #7FA67A;
@@ -51,18 +51,11 @@ Map { buffer-size: 512; }
 #protected {
   polygon-opacity: 0;
   polygon-fill: @d_green;
-  polygon-smooth: 1;
-  [zoom > 10]{ 
-    //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/large_stripe_d_green.png');
-    polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/small.png');
-    polygon-pattern-opacity: @pattern-opacity;
-    polygon-pattern-alignment: global;
-    polygon-pattern-smooth: 1;
-  }
-  [zoom <= 10]{ 
+  polygon-smooth: 1; 
+  [zoom <= 18]{ 
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/large_stripe_d_green.png');
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/small.png');
-    polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_m_gray_#999999/small.png');
+    polygon-pattern-file: url('../img/stripe_m_gray_#999999/small.png');
     polygon-pattern-opacity: @pattern-opacity;
     polygon-pattern-alignment: global;
     polygon-pattern-smooth: 1;
@@ -70,7 +63,7 @@ Map { buffer-size: 512; }
   [zoom <= 6]{ 
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/small_stripe_d_green.png');
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/ex_small.png');
-    polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_m_gray_#999999/ex_small.png');
+    polygon-pattern-file: url('../img/stripe_m_gray_#999999/ex_small.png');
     polygon-pattern-opacity: @pattern-opacity;
     polygon-pattern-alignment: global;
     polygon-pattern-smooth: 1;
@@ -340,5 +333,6 @@ Map { buffer-size: 512; }
   [zoom = 9]{ line-width: 0.7; }
   [zoom >= 10]{ line-width:0.8; }
 }
+
 
 
