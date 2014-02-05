@@ -27,7 +27,7 @@
 @red: #c02535; //#C1404B;
 @maroon: #6B292B;
 
-Map { buffer-size: 512; }
+Map { background-color: white; buffer-size: 256; }
 
 #redd {
   polygon-opacity:0.6;
