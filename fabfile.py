@@ -49,7 +49,7 @@ def deploy(project):
   # Stop renderd.
   run('sudo /etc/init.d/renderd stop')
   # Remove existing tiles.
-  run('rm -rf /var/lib/mod_tile/%s' % project)
+  run('sudo rm -rf /var/lib/mod_tile/%s' % project)
   # Start renderd.
   run('sudo /etc/init.d/renderd start')
   # Restart apache.
