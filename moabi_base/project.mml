@@ -54,7 +54,7 @@
         10.000416787708337
       ],
       "id": "terrain_highzoom",
-      "class": "terrain",
+      "class": "",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_hillshade.tif",
         "band": "1",
@@ -66,7 +66,8 @@
         "band": "1",
         "estimate_extent": "true"
       },
-      "name": "terrain_highzoom"
+      "name": "terrain_highzoom",
+      "layer": null
     },
     {
       "geometry": "raster",
@@ -79,7 +80,7 @@
       "id": "facet",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/world_bank/extractives/drc/FACET/map.tif",
+        "file": "/Users/jamesconkling/Documents/Data/environment/facet/map.tif",
         "band": "1",
         "estimate_extent": "true"
       },
@@ -89,7 +90,8 @@
         "band": "1",
         "estimate_extent": "true"
       },
-      "name": "facet"
+      "name": "facet",
+      "layer": null
     },
     {
       "geometry": "polygon",
