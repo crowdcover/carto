@@ -35,7 +35,7 @@ def update_cron(project):
   # Update crontab
   with settings(hide('warnings', 'stdout'), warn_only=True):
     current = sudo('crontab -u sajjad -l')
-  new = current+' | /home/sajjad/src/mod_tile/render_expired --map=%s --min-zoom=8 --touch-from=10 >/dev/null' % project
+  new = current+'cat /home/sajjad/expire.list | /home/sajjad/src/mod_tile/render_expired --map=%s --min-zoom=8 --touch-from=10 >/dev/null;' % project
   run("echo '%s'|sudo crontab -u sajjad -" % new)
 
 def copy_img():
