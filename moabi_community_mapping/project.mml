@@ -1,0 +1,105 @@
+{
+  "bounds": [
+    18.827,
+    -0.5978,
+    18.8559,
+    -0.5896
+  ],
+  "center": [
+    18.8428,
+    -0.5934,
+    16
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "raster",
+      "extent": [
+        9.999583454395179,
+        -15.000416545624999,
+        45.00041678772851,
+        10.000416787708337
+      ],
+      "id": "terrain",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_hillshade.tif",
+        "band": "1",
+        "estimate_extent": "true"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1",
+        "estimate_extent": "true"
+      },
+      "name": "terrain",
+      "status": "off"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        11.101065418106307,
+        -14.029423658559,
+        31.923889794630075,
+        5.395932176368847
+      ],
+      "id": "facet",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/environment/facet/map.tif",
+        "band": "1",
+        "estimate_extent": "true"
+      },
+      "layer": null,
+      "srs-name": "custom",
+      "srs": "+proj=sinu +lon_0=20 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs",
+      "advanced": {
+        "band": "1",
+        "estimate_extent": "true"
+      },
+      "name": "facet",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -77.01841913669675,
+        -12.393698444856394,
+        30.048532347419965,
+        38.91296889756999
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT (tags->'type') AS type, way FROM planet_osm_point WHERE (tags->'project') = 'community_mapping') AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8573651.2,-1390546.93,3344987.32,4709212.77",
+        "dbname": "moabi",
+        "id": "excites",
+        "project": "moabi_community_mapping",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "excites",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "excites"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Community Mapping",
+  "description": "",
+  "attribution": ""
+}
