@@ -41,8 +41,7 @@
         "band": "1",
         "estimate_extent": "true"
       },
-      "name": "terrain",
-      "status": "off"
+      "name": "terrain"
     },
     {
       "geometry": "raster",
@@ -66,8 +65,7 @@
         "band": "1",
         "estimate_extent": "true"
       },
-      "name": "facet",
-      "status": "off"
+      "name": "facet"
     },
     {
       "geometry": "point",

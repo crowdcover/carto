@@ -81,7 +81,7 @@
       "id": "facet",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/world_bank/extractives/drc/FACET/map.tif",
+        "file": "/Users/jamesconkling/Documents/Data/environment/facet/map.tif",
         "band": "1",
         "estimate_extent": "true"
       },
@@ -92,7 +92,8 @@
         "estimate_extent": "true"
       },
       "name": "facet",
-      "status": "off"
+      "status": "off",
+      "layer": null
     },
     {
       "geometry": "polygon",
