@@ -117,7 +117,6 @@ Map { background-color: white; buffer-size: 256; }
 
 #admin0 {
   line-color: @admin_dark;
-  line-smooth: 1;
   line-join: round;
   line-cap: round;
   [zoom <= 4]{ line-width: 0.8; }
@@ -130,15 +129,6 @@ Map { background-color: white; buffer-size: 256; }
   [zoom = 11]{ line-width: 1.7; }
   [zoom >= 12]{ line-width: 1.8; }
 }
-
-/*
-#admin0::DRC {
-  [adm0_a3_l = "COD"],[adm0_a3_r = "COD"]{
-    line-opacity: 0.6;
-    line-width:0.9;
-    line-color:@admin_dark;
-  }
-}*/
 
 #admin1 [adm0_a3 = 'COD']{
   line-color: @admin_light;
@@ -167,7 +157,6 @@ Map { background-color: white; buffer-size: 256; }
   polygon-fill: @shadow;
   polygon-opacity: @shadow_opacity;
   polygon-comp-op: multiply;
-  polygon-smooth: 1;
 }
 
 #cities [ADM0NAME = 'Congo (Kinshasa)']{
@@ -253,43 +242,6 @@ Map { background-color: white; buffer-size: 256; }
     [SCALERANK=10] { text-size: 14; text-character-spacing:1; }
   }
 }
-
-/**************** RAINFOREST ***************************/
-@nodata: transparent;
-@nonforest: transparent;
-
-@facet_water: transparent;
-@woodland: transparent;
-@primary:  rgba(110,119,50, 0.6);
-@secondary: rgba(110,119,50, 0.6); //rgba(186,198,97, 0.6);
-@primary_gray: rgba(0,0,0,0.3);
-@secondary_gray: rgba(0,0,0,0.2);
-
-@loss00_05: transparent;
-@loss05_10: transparent; 
-
-#facet {
-  //image-filters:agg-stack-blur(1,1);
-  raster-opacity:0.6;
-  raster-scaling:lanczos;
-  raster-comp-op: multiply;
-  raster-colorizer-default-mode: exact;
-  raster-colorizer-default-color: transparent;
-  raster-colorizer-stops: 
-    stop(0, @nodata)
-    stop(1, @nonforest)
-    stop(2, @facet_water)
-    stop(3, @nodata)
-    stop(4, @woodland)
-    stop(5, @primary_gray)
-    stop(6, @secondary_gray)
-    stop(7, @loss00_05)
-    stop(8, @loss00_05)
-    stop(9, @loss00_05)
-    stop(10, @loss05_10)
-    stop(11, @loss05_10)
-    stop(12, @loss05_10)
-  }
 
 
 /**************** Terrain ***************************/
