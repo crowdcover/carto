@@ -16,11 +16,11 @@
 @d_orange: #d8912e;
 @l_yellow: #fae78f;
 
-@water: #333333;
+@water: #222;
 @admin_dark: #222222;
 @admin_light: #808080;
 @shadow: #000000;
-@shadow_opacity: 0.6;
+@shadow_opacity: 0.7;
 
 @orange: #E98017;
 @yellow: #f1dd06; //#E7D500;
@@ -82,41 +82,6 @@ Map { background-color: white; buffer-size: 256; }
   [zoom >= 10]{ line-width:0.8; }
 }
 
-/**************** RAINFOREST ***************************/
-@nodata: transparent;
-@nonforest: transparent;
-
-@facet_water: transparent;
-@woodland: transparent;
-@primary: rgba(0,0,0,0.3); //rgba(110,119,50, 0.6);
-@secondary: rgba(0,0,0,0.2);//rgba(110,119,50, 0.6); //rgba(186,198,97, 0.6);
-
-@loss00_05: transparent;
-@loss05_10: transparent; 
-
-#facet {
-  //image-filters:agg-stack-blur(1,1);
-  raster-opacity:0.6;
-  raster-scaling:lanczos;
-  raster-comp-op: multiply;
-  raster-colorizer-default-mode: exact;
-  raster-colorizer-default-color: transparent;
-  raster-colorizer-stops: 
-    stop(0, @nodata)
-    stop(1, @nonforest)
-    stop(2, @facet_water)
-    stop(3, @nodata)
-    stop(4, @woodland)
-    stop(5, @primary)
-    stop(6, @secondary)
-    stop(7, @loss00_05)
-    stop(8, @loss00_05)
-    stop(9, @loss00_05)
-    stop(10, @loss05_10)
-    stop(11, @loss05_10)
-    stop(12, @loss05_10)
-  }
-
 
 /**************** Rivers **************************/
 /*
@@ -151,16 +116,18 @@ Map { background-color: white; buffer-size: 256; }
 @label_halo: rgba(255,255,255,.55);
 
 #admin0 {
-  line-opacity: 0.8;
   line-color: @admin_dark;
-  [zoom <= 4]{ line-width: 0.5; }
-  [zoom = 5]{ line-width: 0.6; }
-  [zoom = 6]{ line-width: 0.7; }
-  [zoom = 7]{ line-width: 0.85; }
-  [zoom = 8]{ line-width: 1.0; }
-  [zoom = 9]{ line-width: 1.2; }
-  [zoom = 10]{ line-width: 1.4; }
-  [zoom = 11]{ line-width: 1.6; }
+  line-smooth: 1;
+  line-join: round;
+  line-cap: round;
+  [zoom <= 4]{ line-width: 0.8; }
+  [zoom = 5]{ line-width: 1.0; }
+  [zoom = 6]{ line-width: 1.2; }
+  [zoom = 7]{ line-width: 1.3; }
+  [zoom = 8]{ line-width: 1.4; }
+  [zoom = 9]{ line-width: 1.5; }
+  [zoom = 10]{ line-width: 1.6; }
+  [zoom = 11]{ line-width: 1.7; }
   [zoom >= 12]{ line-width: 1.8; }
 }
 
@@ -175,6 +142,7 @@ Map { background-color: white; buffer-size: 256; }
 
 #admin1 [adm0_a3 = 'COD']{
   line-color: @admin_light;
+  line-smooth: 1;
   [zoom <= 4]{ line-width: 0.3; }
   [zoom = 5]{ line-width: 0.4; }
   [zoom = 6]{ line-width: 0.55; }
@@ -199,9 +167,7 @@ Map { background-color: white; buffer-size: 256; }
   polygon-fill: @shadow;
   polygon-opacity: @shadow_opacity;
   polygon-comp-op: multiply;
-  line-opacity: 0.8;
-  line-width:0.5;
-  line-color:@admin_dark;
+  polygon-smooth: 1;
 }
 
 #cities [ADM0NAME = 'Congo (Kinshasa)']{
@@ -288,28 +254,198 @@ Map { background-color: white; buffer-size: 256; }
   }
 }
 
+/**************** RAINFOREST ***************************/
+@nodata: transparent;
+@nonforest: transparent;
 
-/**************** Terrain ***************************/
-#terrain_highzoom [zoom >= 6]{
+@facet_water: transparent;
+@woodland: transparent;
+@primary:  rgba(110,119,50, 0.6);
+@secondary: rgba(110,119,50, 0.6); //rgba(186,198,97, 0.6);
+@primary_gray: rgba(0,0,0,0.3);
+@secondary_gray: rgba(0,0,0,0.2);
+
+@loss00_05: transparent;
+@loss05_10: transparent; 
+
+#facet {
+  //image-filters:agg-stack-blur(1,1);
   raster-opacity:0.6;
   raster-scaling:lanczos;
-  raster-colorizer-default-mode: linear;
+  raster-comp-op: multiply;
+  raster-colorizer-default-mode: exact;
   raster-colorizer-default-color: transparent;
   raster-colorizer-stops: 
-    stop(0, #000)
-    stop(170, rgb(170,170,170))
-    stop(180, #fff);
+    stop(0, @nodata)
+    stop(1, @nonforest)
+    stop(2, @facet_water)
+    stop(3, @nodata)
+    stop(4, @woodland)
+    stop(5, @primary_gray)
+    stop(6, @secondary_gray)
+    stop(7, @loss00_05)
+    stop(8, @loss00_05)
+    stop(9, @loss00_05)
+    stop(10, @loss05_10)
+    stop(11, @loss05_10)
+    stop(12, @loss05_10)
   }
 
-#terrain [zoom < 6]{
-  raster-opacity:0.6;
-  raster-scaling:lanczos;
+
+/**************** Terrain ***************************/
+#hillshade [zoom <= 6]{
+  raster-opacity: 0.8;
+  raster-scaling: lanczos;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
   raster-colorizer-stops: 
     stop(0, #000)
     stop(185, rgb(185,185,185))
     stop(207, #fff);
+}
+
+#hillshade_highzoom [zoom >= 13]{
+  raster-scaling:lanczos;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops: 
+    stop(0, #000)
+    stop(170, rgb(170,170,170)) 
+    stop(180, #fff);
+  [zoom = 13]{ raster-opacity: 0.2; }
+  [zoom = 14]{ raster-opacity: 0.3; }
+  [zoom = 15]{ raster-opacity: 0.4; }
+  [zoom >= 16]{ raster-opacity: 0.5; }
+}
+
+#slope [zoom >= 5]{
+  raster-scaling: lanczos;
+  raster-comp-op: multiply;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  [zoom >= 5]{
+    raster-opacity: 0.6;
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(60, rgb(50, 50, 50))
+  }
+  [zoom >= 7]{
+    raster-opacity: 1;
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(60, rgb(0, 0, 0))
+  }
+  [zoom = 10]{
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(10, rgb(200, 200, 200))
+      stop(60, rgb(0, 0, 0))
+  }
+  [zoom = 11]{
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(10, rgb(190, 190, 190))
+      stop(60, rgb(0, 0, 0))
+  }
+  [zoom = 12]{
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(10, rgb(180, 180, 180))
+      stop(60, rgb(0, 0, 0))
+  }
+  [zoom = 13]{
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(10, rgb(170, 170, 170))
+      stop(60, rgb(0, 0, 0))
+  }
+  [zoom = 14]{
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(10, rgb(165, 165, 165))
+      stop(60, rgb(0, 0, 0))
+  }
+  [zoom = 15]{
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(10, rgb(160, 160, 160))
+      stop(60, rgb(0, 0, 0))
+  }
+  [zoom >= 16]{
+    raster-colorizer-stops: 
+      stop(0, rgb(255, 255, 255))
+      stop(10, rgb(150, 150, 150))
+      stop(60, rgb(0, 0, 0))
+  }
+}
+
+
+/************** Global Forest Cover ******************/
+@sat10: 100;
+@sat11: 36;
+@sat12: 30;
+@sat13: 26;
+@sat14: 18;
+@sat15: 16;
+
+#gfc_10N,
+#gfc_00N,
+#gfc_10S {
+  raster-opacity:1;
+  raster-scaling:lanczos;
+  raster-comp-op: multiply;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  //image-filters:agg-stack-blur(5,5);
+  [zoom < 6]{
+    raster-colorizer-stops:
+      stop(30, desaturate(rgba(186, 198, 97, 0), @sat10))
+      stop(70, desaturate(rgba(186, 198, 97, 0.3), @sat10))
+      stop(90, desaturate(rgba(110, 119, 50, 0), @sat10))
+      stop(100, desaturate(rgba(110, 119, 50, 0.3), @sat10))
+  }
+  [zoom >= 6]{
+    raster-colorizer-stops:
+      stop(30, desaturate(rgba(186, 198, 97, 0), @sat10))
+      stop(70, desaturate(rgba(186, 198, 97, 0.2), @sat10))
+      stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat10))
+      stop(100, desaturate(rgba(110, 119, 50, 0.3), @sat10))
+  }
+  [zoom = 11]{
+    raster-colorizer-stops:
+      stop(30, desaturate(rgba(186, 198, 97, 0), @sat11))
+      stop(70, desaturate(rgba(186, 198, 97, 0.2), @sat11))
+      stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat11))
+      stop(100, desaturate(rgba(110, 119, 50, 0.3), @sat11))
+  }
+  [zoom = 12]{
+    raster-colorizer-stops:
+      stop(30, desaturate(rgba(186, 198, 97, 0), @sat12))
+      stop(70, desaturate(rgba(186, 198, 97, 0.3), @sat12))
+      stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat12))
+      stop(100, desaturate(rgba(110, 119, 50, 0.3), @sat12))
+  }
+  [zoom = 13]{
+    raster-colorizer-stops:
+      stop(30, desaturate(rgba(186, 198, 97, 0), @sat13))
+      stop(70, desaturate(rgba(186, 198, 97, 0.3), @sat13))
+      stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat13))
+      stop(100, desaturate(rgba(110, 119, 50, 0.4), @sat13))
+  }
+  [zoom = 14]{
+    raster-colorizer-stops:
+      stop(30, desaturate(rgba(186, 198, 97, 0), @sat14))
+      stop(70, desaturate(rgba(186, 198, 97, 0.4), @sat14))
+      stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat14))
+      stop(100, desaturate(rgba(110, 119, 50, 0.4), @sat14))
+  }
+  [zoom >= 15]{
+    raster-colorizer-stops:
+      stop(30, desaturate(rgba(186, 198, 97, 0), @sat15))
+      stop(70, desaturate(rgba(186, 198, 97, 0.4), @sat15))
+      stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat15))
+      stop(100, desaturate(rgba(110, 119, 50, 0.4), @sat15))
+  }
 }
 
 
@@ -333,6 +469,3 @@ Map { background-color: white; buffer-size: 256; }
   [zoom = 9]{ line-width: 0.7; }
   [zoom >= 10]{ line-width:0.8; }
 }
-
-
-

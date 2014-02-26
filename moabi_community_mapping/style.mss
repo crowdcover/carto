@@ -123,7 +123,16 @@
     [zoom <= 16]{ marker-transform: "scale(0.14)"; }
     [zoom = 17]{ marker-transform: "scale(0.16)"; }
     [zoom >= 18]{ marker-transform: "scale(0.2)"; }
-  }
+  }/*
+  ::shadow{
+    marker-allow-overlap: true;
+    marker-fill: black;
+    marker-opacity: 0;
+    image-filters: agg-stack-blur(5,5);
+    [zoom <= 16]{ marker-width: 12; }
+    [zoom = 17]{ marker-width: 15; }
+    [zoom >= 18]{ marker-width: 20; }
+  }*/
 }
 
 
