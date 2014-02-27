@@ -331,6 +331,34 @@ Map { background-color: white; buffer-size: 256; }
   }
 }
 
+#contour_25 [zoom >= 9]{
+  line-color: #4a352c;
+  line-comp-op: multiply;
+  line-smooth: 1;
+  [zoom = 9]{ line-width: 0.05; }
+  [zoom = 10]{ line-width: 0.1; }
+  [zoom = 11]{ line-width: 0.15; line-opacity: 0.8; }
+  [zoom = 12]{ line-width: 0.2; line-opacity: 0.7; }
+  [zoom = 13]{ line-width: 0.25; line-opacity: 0.6; }
+  [zoom = 14]{ line-width: 0.3; line-opacity: 0.5; }
+  [zoom = 15]{ line-width: 0.35; line-opacity: 0.4; }
+  [zoom = 16]{ line-width: 0.4; line-opacity: 0.3; }
+  [zoom = 17]{ line-width: 0.45; line-opacity: 0.2; }
+  [zoom >= 18]{ line-width: 0.5; line-opacity: 0.1; }
+  [C100 = 100]{
+    [zoom = 9]{ line-width: 0.1; }
+    [zoom = 10]{ line-width: 0.2; }
+    [zoom >= 11]{ line-width: 0.25; }
+    [zoom = 12]{ line-width: 0.3; }
+    [zoom = 13]{ line-width: 0.35; }
+    [zoom = 14]{ line-width: 0.4; }
+    [zoom = 15]{ line-width: 0.5; }
+    [zoom = 16]{ line-width: 0.6; }
+    [zoom = 17]{ line-width: 0.7; }
+    [zoom >= 18]{ line-width: 0.8; }
+  }
+}
+
 
 /************** Global Forest Cover ******************/
 @sat10: 100;
@@ -382,21 +410,21 @@ Map { background-color: white; buffer-size: 256; }
       stop(30, desaturate(rgba(186, 198, 97, 0), @sat13))
       stop(70, desaturate(rgba(186, 198, 97, 0.3), @sat13))
       stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat13))
-      stop(100, desaturate(rgba(110, 119, 50, 0.4), @sat13))
+      stop(100, desaturate(rgba(142, 158, 42, 0.3), @sat13))
   }
   [zoom = 14]{
     raster-colorizer-stops:
       stop(30, desaturate(rgba(186, 198, 97, 0), @sat14))
       stop(70, desaturate(rgba(186, 198, 97, 0.4), @sat14))
       stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat14))
-      stop(100, desaturate(rgba(110, 119, 50, 0.4), @sat14))
+      stop(100, desaturate(rgba(142, 158, 42, 0.3), @sat14))
   }
   [zoom >= 15]{
     raster-colorizer-stops:
       stop(30, desaturate(rgba(186, 198, 97, 0), @sat15))
       stop(70, desaturate(rgba(186, 198, 97, 0.4), @sat15))
       stop(90, desaturate(rgba(110, 119, 50, 0.1), @sat15))
-      stop(100, desaturate(rgba(110, 119, 50, 0.4), @sat15))
+      stop(100, desaturate(rgba(142, 158, 42, 0.3), @sat15))
   }
 }
 

@@ -161,29 +161,26 @@
       "name": "gfc_10N"
     },
     {
-      "geometry": "raster",
+      "geometry": "linestring",
       "extent": [
-        11.101065418106307,
-        -14.029423658559,
-        31.923889794630075,
-        5.395932176368847
+        11.670311897617994,
+        -14.457671056032659,
+        32.26501837351091,
+        6.3749185180001
       ],
-      "id": "facet",
+      "id": "contour_25",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/environment/facet/map.tif",
-        "band": "1",
-        "estimate_extent": "true"
+        "file": "/Users/jamesconkling/Documents/Data/regions/drc_contour_25_resampled_18k/contour_gte1500m.shp",
+        "id": "contour_25",
+        "project": "moabi_base",
+        "srs": ""
       },
-      "srs-name": "custom",
-      "srs": "+proj=sinu +lon_0=20 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs",
-      "advanced": {
-        "band": "1",
-        "estimate_extent": "true"
-      },
-      "name": "facet",
       "layer": null,
-      "status": "off"
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "contour_25"
     },
     {
       "geometry": "polygon",
