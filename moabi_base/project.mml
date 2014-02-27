@@ -224,27 +224,6 @@
     {
       "geometry": "linestring",
       "extent": [
-        -139.0602066219999,
-        -49.25087001999992,
-        178.448622268,
-        81.12853131600008
-      ],
-      "id": "admin1",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
-        "id": "admin1",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "admin1"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
         -141.00554863899987,
         -55.120923766999944,
         140.97762699400005,
@@ -306,8 +285,28 @@
       "srs-name": "custom",
       "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
       "advanced": {},
-      "name": "protected",
-      "status": "off"
+      "name": "protected"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -139.0602066219999,
+        -49.25087001999992,
+        178.448622268,
+        81.12853131600008
+      ],
+      "id": "admin1",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
+        "id": "admin1",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "admin1"
     },
     {
       "geometry": "point",
@@ -325,8 +324,7 @@
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
-      "name": "cities",
-      "status": "off"
+      "name": "cities"
     },
     {
       "geometry": "linestring",
@@ -353,8 +351,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "redd",
-      "status": "off"
+      "name": "redd"
     },
     {
       "extent": [

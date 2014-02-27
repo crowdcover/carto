@@ -29,24 +29,7 @@
 
 Map { background-color: white; buffer-size: 256; }
 
-#redd {
-  polygon-opacity:0.6;
-  polygon-comp-op: multiply;
-  polygon-fill:@l_green;
-  line-color:darken(@l_green, 50%);
-  line-opacity:1;
-  line-join: round;
-  [zoom <= 3]{ line-width: 0.3; }
-  [zoom = 4]{ line-width: 0.4; }
-  [zoom = 5]{ line-width: 0.5; }
-  [zoom = 6]{ line-width: 0.6; }
-  [zoom = 7]{ line-width: 0.7; }
-  [zoom = 8]{ line-width: 0.8; }
-  [zoom = 9]{ line-width: 0.9; }
-  [zoom >= 10]{ line-width:2.0; }
-}
-
-@pattern-opacity: 1;
+@pattern-opacity: 0.8;
 
 #protected {
   polygon-opacity: 0;
@@ -57,6 +40,7 @@ Map { background-color: white; buffer-size: 256; }
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/small.png');
     polygon-pattern-file: url('../img/stripe_m_gray_#999999/small.png');
     polygon-pattern-opacity: @pattern-opacity;
+    polygon-pattern-comp-op: multiply;
     polygon-pattern-alignment: global;
     polygon-pattern-smooth: 1;
   }
@@ -65,6 +49,7 @@ Map { background-color: white; buffer-size: 256; }
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/ex_small.png');
     polygon-pattern-file: url('../img/stripe_m_gray_#999999/ex_small.png');
     polygon-pattern-opacity: @pattern-opacity;
+    polygon-pattern-comp-op: multiply;
     polygon-pattern-alignment: global;
     polygon-pattern-smooth: 1;
   }
@@ -107,13 +92,13 @@ Map { background-color: white; buffer-size: 256; }
 //@sans: "Helvetica Neue Regular", "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin";
 //@sans_bold:"Helvetica Neue Bold";
 
-@sans: "DejaVu Sans Condensed", "DejaVu Sans Book"; 
+@sans: "DejaVu Sans Book", "DejaVu Sans Condensed"; 
 @sans_bold: "DejaVu Sans Condensed Bold", "DejaVu Sans Bold";
 
 @admin0_label: #222222;
 @admin1_label: #747474;
-@city_label: #606060;
-@label_halo: rgba(255,255,255,.55);
+@city_label: #505050;
+@label_halo: rgba(250,250,250,.4);
 
 #admin0 {
   line-color: @admin_dark;
@@ -133,15 +118,16 @@ Map { background-color: white; buffer-size: 256; }
 #admin1 [adm0_a3 = 'COD']{
   line-color: @admin_light;
   line-smooth: 1;
+  line-comp-op: multiply;
   [zoom <= 4]{ line-width: 0.3; }
   [zoom = 5]{ line-width: 0.4; }
   [zoom = 6]{ line-width: 0.55; }
   [zoom = 7]{ line-width: 0.7; }
   [zoom = 8]{ line-width: 0.8; }
-  [zoom = 9]{ line-width: 0.9; }
-  [zoom = 10]{ line-width: 1.0; }
-  [zoom = 11]{ line-width: 1.2; }
-  [zoom >= 12]{ line-width: 1.4; }
+  [zoom = 9]{ line-width: 1.0; }
+  [zoom = 10]{ line-width: 1.2; }
+  [zoom = 11]{ line-width: 1.4; }
+  [zoom >= 12]{ line-width: 1.6; }
 }
 
 #ocean {
@@ -157,6 +143,8 @@ Map { background-color: white; buffer-size: 256; }
   polygon-fill: @shadow;
   polygon-opacity: @shadow_opacity;
   polygon-comp-op: multiply;
+  line-color: @shadow;
+  line-width: 0.1;
 }
 
 #cities [ADM0NAME = 'Congo (Kinshasa)']{
@@ -172,26 +160,26 @@ Map { background-color: white; buffer-size: 256; }
     text-face-name:@sans;
     text-fill:@city_label;
     text-size:9;
-    text-halo-radius:1.2;
+    text-halo-radius:1.4;
     text-halo-fill: @label_halo;
     text-dy:-5;
-    marker-width:3;
+    marker-width:2;
     marker-fill:@city_label;
     marker-comp-op:multiply;
   }
   [zoom=5] {
-    [SCALERANK<3] { text-size: 13; }
+    [SCALERANK<3] { text-size: 12; text-character-spacing: 1.2; }
     [SCALERANK=3] { text-size: 12; }
     [SCALERANK=4] { text-size: 11; }
   }
   [zoom=6] {
-    [SCALERANK<3] { text-size: 14; }
+    [SCALERANK<3] { text-size: 13; text-character-spacing: 1.2; }
     [SCALERANK=3] { text-size: 13; }
     [SCALERANK=4] { text-size: 12; }
     [SCALERANK=5] { text-size: 11; }
   }
   [zoom=7] {
-    [SCALERANK<3] { text-size: 15; }
+    [SCALERANK<3] { text-size: 15; text-character-spacing: 1.2; }
     [SCALERANK=3] { text-size: 14; }
     [SCALERANK=4] { text-size: 13; }
     [SCALERANK=5] { text-size: 12; }
@@ -199,7 +187,7 @@ Map { background-color: white; buffer-size: 256; }
     [SCALERANK=7] { text-size: 11; }
   }
   [zoom=8] {
-    [SCALERANK<3] { text-size: 15; }
+    [SCALERANK<3] { text-size: 15; text-character-spacing: 1.3; }
     [SCALERANK=3] { text-size: 15; }
     [SCALERANK=4] { text-size: 14; }
     [SCALERANK=5] { text-size: 14; }
@@ -209,7 +197,7 @@ Map { background-color: white; buffer-size: 256; }
     [SCALERANK=9] { text-size: 11; }
   }
   [zoom=9] {
-    [SCALERANK<3] { text-size: 16; }
+    [SCALERANK<3] { text-size: 16; text-character-spacing: 1.3; }
     [SCALERANK=3] { text-size: 16; }
     [SCALERANK=4] { text-size: 15; }
     [SCALERANK=5] { text-size: 15; }
@@ -246,7 +234,7 @@ Map { background-color: white; buffer-size: 256; }
 
 /**************** Terrain ***************************/
 #hillshade [zoom <= 6]{
-  raster-opacity: 0.8;
+  raster-opacity: 0.6;
   raster-scaling: lanczos;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
@@ -448,4 +436,21 @@ Map { background-color: white; buffer-size: 256; }
   [zoom = 8]{ line-width: 0.6; }
   [zoom = 9]{ line-width: 0.7; }
   [zoom >= 10]{ line-width:0.8; }
+}
+
+#redd {
+  polygon-opacity:0.6;
+  polygon-comp-op: multiply;
+  polygon-fill:@l_green;
+  line-color:darken(@l_green, 50%);
+  line-opacity:1;
+  line-join: round;
+  [zoom <= 3]{ line-width: 0.3; }
+  [zoom = 4]{ line-width: 0.4; }
+  [zoom = 5]{ line-width: 0.5; }
+  [zoom = 6]{ line-width: 0.6; }
+  [zoom = 7]{ line-width: 0.7; }
+  [zoom = 8]{ line-width: 0.8; }
+  [zoom = 9]{ line-width: 0.9; }
+  [zoom >= 10]{ line-width:2.0; }
 }
