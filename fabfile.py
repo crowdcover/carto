@@ -1,4 +1,4 @@
-from fabric.api import run, cd, settings, hide, sudo
+from fabric.api import run, cd, settings, hide
 from fabric.contrib import files
 from string import Template
 
@@ -11,19 +11,19 @@ def create_xml(project):
   # Create mapnik xml from carto.
   # Update the mapnil-style directory with the new xml.
   with cd('carto'):
-    run('/home/sajjad/node_modules/carto/bin/carto %s/project.local.mml > /home/moabi/%s.xml' % (project, project))
+    run('/home/moabi/node_modules/carto/bin/carto %s/project.local.mml > /home/moabi/%s.xml' % (project, project))
     run('mv /home/moabi/%s.xml /home/moabi/src/mapnik-style/%s.xml' % (project, project))
 
 def create_local_mml(project):
   # Use CartoCC and create project.local.mml
   with cd('carto/%s' % project):
-    run('/home/mikel/bin/CartoCC/bin/cartocc project.mml /home/mikel/bin/CartoCC/moabi.json > project.local.mml')
+    run('/home/moabi/CartoCC/bin/cartocc project.mml /home/moabi/CartoCC/moabi.json > project.local.mml')
 
 def update_renderd_conf(project):
   # Update renderd.conf with the config for the new tileset.
   # URI=/redd/
   # TILEDIR=/var/lib/mod_tile
-  # XML=/home/sajjad/src/mapnik-style/REDD.xml
+  # XML=/home/moabi/src/mapnik-style/REDD.xml
   # HOST=localhost
   # TILESIZE=256
   with cd('/usr/local/etc/'):
@@ -34,9 +34,9 @@ def update_renderd_conf(project):
 def update_cron(project):
   # Update crontab
   with settings(hide('warnings', 'stdout'), warn_only=True):
-    current = sudo('crontab -u sajjad -l')
-  new = current+'cat /home/sajjad/expire.list | /home/sajjad/src/mod_tile/render_expired --map=%s --min-zoom=8 --touch-from=10 >/dev/null;' % project
-  run("echo '%s'|sudo crontab -u sajjad -" % new)
+    current = run('crontab -l')
+  new = current+'cat /home/moabi/expire.list | /home/moabi/src/mod_tile/render_expired --map=%s --min-zoom=8 --touch-from=10 >/dev/null;' % project
+  run("echo '%s'|crontab -" % new)
 
 def copy_img():
   with cd('carto'):
