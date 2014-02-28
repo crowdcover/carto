@@ -20,54 +20,6 @@
   ],
   "Layer": [
     {
-      "geometry": "raster",
-      "extent": [
-        9.999583454395179,
-        -15.000416545624999,
-        45.00041678772851,
-        10.000416787708337
-      ],
-      "id": "terrain",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_hillshade.tif",
-        "band": "1",
-        "estimate_extent": "true"
-      },
-      "layer": null,
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {
-        "band": "1",
-        "estimate_extent": "true"
-      },
-      "name": "terrain"
-    },
-    {
-      "geometry": "raster",
-      "extent": [
-        11.101065418106307,
-        -14.029423658559,
-        31.923889794630075,
-        5.395932176368847
-      ],
-      "id": "facet",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/environment/facet/map.tif",
-        "band": "1",
-        "estimate_extent": "true"
-      },
-      "layer": null,
-      "srs-name": "custom",
-      "srs": "+proj=sinu +lon_0=20 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs",
-      "advanced": {
-        "band": "1",
-        "estimate_extent": "true"
-      },
-      "name": "facet"
-    },
-    {
       "geometry": "point",
       "extent": [
         -77.01841913669675,
