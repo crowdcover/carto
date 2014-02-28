@@ -23,14 +23,14 @@
       "geometry": "raster",
       "extent": [
         9.999861111111102,
-        -20.000138888888895,
+        -20.0001388888889,
         40.000138888888884,
         10.000138888888884
       ],
       "id": "lossyear",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/environment/umd_global forest cover/lossyear.tif",
+        "file": "/Users/jamesconkling/Documents/Data/environment/umd_global forest cover/lossyear_3857_bilinear.tif",
         "band": "1"
       },
       "layer": null,

@@ -309,24 +309,6 @@
       "name": "admin1"
     },
     {
-      "geometry": "point",
-      "extent": [
-        -179.58997888396897,
-        -85.051,
-        179.38330358817018,
-        82.48332318035943
-      ],
-      "id": "cities",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
-      },
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "cities"
-    },
-    {
       "geometry": "linestring",
       "extent": [
         -77.0269901424856,
@@ -352,6 +334,24 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "redd"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
+      ],
+      "id": "cities",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "cities"
     },
     {
       "extent": [

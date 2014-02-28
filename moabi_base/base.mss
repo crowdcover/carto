@@ -98,7 +98,7 @@ Map { background-color: white; buffer-size: 256; }
 @admin0_label: #222222;
 @admin1_label: #747474;
 @city_label: #505050;
-@label_halo: rgba(250,250,250,.4);
+@label_halo: rgba(230,230,230,1);
 
 #admin0 {
   line-color: @admin_dark;
