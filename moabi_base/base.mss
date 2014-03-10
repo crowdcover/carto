@@ -148,9 +148,9 @@ Map { background-color: white; buffer-size: 256; }
 }
 
 #cities [ADM0NAME = 'Congo (Kinshasa)']{
-  [SCALERANK<=3][zoom>=5],
-  [SCALERANK=4][zoom>=5],
-  [SCALERANK=5][zoom>=6],
+  //[SCALERANK<=3][zoom>=5],
+  //[SCALERANK<=4][zoom>=5],
+  [SCALERANK<=5][zoom>=6],
   [SCALERANK=6][zoom>=7],
   [SCALERANK=7][zoom>=7],
   [SCALERANK=8][zoom>=8],
@@ -159,73 +159,74 @@ Map { background-color: white; buffer-size: 256; }
     text-name:'[NAMEASCII]';
     text-face-name:@sans;
     text-fill:@city_label;
-    text-size:9;
+    text-size:10;
     text-halo-radius:1.4;
     text-halo-fill: @label_halo;
+    text-character-spacing: 2;
     text-dy:-5;
     marker-width:2;
     marker-fill:@city_label;
     marker-comp-op:multiply;
-  }
+  }/*
   [zoom=5] {
     [SCALERANK<3] { text-size: 12; text-character-spacing: 1.2; }
     [SCALERANK=3] { text-size: 12; }
     [SCALERANK=4] { text-size: 11; }
-  }
+  }*/
   [zoom=6] {
-    [SCALERANK<3] { text-size: 13; text-character-spacing: 1.2; }
-    [SCALERANK=3] { text-size: 13; }
-    [SCALERANK=4] { text-size: 12; }
+    [SCALERANK<3] { text-size: 13; text-character-spacing: 1.3; }
+    [SCALERANK=3] { text-size: 13; text-character-spacing: 1.3; }
+    [SCALERANK=4] { text-size: 12; text-character-spacing: 1.2; }
     [SCALERANK=5] { text-size: 11; }
   }
   [zoom=7] {
-    [SCALERANK<3] { text-size: 15; text-character-spacing: 1.2; }
-    [SCALERANK=3] { text-size: 14; }
-    [SCALERANK=4] { text-size: 13; }
-    [SCALERANK=5] { text-size: 12; }
+    [SCALERANK<3] { text-size: 15; text-character-spacing: 1.3; }
+    [SCALERANK=3] { text-size: 14; text-character-spacing: 1.3; }
+    [SCALERANK=4] { text-size: 13; text-character-spacing: 1.3; }
+    [SCALERANK=5] { text-size: 12; text-character-spacing: 1.2; }
     [SCALERANK=6] { text-size: 11; }
     [SCALERANK=7] { text-size: 11; }
   }
   [zoom=8] {
-    [SCALERANK<3] { text-size: 15; text-character-spacing: 1.3; }
-    [SCALERANK=3] { text-size: 15; }
-    [SCALERANK=4] { text-size: 14; }
-    [SCALERANK=5] { text-size: 14; }
-    [SCALERANK=6] { text-size: 13; }
+    [SCALERANK<3] { text-size: 15; text-character-spacing: 1.4; }
+    [SCALERANK=3] { text-size: 15; text-character-spacing: 1.3; }
+    [SCALERANK=4] { text-size: 14; text-character-spacing: 1.3; }
+    [SCALERANK=5] { text-size: 14; text-character-spacing: 1.2; }
+    [SCALERANK=6] { text-size: 13; text-character-spacing: 1.2; }
     [SCALERANK=7] { text-size: 13; }
     [SCALERANK=8] { text-size: 12; }
     [SCALERANK=9] { text-size: 11; }
   }
   [zoom=9] {
-    [SCALERANK<3] { text-size: 16; text-character-spacing: 1.3; }
-    [SCALERANK=3] { text-size: 16; }
-    [SCALERANK=4] { text-size: 15; }
-    [SCALERANK=5] { text-size: 15; }
-    [SCALERANK=6] { text-size: 14; }
-    [SCALERANK=7] { text-size: 14; }
+    [SCALERANK<3] { text-size: 16; text-character-spacing: 1.4; }
+    [SCALERANK=3] { text-size: 16; text-character-spacing: 1.3; }
+    [SCALERANK=4] { text-size: 15; text-character-spacing: 1.3; }
+    [SCALERANK=5] { text-size: 15; text-character-spacing: 1.3; }
+    [SCALERANK=6] { text-size: 14; text-character-spacing: 1.3; }
+    [SCALERANK=7] { text-size: 14; text-character-spacing: 1.2; }
     [SCALERANK=8] { text-size: 13; }
     [SCALERANK=9] { text-size: 13; }
     [SCALERANK=10] { text-size: 12; }
   }
   [zoom=10] {
-    [SCALERANK<3] { text-size: 16; text-character-spacing:2; }
-    [SCALERANK=3] { text-size: 16; text-character-spacing:2; }
-    [SCALERANK=4] { text-size: 15; text-character-spacing:1; }
-    [SCALERANK=5] { text-size: 15; text-character-spacing:1; }
-    [SCALERANK=6] { text-size: 15; text-character-spacing:1; }
-    [SCALERANK=7] { text-size: 14; }
-    [SCALERANK=8] { text-size: 14; }
+    [SCALERANK<3] { text-size: 16; text-character-spacing:1.8; }
+    [SCALERANK=3] { text-size: 16; text-character-spacing:1.8; }
+    [SCALERANK=4] { text-size: 15; text-character-spacing:1.4; }
+    [SCALERANK=5] { text-size: 15; text-character-spacing:1.4; }
+    [SCALERANK=6] { text-size: 15; text-character-spacing:1.3; }
+    [SCALERANK=7] { text-size: 14; text-character-spacing: 1.3; }
+    [SCALERANK=8] { text-size: 14; text-character-spacing: 1.2; }
     [SCALERANK=9] { text-size: 13; }
     [SCALERANK=10] { text-size: 13; }
   }
   [zoom>10] {
-    [SCALERANK<3] { text-size: 16; text-character-spacing:3; }
-    [SCALERANK=3] { text-size: 16; text-character-spacing:3; }
-    [SCALERANK=4] { text-size: 16; text-character-spacing:3; }
+    [SCALERANK<3] { text-size: 16; text-character-spacing:2.5; }
+    [SCALERANK=3] { text-size: 16; text-character-spacing:2.5; }
+    [SCALERANK=4] { text-size: 16; text-character-spacing:2.5; }
     [SCALERANK=5] { text-size: 15; text-character-spacing:2; }
     [SCALERANK=6] { text-size: 15; text-character-spacing:2; }
-    [SCALERANK=7] { text-size: 15; text-character-spacing:2; }
-    [SCALERANK=8] { text-size: 14; text-character-spacing:1; }
+    [SCALERANK=7] { text-size: 15; text-character-spacing:1.8; }
+    [SCALERANK=8] { text-size: 14; text-character-spacing:1.6; }
     [SCALERANK=9] { text-size: 14; text-character-spacing:1; }
     [SCALERANK=10] { text-size: 14; text-character-spacing:1; }
   }
@@ -319,13 +320,13 @@ Map { background-color: white; buffer-size: 256; }
   }
 }
 
-#contour_25 [zoom >= 9]{
+#contour_20 [zoom >= 9]{
   line-color: #4a352c;
   line-comp-op: multiply;
   line-smooth: 1;
-  [zoom = 9]{ line-width: 0.05; }
-  [zoom = 10]{ line-width: 0.1; }
-  [zoom = 11]{ line-width: 0.15; line-opacity: 0.8; }
+  [zoom = 9]{ line-width: 0.02; }
+  [zoom = 10]{ line-width: 0.08; }
+  [zoom = 11]{ line-width: 0.14; line-opacity: 0.8; }
   [zoom = 12]{ line-width: 0.2; line-opacity: 0.7; }
   [zoom = 13]{ line-width: 0.25; line-opacity: 0.6; }
   [zoom = 14]{ line-width: 0.3; line-opacity: 0.5; }
@@ -334,16 +335,25 @@ Map { background-color: white; buffer-size: 256; }
   [zoom = 17]{ line-width: 0.45; line-opacity: 0.2; }
   [zoom >= 18]{ line-width: 0.5; line-opacity: 0.1; }
   [C100 = 100]{
-    [zoom = 9]{ line-width: 0.1; }
-    [zoom = 10]{ line-width: 0.2; }
-    [zoom >= 11]{ line-width: 0.25; }
-    [zoom = 12]{ line-width: 0.3; }
-    [zoom = 13]{ line-width: 0.35; }
-    [zoom = 14]{ line-width: 0.4; }
-    [zoom = 15]{ line-width: 0.5; }
-    [zoom = 16]{ line-width: 0.6; }
-    [zoom = 17]{ line-width: 0.7; }
-    [zoom >= 18]{ line-width: 0.8; }
+    [zoom = 9]{ line-width: 0.08; }
+    [zoom = 10]{ line-width: 0.15; }
+    [zoom = 11]{ line-width: 0.3; }
+    [zoom = 12]{ line-width: 0.4; }
+    [zoom >= 13]{ 
+      line-width: 0.55; /*
+      text-name: '[ELEV]';
+      text-face-name: @sans;
+      text-size: 8;
+      text-fill: #4a352c;
+      text-halo-fill: #bbb;
+      text-halo-radius: 0.8;
+      text-placement: line; */
+    }
+    [zoom = 14]{ line-width: 0.7; }
+    [zoom = 15]{ line-width: 0.85; }
+    [zoom = 16]{ line-width: 1.0; }
+    [zoom = 17]{ line-width: 1.1; }
+    [zoom >= 18]{ line-width: 1.2; }
   }
 }
 
