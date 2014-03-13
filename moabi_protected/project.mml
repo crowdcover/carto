@@ -1,0 +1,47 @@
+{
+  "bounds": [
+    11.9531,
+    -11.9963,
+    30.4102,
+    5.441
+  ],
+  "center": [
+    22.1045,
+    -2.7455,
+    6
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 18,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.229011154208719,
+        -11.832948194415977,
+        30.257901263305204,
+        5.388336188125172
+      ],
+      "id": "protected",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/PROTECTED AREA/Protected_Area_2013/DRC_Protected_Area_JULY_2013.shp"
+      },
+      "layer": null,
+      "srs-name": "custom",
+      "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
+      "advanced": {},
+      "name": "protected"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Protected Areas",
+  "description": "",
+  "attribution": ""
+}

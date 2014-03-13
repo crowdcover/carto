@@ -33,8 +33,6 @@ Map { background-color: white; buffer-size: 256; }
 
 #protected {
   polygon-opacity: 0;
-  polygon-fill: @d_green;
-  polygon-smooth: 1; 
   [zoom <= 18]{ 
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/large_stripe_d_green.png');
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/small.png');
@@ -44,17 +42,15 @@ Map { background-color: white; buffer-size: 256; }
     polygon-pattern-alignment: global;
     polygon-pattern-smooth: 1;
   }
-  [zoom <= 6]{ 
+  [zoom <= 7]{ 
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/small_stripe_d_green.png');
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/ex_small.png');
     polygon-pattern-file: url('../img/stripe_m_gray_#999999/ex_small.png');
     polygon-pattern-opacity: @pattern-opacity;
     polygon-pattern-comp-op: multiply;
     polygon-pattern-alignment: global;
-    polygon-pattern-smooth: 1;
   }
   line-color:black;
-  line-smooth: 1;
   line-width: 0.6;
   line-opacity:0.4;
   [zoom <= 3]{ line-width: 0.1; }
@@ -325,9 +321,9 @@ Map { background-color: white; buffer-size: 256; }
   line-comp-op: multiply;
   line-smooth: 1;
   [zoom = 9]{ line-width: 0.02; }
-  [zoom = 10]{ line-width: 0.08; }
-  [zoom = 11]{ line-width: 0.14; line-opacity: 0.8; }
-  [zoom = 12]{ line-width: 0.2; line-opacity: 0.7; }
+  [zoom = 10]{ line-width: 0.06; }
+  [zoom = 11]{ line-width: 0.12; line-opacity: 0.8; }
+  [zoom = 12]{ line-width: 0.18; line-opacity: 0.7; }
   [zoom = 13]{ line-width: 0.25; line-opacity: 0.6; }
   [zoom = 14]{ line-width: 0.3; line-opacity: 0.5; }
   [zoom = 15]{ line-width: 0.35; line-opacity: 0.4; }
