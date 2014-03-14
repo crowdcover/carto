@@ -118,15 +118,15 @@
     {
       "geometry": "polygon",
       "extent": [
-        -179.99978348919964,
+        -179.9999999999999,
         -85.051,
         180,
-        83.63381093402977
+        83.63410065300015
       ],
       "id": "countries",
       "class": "",
       "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip"
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_0_countries/ne_10m_admin_0_countries.shp"
       },
       "layer": null,
       "srs-name": "autodetect",
