@@ -15,14 +15,14 @@
 #gfc_10N,
 #gfc_00N,
 #gfc_10S {
-  raster-opacity:1;
+  raster-opacity:0.7;
   //image-filters:agg-stack-blur(5,5);
   raster-scaling: lanczos;
   [zoom >= 12]{ raster-scaling: gaussian; }
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
   raster-colorizer-stops:
-    stop(10, fadeout(@1, 100%))
+    stop(15, fadeout(@1, 100%))
     stop(20, @1)
     stop(50, @2)
     stop(60, @3)
