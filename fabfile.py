@@ -1,6 +1,8 @@
 from fabric.api import run, cd, settings, hide
 from fabric.contrib import files
 from string import Template
+import urllib, urllib2
+import base64
 
 def pull():
   # Pull changes into server.
@@ -54,6 +56,15 @@ def deploy(project):
   run('sudo /etc/init.d/renderd start')
   # Restart apache.
   run('sudo /etc/init.d/apache2 restart')
+
+def add_to_osm(project):
+  url = 'http://localhost:3000/api/0.6/tiles.json'
+  values = dict(code='A', keyid=project, name=project, attribution="Moabi", url="http://tiles.osm.moabi.org/%s/{z}/{x}/{y}.png" % project, subdomains='', base_layer='false')  
+  data = urllib.urlencode(values)
+  req = urllib2.Request(url, data)
+  base64string = base64.encodestring('%s:%s' % ('user', 'password')).replace('\n', '')
+  req.add_header("Authorization", "Basic %s" % base64string) 
+  rsp = urllib2.urlopen(req)
 
 def update(project):
   prepare_server()
