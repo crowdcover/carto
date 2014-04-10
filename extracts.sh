@@ -23,6 +23,6 @@ osmosis --read-xml file=/var/www/planet/planet.latest.osm --tf accept-ways trees
 /home/moabi/osmtogeojson/osmtogeojson oil_palm.osm > oil_palm.geojson
 
 osmosis --read-xml file=/var/www/planet/planet.latest.osm --tf accept-ways highway=proposed --used-node --write-xml highway.osm 
-/home/moabi/osmtogeojson/osmtogeojson highway.osm > highway.geojson
+/home/moabi/osmtogeojson/osmtogeojson highway.osm > road_rehabilitation.geojson
 
 gzip -f *
