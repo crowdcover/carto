@@ -253,7 +253,7 @@
       "id": "lakes",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/WRI_Data/Hydrographie/RDC_hydro_surface_2009.shp",
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
         "id": "lakes",
         "project": "moabi_base",
         "srs": "",
@@ -264,7 +264,8 @@
       "advanced": {
         "encoding": "LATIN1"
       },
-      "name": "lakes"
+      "name": "lakes",
+      "layer": null
     },
     {
       "geometry": "polygon",
@@ -395,7 +396,7 @@
       "id": "rivers_major",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/WRI_Data/Hydrographie/RDC_hydro_surface_2009.shp",
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
         "id": "rivers_major",
         "project": "moabi_base",
         "srs": "",
@@ -407,7 +408,8 @@
         "encoding": "LATIN1"
       },
       "name": "rivers_major",
-      "status": "off"
+      "status": "off",
+      "layer": null
     },
     {
       "geometry": "linestring",

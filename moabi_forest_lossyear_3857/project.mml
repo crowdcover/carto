@@ -30,7 +30,7 @@
       "id": "lossyear",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/environment/umd_global forest cover/lossyear_3857_bilinear.tif",
+        "file": "/Users/jamesconkling/Documents/Data/environment/umd_global forest cover/lossyear_3857_bilinear_ii.tif",
         "band": "1"
       },
       "layer": null,

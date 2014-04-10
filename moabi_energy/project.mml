@@ -13,7 +13,7 @@
   "format": "png",
   "interactivity": false,
   "minzoom": 0,
-  "maxzoom": 30,
+  "maxzoom": 18,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "base.mss",
@@ -30,7 +30,7 @@
         180,
         85.051
       ],
-      "id": "terrain",
+      "id": "hillshade",
       "class": "",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_raster/SR_HR/SR_HR.tif",
@@ -43,7 +43,8 @@
         "band": "1",
         "estimate_extent": "true"
       },
-      "name": "terrain",
+      "name": "hillshade",
+      "layer": null,
       "status": "off"
     },
     {
@@ -54,8 +55,8 @@
         45.00041678772851,
         10.000416787708337
       ],
-      "id": "terrain_highzoom",
-      "class": "terrain",
+      "id": "hillshade_highzoom",
+      "class": "",
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_hillshade.tif",
         "band": "1",
@@ -67,31 +68,56 @@
         "band": "1",
         "estimate_extent": "true"
       },
-      "name": "terrain_highzoom",
+      "name": "hillshade_highzoom",
+      "layer": null,
       "status": "off"
     },
     {
       "geometry": "raster",
       "extent": [
-        11.101065418106307,
-        -14.029423658559,
-        31.923889794630075,
-        5.395932176368847
+        9.999583454395179,
+        -15.000416545624999,
+        45.00041678772851,
+        10.000416787708337
       ],
-      "id": "facet",
+      "id": "slope",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/world_bank/extractives/drc/FACET/map.tif",
+        "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_slope.tif",
         "band": "1",
         "estimate_extent": "true"
       },
-      "srs-name": "custom",
-      "srs": "+proj=sinu +lon_0=20 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs",
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {
         "band": "1",
         "estimate_extent": "true"
       },
-      "name": "facet",
+      "name": "slope",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.671085039409176,
+        -14.458287203724133,
+        32.26490867995168,
+        6.3749185180001
+      ],
+      "id": "contour_20",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/regions/drc_contour_20/contour.shp",
+        "id": "contour_25",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "contour_20",
       "status": "off"
     },
     {
@@ -138,28 +164,6 @@
     {
       "geometry": "linestring",
       "extent": [
-        -139.0602066219999,
-        -49.25087001999992,
-        178.448622268,
-        81.12853131600008
-      ],
-      "id": "admin1",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
-        "id": "admin1",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "admin1",
-      "status": "off"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
         -141.00554863899987,
         -55.120923766999944,
         140.97762699400005,
@@ -190,7 +194,7 @@
       "id": "lakes",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/WRI_Data/Hydrographie/RDC_hydro_surface_2009.shp",
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
         "id": "lakes",
         "project": "moabi_base",
         "srs": "",
@@ -202,6 +206,7 @@
         "encoding": "LATIN1"
       },
       "name": "lakes",
+      "layer": null,
       "status": "off"
     },
     {
@@ -224,25 +229,29 @@
       "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
       "advanced": {},
       "name": "protected",
-      "status": "off"
+      "status": "off",
+      "layer": null
     },
     {
-      "geometry": "point",
+      "geometry": "linestring",
       "extent": [
-        -179.58997888396897,
-        -85.051,
-        179.38330358817018,
-        82.48332318035943
+        -139.0602066219999,
+        -49.25087001999992,
+        178.448622268,
+        81.12853131600008
       ],
-      "id": "cities",
+      "id": "admin1",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
+        "id": "admin1",
+        "project": "moabi_base",
+        "srs": ""
       },
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
-      "name": "cities",
+      "name": "admin1",
       "status": "off"
     },
     {
@@ -271,6 +280,25 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "redd",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
+      ],
+      "id": "cities",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "cities",
       "status": "off"
     },
     {
@@ -312,7 +340,7 @@
       "id": "rivers_major",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/WRI_Data/Hydrographie/RDC_hydro_surface_2009.shp",
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
         "id": "rivers_major",
         "project": "moabi_base",
         "srs": "",
@@ -324,7 +352,8 @@
         "encoding": "LATIN1"
       },
       "name": "rivers_major",
-      "status": "off"
+      "status": "off",
+      "layer": null
     },
     {
       "geometry": "linestring",

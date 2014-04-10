@@ -71,30 +71,6 @@
       "status": "off"
     },
     {
-      "geometry": "raster",
-      "extent": [
-        11.101065418106307,
-        -14.029423658559,
-        31.923889794630075,
-        5.395932176368847
-      ],
-      "id": "facet",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/world_bank/extractives/drc/FACET/map.tif",
-        "band": "1",
-        "estimate_extent": "true"
-      },
-      "srs-name": "custom",
-      "srs": "+proj=sinu +lon_0=20 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs",
-      "advanced": {
-        "band": "1",
-        "estimate_extent": "true"
-      },
-      "name": "facet",
-      "status": "off"
-    },
-    {
       "geometry": "polygon",
       "extent": [
         -179.99999999999994,
@@ -190,7 +166,7 @@
       "id": "lakes",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/WRI_Data/Hydrographie/RDC_hydro_surface_2009.shp",
+        "file": "/Users/jamesconkling/Dropbox/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
         "id": "lakes",
         "project": "moabi_base",
         "srs": "",
@@ -202,7 +178,8 @@
         "encoding": "LATIN1"
       },
       "name": "lakes",
-      "status": "off"
+      "status": "off",
+      "layer": null
     },
     {
       "geometry": "polygon",
@@ -312,12 +289,10 @@
       "id": "rivers_major",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/WRI_Data/Hydrographie/RDC_hydro_surface_2009.shp",
-        "id": "rivers_major",
-        "project": "moabi_base",
-        "srs": "",
+        "file": "/Users/jamesconkling/Dropbox/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
         "encoding": "LATIN1"
       },
+      "layer": null,
       "srs-name": "custom",
       "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
       "advanced": {

@@ -88,8 +88,8 @@ Map { background-color: white; buffer-size: 256; }
 //@sans: "Helvetica Neue Regular", "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin";
 //@sans_bold:"Helvetica Neue Bold";
 
-@sans: "DejaVu Sans Book", "DejaVu Sans Condensed"; 
-@sans_bold: "DejaVu Sans Condensed Bold", "DejaVu Sans Bold";
+@sans: "DejaVu Sans Book", "DejaVu Sans Condensed", "Helvetica CY Plain"; 
+@sans_bold: "DejaVu Sans Condensed Bold", "DejaVu Sans Bold", "Helvetica CY Bold";
 
 @admin0_label: #222222;
 @admin1_label: #747474;
