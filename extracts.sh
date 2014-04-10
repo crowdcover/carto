@@ -25,4 +25,11 @@ osmosis --read-xml file=/var/www/planet/planet.latest.osm --tf accept-ways trees
 osmosis --read-xml file=/var/www/planet/planet.latest.osm --tf accept-ways highway=proposed --used-node --write-xml highway.osm 
 /home/moabi/osmtogeojson/osmtogeojson highway.osm > highway.geojson
 
+ogr2ogr -f GeoJSON protected_area.geojson /home/moabi/dependencies/DRC_Protected_Area_JULY_2013.shp
+
+osmosis --read-xml file=/var/www/planet/planet.latest.osm --tf accept-ways power=line --used-node --write-xml power.osm 
+/home/moabi/osmtogeojson/osmtogeojson power.osm > power.geojson
+
+osmosis --read-xml file=/var/www/planet/planet.latest.osm --tf accept-nodes waterway=dam --tf reject-ways  --write-xml dam.osm 
+
 gzip -f *
