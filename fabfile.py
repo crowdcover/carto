@@ -59,7 +59,7 @@ def deploy(project):
 
 def add_to_osm(project):
   url = 'http://osm.moabi.org/api/0.6/tiles.json'
-  values = dict(tile=(dict(code=project[0], keyid=project.lower(), name=project, attribution="Moabi", url="http://tiles.osm.moabi.org/moabi_%s/{z}/{x}/{y}.png" % project.lower(), subdomains='', base_layer='false', description=''))  
+  values = dict(tile=(dict(code=project[0], keyid=project.lower(), name=project, attribution="Moabi", url="http://tiles.osm.moabi.org/moabi_%s/{z}/{x}/{y}.png" % project.lower(), subdomains='', base_layer='false', description='')))  
   data = urllib.urlencode(values)
   req = urllib2.Request(url, data)
   base64string = base64.encodestring('%s:%s' % ('user', 'password')).replace('\n', '')
