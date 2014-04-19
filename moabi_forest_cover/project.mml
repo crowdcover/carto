@@ -1,9 +1,9 @@
 {
   "bounds": [
-    10.9877,
-    -13.4137,
-    39.9037,
-    9.533
+    10.1527,
+    -19.6038,
+    41.0023,
+    9.5763
   ],
   "center": [
     26.0156,
@@ -116,24 +116,26 @@
       "name": "slope"
     },
     {
-      "geometry": "polygon",
+      "geometry": "linestring",
       "extent": [
-        -179.9999999999999,
-        -85.051,
-        180,
-        83.63410065300015
+        -141.00554863899987,
+        -55.120923766999944,
+        140.97762699400005,
+        70.07531036400012
       ],
       "id": "countries",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_0_countries/ne_10m_admin_0_countries.shp"
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_0_boundary_lines_land/ne_10m_admin_0_boundary_lines_land.shp",
+        "id": "countries",
+        "project": "moabi_forest_cover",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
       },
       "layer": null,
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
-      "name": "countries",
-      "status": "off"
+      "name": "countries"
     }
   ],
   "scale": 1,

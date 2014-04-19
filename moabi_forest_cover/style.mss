@@ -1,21 +1,25 @@
+/*
 @1: #2B83BA;
 @2: #ABDDA4;
 @3: #FFFFBF;
 @4: #FDAE61;
 @5: #D7191C;
 @6: #990700;
+*/
 
-@1bw: #FFF;
-@2bw: #DDD;
-@3bw: #BBB;
-@4bw: #999;
-@5bw: #666;
-@6bw: #111;
+@1: #FFF;
+@2: #DDD;
+@3: #BBB;
+@4: #999;
+@5: #666;
+@6: #111;
+
+Map { background-color: white; }
 
 #gfc_10N,
 #gfc_00N,
 #gfc_10S {
-  raster-opacity:0.7;
+  raster-opacity:1;
   //image-filters:agg-stack-blur(5,5);
   raster-scaling: lanczos;
   [zoom >= 12]{ raster-scaling: gaussian; }
@@ -30,26 +34,6 @@
     stop(90, @5)
     stop(100, @6);
 }
-
-/*
-#gfc_10N,
-#gfc_00N,
-#gfc_10S {
-  raster-opacity:0.7;
-  //image-filters:agg-stack-blur(5,5);
-  raster-scaling: lanczos;
-  [zoom >= 12]{ raster-scaling: gaussian; }
-  raster-colorizer-default-mode: linear;
-  raster-colorizer-default-color: transparent;
-  raster-colorizer-stops:
-    stop(10, fadeout(@1bw, 100%))
-    stop(20, @1bw)
-    stop(50, @2bw)
-    stop(60, @3bw)
-    stop(80, @4bw)
-    stop(90, @5bw)
-    stop(100, @6bw);
-}*/
 
 #slope {
   raster-scaling: lanczos;
@@ -115,4 +99,7 @@
   line-opacity: 0.6;
   line-comp-op: multiply;
   line-width:0.5;
+  [type = 'Water Indicator']{
+    line-dasharray: 5,3;
+  }
 }
