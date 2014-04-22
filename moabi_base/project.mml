@@ -601,7 +601,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT landuse, (tags -> 'industrial') as industrial, operator, way FROM planet_osm_polygon WHERE (tags -> 'industrial') = 'mining') AS data",
+        "table": "(SELECT landuse, (tags -> 'industrial') as industrial, operator, \n  (tags -> 'operational_status') as operational_status,\n  (tags -> 'concession_type') as concession_type,\n  way \nFROM planet_osm_polygon WHERE (tags -> 'industrial') = 'mining') AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
