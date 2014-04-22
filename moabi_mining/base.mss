@@ -27,7 +27,7 @@
 @red: #c02535; //#C1404B;
 @maroon: #6B292B;
 
-Map { background-color: white; buffer-size: 256; }
+//Map { background-color: white; buffer-size: 256; }
 
 @pattern-opacity: 0.8;
 
