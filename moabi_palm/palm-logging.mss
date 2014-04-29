@@ -42,7 +42,7 @@
 /***********************************************/
 @palm: darken(@forest_green, 6); //@d_orange;
 
-#palm_oil [zoom < 8][osm_id = 5536]{
+#palm_oil [zoom < 8]{
   marker-fill: @palm;
   marker-fill-opacity: 0.7;
   marker-line-opacity: 0.4;
@@ -54,7 +54,7 @@
   [zoom = 7]{ marker-width: 7.0; }
 }
 
-#palm_oil [zoom >= 8][osm_id = 5536]{
+#palm_oil [zoom >= 8]{
   polygon-opacity:0.8;
   polygon-fill:@palm;
   //comp-op: multiply;
