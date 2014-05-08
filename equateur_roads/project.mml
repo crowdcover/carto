@@ -1,0 +1,83 @@
+{
+  "bounds": [
+    16.2872,
+    -2.6687,
+    24.8016,
+    5.8346
+  ],
+  "center": [
+    20.6653,
+    1.8673,
+    7
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 17,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "palette.mss",
+    "admin.mss",
+    "osm.mss",
+    "wri.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "extent": [
+        12.204027583939272,
+        -13.36145342233793,
+        31.258561737298518,
+        5.145529207427191
+      ],
+      "id": "wri_roads",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Projects/moabi/EcoHackathon/wri_drc_Infrastructure/DRC_voirie_2013_4326/RDC_voirie_2013.shp",
+        "id": "wri_roads",
+        "project": "equateur_roads",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+        "encoding": "Latin1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "encoding": "Latin1"
+      },
+      "name": "wri_roads"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        16.22223374479465,
+        -2.8529132153424115,
+        25.3106862951106,
+        6.066588030530906
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk', 'motorway_link', 'trunk_link') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary', 'primary_link', 'secondary_link') THEN 'mainroad'\n    WHEN highway IN ('tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    ELSE 'service'\n  END AS stylegroup\n  FROM planet_osm_line\n  WHERE highway IS NOT NULL\n  ORDER BY z_order\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1805850.8,-317716.16,2817572.71,676594.89",
+        "dbname": "mdev",
+        "id": "roads_high",
+        "project": "equateur_roads",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "roads_high",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads_high"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Equateur Roads",
+  "description": "",
+  "attribution": ""
+}
