@@ -1,7 +1,8 @@
-@pattern-opacity: 0.8;
+@pattern-opacity: 1;
 
 #protected {
-  polygon-opacity: 0;
+  polygon-opacity: 0.4;
+  polygon-fill: #444;
   [zoom <= 18]{ 
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/large_stripe_d_green.png');
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/stripe_black_#000000/small.png');
