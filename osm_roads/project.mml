@@ -1,9 +1,9 @@
 {
   "bounds": [
-    10.1527,
-    -19.6038,
-    41.0023,
-    9.5763
+    12.0643,
+    -13.6701,
+    31.3563,
+    5.4382
   ],
   "center": [
     22.4561,
@@ -24,21 +24,26 @@
     {
       "geometry": "linestring",
       "extent": [
-        -141.00554863899987,
-        -55.120923766999944,
-        140.97762699400005,
-        70.07531036400012
+        7.895906581465528,
+        -18.042135153134947,
+        43.55945994223861,
+        12.18011394998009
       ],
-      "id": "countries",
-      "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_0_boundary_lines_land/ne_10m_admin_0_boundary_lines_land.shp"
+        "type": "postgis",
+        "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "878968.3,-2042480.98,4849016.9,1366213.42",
+        "dbname": "osm_c_africa"
       },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "id": "roads_med",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "countries"
+      "name": "roads_med"
     },
     {
       "geometry": "linestring",
@@ -65,28 +70,46 @@
       "name": "roads_high"
     },
     {
+      "geometry": "polygon",
+      "extent": [
+        -179.9999999999999,
+        -85.051,
+        180,
+        83.63410065300015
+      ],
+      "id": "countryies_poly",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_0_countries/ne_10m_admin_0_countries.shp",
+        "id": "countryies_poly",
+        "project": "osm_roads",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "countryies_poly"
+    },
+    {
       "geometry": "linestring",
       "extent": [
-        7.895906581465528,
-        -18.042135153134947,
-        43.55945994223861,
-        12.18011394998009
+        -141.00554863899987,
+        -55.120923766999944,
+        140.97762699400005,
+        70.07531036400012
       ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
-        "key_field": "",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "878968.3,-2042480.98,4849016.9,1366213.42",
-        "dbname": "osm_c_africa"
-      },
-      "id": "roads_med",
+      "id": "countries",
       "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_0_boundary_lines_land/ne_10m_admin_0_boundary_lines_land.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
       "advanced": {},
-      "name": "roads_med"
+      "name": "countries",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -99,7 +122,10 @@
       "id": "cities",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp",
+        "id": "cities",
+        "project": "osm_roads",
+        "srs": ""
       },
       "layer": null,
       "srs-name": "autodetect",
