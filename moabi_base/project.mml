@@ -601,9 +601,9 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT landuse, (tags -> 'industrial') as industrial, operator, \n  (tags -> 'operational_status') as operational_status,\n  (tags -> 'concession_type') as concession_type,\n  way \nFROM planet_osm_polygon WHERE (tags -> 'industrial') = 'mining') AS data",
-        "key_field": "",
-        "geometry_field": "",
+        "table": "(SELECT osm_id, (tags->'concession') AS concession, (tags->'license') AS license, \n  (tags->'status') as status, operator, (tags->'resource') as resource,\n  (tags->'application_date') as application_date, (tags->'grant_date') as grant_date,\n  (tags->'expiration_date') as expiration_date, way\n  FROM planet_osm_polygon \n  WHERE (tags -> 'concession') = 'mining') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
         "dbname": "moabi"
