@@ -1,8 +1,18 @@
+/*yellow-red*/
+/*
 @2001: #ffeb88;
 @2003: #ffb34a;
 @2006: #f07c2e;
 @2009: #e34a28;
 @2012: #c62107;
+*/
+/*pink-purple*/
+@purple: #6b17ff;
+@2001: lighten(@purple, 60%);
+@2003: lighten(@purple, 45%);
+@2006: lighten(@purple, 30%);
+@2009: lighten(@purple, 15%);
+@2012: lighten(@purple, 0%);
 /*
 @2012: #222;
 @2009: #222;
