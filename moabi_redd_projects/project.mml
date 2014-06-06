@@ -21,18 +21,18 @@
   "Layer": [
     {
       "extent": [
-        -77.0390025941279,
+        12.206629767319301,
         -13.455675940967357,
         31.30277999987542,
-        38.920901318173705
+        5.133333308874133
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT name, way FROM planet_osm_polygon WHERE (tags->'landuse') = 'redd') AS data",
-        "key_field": "",
-        "geometry_field": "",
+        "table": "(SELECT osm_id, name, way FROM planet_osm_polygon WHERE landuse = 'redd') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
         "extent_cache": "auto",
-        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
+        "extent": "1358835.81,-1511840.58,3484609.53,572206.08",
         "dbname": "moabi",
         "id": "redd",
         "project": "moabi_redd_projects",
