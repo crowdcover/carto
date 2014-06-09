@@ -51,7 +51,7 @@
   [zoom = 7]{ line-width: 0.5; }
   [zoom = 8]{ line-width: 0.6; }
   [zoom = 9]{ line-width: 0.7; }
-  [zoom >= 10]{ line-width:0.8; }
+  [zoom >= 10]{ line-width:0.8; }/*
   ::doublestroke{
     line-color: @oil;
     //line-comp-op: multiply;
@@ -66,5 +66,5 @@
     [zoom = 8]{ line-width: 3.0; line-offset: -1.5; }
     [zoom = 9]{ line-width: 4.0; line-offset: -2.0; }
     [zoom >= 10]{ line-width: 6.0; line-offset: -3.0; }
-  }
+  }*/
 }
