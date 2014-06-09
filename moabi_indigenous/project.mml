@@ -379,7 +379,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT boundary, way FROM planet_osm_polygon WHERE (tags->'territory'='indigenous') ) AS data",
+        "table": "(SELECT * FROM planet_osm_polygon WHERE (tags->'territory'='indigenous') ) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
