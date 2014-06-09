@@ -538,7 +538,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT operator, way FROM planet_osm_polygon WHERE (tags -> 'concession') = 'logging') AS data",
+        "table": "(SELECT * FROM planet_osm_polygon WHERE (tags -> 'concession') = 'logging') AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -562,7 +562,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT operator, way FROM planet_osm_point WHERE (tags -> 'industrial') = 'logging' AND (tags -> 'artisanal') = 'yes') AS data",
+        "table": "(SELECT * FROM planet_osm_point WHERE (tags -> 'concession') = 'logging' AND (tags -> 'artisanal') = 'yes') AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -631,7 +631,7 @@
   "scale": 1,
   "metatile": 2,
   "_basemap": "",
-  "name": "Moabi Base",
+  "name": "Logging Concessions",
   "description": "",
   "attribution": ""
 }
