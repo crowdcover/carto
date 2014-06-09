@@ -27,7 +27,6 @@
 @red: #c02535; //#C1404B;
 @maroon: #6B292B;
 
-Map { buffer-size: 256; }
 
 @pattern-opacity: 0.8;
 
@@ -232,6 +231,7 @@ Map { buffer-size: 256; }
 /**************** Terrain ***************************/
 #hillshade [zoom <= 6]{
   raster-opacity: 0.6;
+  [zoom = 6]{ raster-opacity: 0.4; }
   raster-scaling: lanczos;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
@@ -241,7 +241,8 @@ Map { buffer-size: 256; }
     stop(207, #fff);
 }
 
-#hillshade_highzoom [zoom >= 13]{
+#hillshade_highzoom [zoom >= 6]{
+  raster-opacity: 0.4;
   raster-scaling:lanczos;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
@@ -358,9 +359,9 @@ Map { buffer-size: 256; }
 @sat10: 100;
 @sat11: 36;
 @sat12: 30;
-@sat13: 26;
-@sat14: 18;
-@sat15: 16;
+@sat13: 30;
+@sat14: 30;
+@sat15: 30;
 
 #gfc_10N,
 #gfc_00N,
