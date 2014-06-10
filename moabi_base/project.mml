@@ -268,6 +268,45 @@
       "layer": null
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        -139.0602066219999,
+        -49.25087001999992,
+        178.448622268,
+        81.12853131600008
+      ],
+      "id": "admin1",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
+        "id": "admin1",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "admin1"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
+      ],
+      "id": "cities",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "cities"
+    },
+    {
       "geometry": "polygon",
       "extent": [
         12.229011154208719,
@@ -289,27 +328,6 @@
       "name": "protected",
       "status": "off",
       "layer": null
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -139.0602066219999,
-        -49.25087001999992,
-        178.448622268,
-        81.12853131600008
-      ],
-      "id": "admin1",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
-        "id": "admin1",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "admin1"
     },
     {
       "geometry": "linestring",
@@ -338,24 +356,6 @@
       "advanced": {},
       "name": "redd",
       "status": "off"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        -179.58997888396897,
-        -85.051,
-        179.38330358817018,
-        82.48332318035943
-      ],
-      "id": "cities",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
-      },
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "cities"
     },
     {
       "extent": [
@@ -619,6 +619,7 @@
   ],
   "scale": 1,
   "metatile": 2,
+  "_basemap": "",
   "name": "Moabi Base",
   "description": "",
   "attribution": ""
