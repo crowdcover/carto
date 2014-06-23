@@ -1,7 +1,7 @@
 @pattern-opacity: 1;
 
 #protected {
-  polygon-opacity: 0.3;
+  polygon-opacity: 0.6;
   polygon-fill: #d0ffab;
   /*[zoom <= 18]{ 
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/large_stripe_d_green.png');
@@ -20,8 +20,7 @@
     polygon-pattern-alignment: global;
   }*/
   line-color:black;
-  line-width: 0.6;
-  line-opacity:0.4;
+  line-opacity:0.8;
   line-dasharray:8,4;
   [zoom <= 3]{ line-width: 0.1; }
   [zoom = 4]{ line-width: 0.1; }
