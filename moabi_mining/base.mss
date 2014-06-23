@@ -20,7 +20,7 @@
 @admin_dark: #222222;
 @admin_light: #808080;
 @shadow: #000000;
-@shadow_opacity: 0.7;
+@shadow_opacity: 0.6;
 
 @orange: #E98017;
 @yellow: #f1dd06; //#E7D500;
@@ -230,7 +230,7 @@
 
 
 /**************** Terrain ***************************/
-#hillshade [zoom <= 6]{
+#hillshade [zoom < 6]{
   raster-opacity: 0.6;
   [zoom = 6]{ raster-opacity: 0.4; }
   raster-scaling: lanczos;
@@ -257,23 +257,24 @@
   [zoom >= 16]{ raster-opacity: 0.5; }
 }
 
-#slope [zoom >= 5]{
+#slope [zoom >= 6]{
   raster-scaling: lanczos;
   raster-comp-op: multiply;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
-  [zoom >= 5]{
+  [zoom = 6]{
     raster-opacity: 0.6;
     raster-colorizer-stops: 
       stop(0, rgb(255, 255, 255))
       stop(60, rgb(50, 50, 50))
   }
   [zoom >= 7]{
-    raster-opacity: 1;
+    raster-opacity: 0.4;
     raster-colorizer-stops: 
       stop(0, rgb(255, 255, 255))
       stop(60, rgb(0, 0, 0))
   }
+  [zoom >= 9] { raster-opacity: 0.3; }
   [zoom = 10]{
     raster-colorizer-stops: 
       stop(0, rgb(255, 255, 255))
@@ -367,13 +368,13 @@
 #gfc_10N,
 #gfc_00N,
 #gfc_10S {
-  raster-opacity:1;
   raster-scaling:lanczos;
   raster-comp-op: multiply;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
   //image-filters:agg-stack-blur(5,5);
   [zoom < 6]{
+    raster-opacity:0.6;
     raster-colorizer-stops:
       stop(30, desaturate(rgba(186, 198, 97, 0), @sat10))
       stop(70, desaturate(rgba(186, 198, 97, 0.3), @sat10))
@@ -381,6 +382,7 @@
       stop(100, desaturate(rgba(110, 119, 50, 0.3), @sat10))
   }
   [zoom >= 6]{
+    raster-opacity:0.7;
     raster-colorizer-stops:
       stop(30, desaturate(rgba(186, 198, 97, 0), @sat10))
       stop(70, desaturate(rgba(186, 198, 97, 0.2), @sat10))
