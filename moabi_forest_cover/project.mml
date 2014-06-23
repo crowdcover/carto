@@ -181,7 +181,8 @@
       "advanced": {
         "band": "1"
       },
-      "name": "lossyear"
+      "name": "lossyear",
+      "status": "off"
     },
     {
       "geometry": "linestring",
