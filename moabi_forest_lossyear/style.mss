@@ -36,7 +36,7 @@
 
 #lossyear {
   raster-opacity:1;
-  image-filters:agg-stack-blur(1,1);
+  //image-filters:agg-stack-blur(1,1);
   //raster-scaling: gaussian;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
