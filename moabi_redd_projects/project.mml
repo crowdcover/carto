@@ -352,14 +352,14 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM planet_osm_polygon WHERE landuse = 'redd') AS data",
+        "table": "(SELECT osm_id, name, (tags->'status') AS status, (tags->'project_leader') AS project_leader, (tags->'methodology') AS methodology, (tags->'start_date') AS start_date, (tags->'end_date') AS end_date, (tags->'contact_person') AS contact_person, (tags->'contact_email') AS contact_email, way\nFROM planet_osm_polygon WHERE landuse = 'redd') AS data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
         "dbname": "moabi",
         "id": "redd",
-        "project": "moabi_base",
+        "project": "moabi_redd_projects",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "redd",

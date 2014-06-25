@@ -587,9 +587,9 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM planet_osm_polygon WHERE (tags->'concession')='oil') AS data",
-        "key_field": "",
-        "geometry_field": "",
+        "table": "(SELECT osm_id, name, way FROM planet_osm_polygon WHERE (tags->'concession')='oil') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
         "dbname": "moabi",

@@ -462,7 +462,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT name, (tags->'proposed') AS proposed, way FROM planet_osm_line WHERE (tags->'energy')='transmission_line') AS data",
+        "table": "(SELECT osm_id, name, (tags->'proposed') AS proposed, way FROM planet_osm_line WHERE (tags->'energy')='transmission_line') AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -486,7 +486,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT name, (tags->'proposed') AS proposed, way FROM planet_osm_point WHERE (tags->'energy')='dam') as data",
+        "table": "(SELECT osm_id, name, (tags->'proposed') AS proposed, way FROM planet_osm_point WHERE (tags->'energy')='dam') as data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
