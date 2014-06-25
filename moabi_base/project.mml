@@ -268,6 +268,45 @@
       "layer": null
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        -139.0602066219999,
+        -49.25087001999992,
+        178.448622268,
+        81.12853131600008
+      ],
+      "id": "admin1",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
+        "id": "admin1",
+        "project": "moabi_base",
+        "srs": ""
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "admin1"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
+      ],
+      "id": "cities",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "cities"
+    },
+    {
       "geometry": "polygon",
       "extent": [
         12.229011154208719,
@@ -293,27 +332,6 @@
     {
       "geometry": "linestring",
       "extent": [
-        -139.0602066219999,
-        -49.25087001999992,
-        178.448622268,
-        81.12853131600008
-      ],
-      "id": "admin1",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp/ne_10m_admin_1_states_provinces_lines_shp.shp",
-        "id": "admin1",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "admin1"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
         -77.0269901424856,
         -15.050247715190558,
         31.061324709265847,
@@ -321,9 +339,9 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT name, way FROM planet_osm_polygon WHERE (tags -> 'protected_area') = 'redd') AS data",
-        "key_field": "",
-        "geometry_field": "",
+        "table": "(SELECT * FROM planet_osm_polygon WHERE landuse = 'redd') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
         "dbname": "moabi",
@@ -338,24 +356,6 @@
       "advanced": {},
       "name": "redd",
       "status": "off"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        -179.58997888396897,
-        -85.051,
-        179.38330358817018,
-        82.48332318035943
-      ],
-      "id": "cities",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_cultural/ne_10m_populated_places/ne_10m_populated_places.shp"
-      },
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "cities"
     },
     {
       "extent": [
@@ -408,8 +408,8 @@
         "encoding": "LATIN1"
       },
       "name": "rivers_major",
-      "status": "off",
-      "layer": null
+      "layer": null,
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -513,7 +513,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "palm_oil"
+      "name": "palm_oil",
+      "status": "off"
     },
     {
       "extent": [
@@ -573,9 +574,9 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT name, landuse, (tags -> 'industrial') AS industrial, way FROM planet_osm_polygon WHERE landuse='concession' AND (tags -> 'industrial') = 'oil') AS data",
-        "key_field": "",
-        "geometry_field": "",
+        "table": "(SELECT osm_id, name, way FROM planet_osm_polygon WHERE (tags->'concession')='oil') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
         "dbname": "moabi",
@@ -600,9 +601,9 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT landuse, (tags -> 'industrial') as industrial, operator, \n  (tags -> 'operational_status') as operational_status,\n  (tags -> 'concession_type') as concession_type,\n  way \nFROM planet_osm_polygon WHERE (tags -> 'industrial') = 'mining') AS data",
-        "key_field": "",
-        "geometry_field": "",
+        "table": "(SELECT osm_id, (tags->'license') AS license, \n  (tags->'status') as status, operator, (tags->'resource') as resource,\n  (tags->'application_date') as application_date, (tags->'grant_date') as grant_date,\n  (tags->'expiration_date') as expiration_date, way,\n  CASE\n    WHEN (tags->'license')='ZRG'\n    THEN 'research'\n    WHEN (tags->'license') in ('PR', 'PR (AS)', 'PR (PP)', 'ZRG', 'ARPC', 'ARPC (Car)')\n    THEN 'exploration'\n    WHEN (tags->'license') in ('PE', 'PEPM', 'PER', 'AECP', 'AECT', 'AECT (Car)', 'ZEA')\n    THEN 'exploitation'\n    ELSE 'other'\n  END AS type\n  FROM planet_osm_polygon \n  WHERE (tags -> 'concession') = 'mining') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
         "dbname": "moabi"
@@ -618,6 +619,7 @@
   ],
   "scale": 1,
   "metatile": 2,
+  "_basemap": "",
   "name": "Moabi Base",
   "description": "",
   "attribution": ""

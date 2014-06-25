@@ -95,10 +95,10 @@
 #hydropower::circle {
   marker-allow-overlap: true;
   //marker-fill-opacity: 0;
-  marker-fill: white;
+  marker-fill: desaturate(lighten(@energy, 30), 20);
   marker-line-width: 0;
   marker-line-color: @energy;
-  [waterway = 'dam'] { marker-fill: desaturate(lighten(@energy, 30), 20); }
+  [proposed = 'yes'] { marker-fill: white; }
     [zoom <= 2]{ marker-width: 2;  marker-line-width: 0.5;}
     [zoom = 3]{ marker-width: 2.5; marker-line-width: 0.5;}
     [zoom = 4]{ marker-width: 3.5; marker-line-width: 0.5;}
@@ -170,7 +170,7 @@
     [zoom = 9]{ line-width: 3.5; }
     [zoom = 10]{ line-width: 3.5; }
     [zoom >= 11]{ line-width: 3.9; }
-  [power = 'proposed']{
+  [proposed = 'yes']{
     [zoom <= 2]{ line-dasharray: 0.4,0.9; }
     [zoom = 3]{ line-dasharray: 0.5,0.9; }
     [zoom = 4]{ line-dasharray: 0.6,1.0; }

@@ -110,7 +110,7 @@
     [zoom = 10]{ marker-width: 13; marker-line-width: 1.4; }
     [zoom >= 11]{ marker-width: 14; marker-line-width: 1.5; }
   }
-
+/*
 #hydropower::label[zoom >= 5]{
   [waterway = 'dam']{ 
     text-name: "[name]";
@@ -155,7 +155,7 @@
   [zoom >= 10]{ text-size: 15; }
   }
 }
-
+*/
 
 #transmission_lines {
   line-color: @energy;

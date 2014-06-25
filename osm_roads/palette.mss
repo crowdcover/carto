@@ -48,7 +48,7 @@
  * - fill: for higher zoomlevels, this color is for the road's
  *         inner fill (inline).
  */
-@road: #666; //#4d4d4d;
+@road: #555; //#4d4d4d;
 
 @motorway_line:     @road;//#E65C5C;
 @motorway_fill:     lighten(@motorway_line,10%);
@@ -66,9 +66,9 @@
 @secondary_fill:    lighten(@secondary_line,10%);
 @secondary_case:    @secondary_line * 0.9;
 
-@standard_line:     @road * 0.85;//@land * 0.85;
+@standard_line:     @road;//@land * 0.85;
 @standard_fill:     #fff;
-@standard_case:     @road * 0.9;//@land * 0.9;
+@standard_case:     @road;//@land * 0.9;
 
 @pedestrian_line:   @standard_line;
 @pedestrian_fill:   #FAFAF5;

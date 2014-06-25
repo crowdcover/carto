@@ -35,8 +35,8 @@
 //Map { background-color: white; }
 
 #lossyear {
-  raster-opacity:1;
-  //image-filters:agg-stack-blur(1,1);
+  raster-opacity:0.8;
+  //image-filters:agg-stack-blur(5,5);
   //raster-scaling: gaussian;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;

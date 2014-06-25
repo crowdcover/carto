@@ -8,8 +8,13 @@ Map {
   line-dasharray: 16,8;
 }
 
+#countryies_poly [sovereignt != 'Democratic Republic of the Congo']{
+  polygon-opacity:1;
+  polygon-fill:white;
+}
 
-#cities {
+
+#cities [ADM0_A3 = 'COD']{
   [SCALERANK<3][zoom>=4],
   [SCALERANK=3][zoom>=5],
   [SCALERANK=4][zoom>=5],

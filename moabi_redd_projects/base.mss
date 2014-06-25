@@ -20,12 +20,14 @@
 @admin_dark: #222222;
 @admin_light: #808080;
 @shadow: #000000;
-@shadow_opacity: 0.7;
+@shadow_opacity: 0.6;
 
 @orange: #E98017;
 @yellow: #f1dd06; //#E7D500;
 @red: #c02535; //#C1404B;
 @maroon: #6B292B;
+
+//Map { background-color: white; buffer-size: 256; }
 
 @pattern-opacity: 0.8;
 
@@ -228,8 +230,8 @@
 
 
 /**************** Terrain ***************************/
-#hillshade [zoom <= 6]{
-  raster-opacity: 0.2;
+#hillshade [zoom < 6]{
+  raster-opacity: 0.6;
   [zoom = 6]{ raster-opacity: 0.4; }
   raster-scaling: lanczos;
   raster-colorizer-default-mode: linear;
@@ -241,7 +243,7 @@
 }
 
 #hillshade_highzoom [zoom >= 6]{
-  raster-opacity: 0.2;
+  raster-opacity: 0.5;
   raster-scaling:lanczos;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
@@ -255,23 +257,24 @@
   [zoom >= 16]{ raster-opacity: 0.5; }
 }
 
-#slope [zoom >= 5]{
+#slope [zoom >= 6]{
   raster-scaling: lanczos;
   raster-comp-op: multiply;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
-  [zoom >= 5]{
+  [zoom = 6]{
     raster-opacity: 0.6;
     raster-colorizer-stops: 
       stop(0, rgb(255, 255, 255))
       stop(60, rgb(50, 50, 50))
   }
   [zoom >= 7]{
-    raster-opacity: 0.6;
+    raster-opacity: 0.4;
     raster-colorizer-stops: 
       stop(0, rgb(255, 255, 255))
       stop(60, rgb(0, 0, 0))
   }
+  [zoom >= 9] { raster-opacity: 0.3; }
   [zoom = 10]{
     raster-colorizer-stops: 
       stop(0, rgb(255, 255, 255))
@@ -365,13 +368,13 @@
 #gfc_10N,
 #gfc_00N,
 #gfc_10S {
-  raster-opacity:1;
   raster-scaling:lanczos;
   raster-comp-op: multiply;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
   //image-filters:agg-stack-blur(5,5);
   [zoom < 6]{
+    raster-opacity:0.6;
     raster-colorizer-stops:
       stop(30, desaturate(rgba(186, 198, 97, 0), @sat10))
       stop(70, desaturate(rgba(186, 198, 97, 0.3), @sat10))
@@ -379,6 +382,7 @@
       stop(100, desaturate(rgba(110, 119, 50, 0.3), @sat10))
   }
   [zoom >= 6]{
+    raster-opacity:0.7;
     raster-colorizer-stops:
       stop(30, desaturate(rgba(186, 198, 97, 0), @sat10))
       stop(70, desaturate(rgba(186, 198, 97, 0.2), @sat10))
@@ -444,19 +448,62 @@
   [zoom >= 10]{ line-width:0.8; }
 }
 
+//base
+@forest_green: #79750A;
+@wood_brown: #976A2F;
+@muted_blue: #7FA67A;
+@muted_green: #D5D595;
+@clay: #DAB37A;
+
+@d_blue: #243060;
+@l_blue: #8697d1;
+@d_green: #5d6223;
+@l_green: #dae57e;
+@d_purple: #614975;
+@l_purple: #9c97c9;
+@d_red: #672c2d;
+@l_red: #bd5f3a;
+@d_orange: #d8912e;
+@l_yellow: #fae78f;
+
+@water: #222;
+@admin_dark: #222222;
+@admin_light: #808080;
+@shadow: #000000;
+@shadow_opacity: 0.7;
+
+@orange: #E98017;
+@yellow: #f1dd06; //#E7D500;
+@red: #c02535; //#C1404B;
+@maroon: #6B292B;
+
 #redd {
   polygon-opacity:0.6;
-  polygon-comp-op: multiply;
   polygon-fill:@l_green;
-  line-color:darken(@l_green, 50%);
-  line-opacity:1;
+  line-color:@admin_dark;
+  line-opacity:0.8;
   line-join: round;
-  [zoom <= 3]{ line-width: 0.3; }
-  [zoom = 4]{ line-width: 0.4; }
-  [zoom = 5]{ line-width: 0.5; }
-  [zoom = 6]{ line-width: 0.6; }
-  [zoom = 7]{ line-width: 0.7; }
-  [zoom = 8]{ line-width: 0.8; }
-  [zoom = 9]{ line-width: 0.9; }
-  [zoom >= 10]{ line-width:2.0; }
+  [zoom <= 3]{ line-width: 0.1; }
+  [zoom = 4]{ line-width: 0.2; }
+  [zoom = 5]{ line-width: 0.3; }
+  [zoom = 6]{ line-width: 0.4; }
+  [zoom = 7]{ line-width: 0.5; }
+  [zoom = 8]{ line-width: 0.6; }
+  [zoom = 9]{ line-width: 0.7; }
+  [zoom >= 10]{ line-width:0.8; }
+  ::doublestroke{
+    line-color: darken(@l_green, 5%);
+    line-comp-op: multiply;
+    line-opacity:0.6;
+    line-cap: butt;
+    line-join: miter;
+    [zoom <= 3]{ line-width: 1; line-offset: -0.5; }
+    [zoom = 4]{ line-width: 1; line-offset: -0.5; }
+    [zoom = 5]{ line-width: 1.5; line-offset: -0.75; }
+    [zoom = 6]{ line-width: 2.0; line-offset: -1.0; }
+    [zoom = 7]{ line-width: 3.0; line-offset: -1.5; }
+    [zoom = 8]{ line-width: 4.0; line-offset: -2.0; }
+    [zoom = 9]{ line-width: 5.0; line-offset: -2.5; }
+    [zoom >= 10]{ line-width: 6.0; line-offset: -3.0; }
+  }
 }
