@@ -10,7 +10,7 @@
 #mining {
   polygon-fill: @mining;
   [type='research']{ 
-    polygon-opacity: 0.2; 
+    polygon-opacity: 0.3; 
     polygon-fill: spin(darken(@mining, -10%), 2%);
   }
   [type='exploration']{ 
