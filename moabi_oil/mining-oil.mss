@@ -24,7 +24,7 @@
   ::doublestroke{
     line-color: @mining;
     line-comp-op: multiply;
-    line-opacity:0.3;
+    line-opacity:0.1;
     line-cap: butt;
     line-join: miter;
     [zoom <= 3]{ line-width: 1; line-offset: -0.5; }
