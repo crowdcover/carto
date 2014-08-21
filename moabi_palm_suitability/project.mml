@@ -1,0 +1,123 @@
+{
+  "bounds": [
+    11.9531,
+    -13.411,
+    31.377,
+    5.5722
+  ],
+  "center": [
+    22.3242,
+    -2.3943,
+    6
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 18,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "palm.mss",
+    "ifl.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "raster",
+      "extent": [
+        -179.99999999990004,
+        -55.99999999999994,
+        180,
+        83.63334061577913
+      ],
+      "id": "suitability",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/Mapping Projects/Palm Oil Suitability/palm-oil-suitability/OP_suit_DRC.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "suitability"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        9.999583454395179,
+        -15.000416545624999,
+        45.00041678772851,
+        10.000416787708337
+      ],
+      "id": "slope",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_slope.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "slope",
+      "status": "off"
+    },
+    {
+      "extent": [
+        12.206629767319301,
+        -13.455675940967357,
+        31.30277999987542,
+        5.133333308874133
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, landuse, (tags -> 'trees') as trees, way FROM planet_osm_polygon WHERE landuse = 'orchard' AND (tags -> 'trees') = 'oil_palms') as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1358835.81,-1511840.58,3484609.53,572206.08",
+        "dbname": "moabi",
+        "id": "palm_plantations",
+        "project": "moabi_palm_suitability",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "palm_plantations",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "palm_plantations",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -172.70314025878906,
+        -55.46234504659856,
+        178.23925781250006,
+        69.63531494140628
+      ],
+      "id": "intact_forest",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/environment/intact_forests/world_ifl.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "intact_forest",
+      "status": "off"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "https://dl.dropboxusercontent.com/u/49790262/base_tilejson.json",
+  "name": "Palm Oil Suitability Map",
+  "description": "",
+  "attribution": ""
+}
