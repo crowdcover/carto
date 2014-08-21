@@ -70,11 +70,16 @@ def add_to_osm(project):
 def write_tile_js():
   run ('wget http://osm.moabi.org/api/0.6/tiles.js -O /var/www/openstreetmap-website/app/assets/javascripts/moabi.tiles.js')
 
+def clear_grids(project):
+  # The TileStache clean procedure is going to be awfully slow.
+  # run('sudo tilestache-clean.py --config=/home/moabi/tilestache.cfg --bbox=-35.8 52.0 37.7 -26.0 -q --layer=%s -e json 3 4 5 6 7 8 9 10 11 12 14' % project)
+  run('sudo rm -rf /tmp/stache/%s' % project)
 
 def update(project):
   prepare_server()
   create_local_mml(project)
   create_xml(project)
+  clear_grids(project)
   copy_img()
   deploy(project)
 
