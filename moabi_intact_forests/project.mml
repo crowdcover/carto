@@ -33,8 +33,8 @@
         "file": "/Users/jamesconkling/Documents/Data/environment/intact_forests/world_ifl.shp"
       },
       "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "intact_forests"
     }
