@@ -29,7 +29,7 @@ osmosis --read-xml file=/var/www/planet/planet.latest.osm.gz --tf accept-ways co
 /home/moabi/osmtogeojson/osmtogeojson oil_palm.osm > oil_palm.geojson
 
 # road rehabilitation projects
-osmosis --read-xml file=/var/www/planet/planet.latest.osm.gz --tf accept-ways proposed=true --used-node --write-xml highway.osm
+osmosis --read-xml file=/var/www/planet/planet.latest.osm.gz --tf accept-ways highway=* --used-node --write-xml highway.osm
 /home/moabi/osmtogeojson/osmtogeojson highway.osm > highway.geojson
 
 # protected areas
@@ -41,5 +41,6 @@ osmosis --read-xml file=/var/www/planet/planet.latest.osm.gz --tf accept-ways en
 
 # hydro power
 osmosis --read-xml file=/var/www/planet/planet.latest.osm.gz --tf accept-nodes energy=dam --tf reject-ways  --write-xml dam.osm
+/home/moabi/osmtogeojson/osmtogeojson dam.osm > dam.geojson
 
 gzip -f *
