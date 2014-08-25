@@ -92,32 +92,12 @@
       "advanced": {},
       "name": "palm_plantations",
       "status": "off"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        -172.70314025878906,
-        -55.46234504659856,
-        178.23925781250006,
-        69.63531494140628
-      ],
-      "id": "intact_forest",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/environment/intact_forests/world_ifl.shp"
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "intact_forest",
-      "status": "off"
     }
   ],
   "scale": 1,
   "metatile": 2,
-  "_basemap": "https://dl.dropboxusercontent.com/u/49790262/base_tilejson.json",
-  "name": "Palm Oil Suitability Map",
+  "_basemap": "",
+  "name": "Palm Oil Suitability",
   "description": "",
   "attribution": ""
 }

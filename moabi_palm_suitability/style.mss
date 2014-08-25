@@ -1,3 +1,4 @@
+//Map {background-color:#ccc;}
 //yellow-blue
 /*
 @1: #fffad8;
@@ -18,7 +19,7 @@
 @7: #04165C;
 
 #suitability {
-  raster-opacity:0.8;
+  raster-opacity:0.6;
   raster-scaling:bilinear;
   //image-filters:agg-stack-blur(1,1);
   raster-colorizer-default-color: transparent;
