@@ -1,9 +1,9 @@
 {
   "bounds": [
-    -7.1356,
-    -31.7702,
-    54.212,
-    21.6523
+    11.8927,
+    -13.4591,
+    31.4923,
+    5.4793
   ],
   "center": [
     22.8296,
@@ -13,13 +13,10 @@
   "format": "png",
   "interactivity": false,
   "minzoom": 0,
-  "maxzoom": 18,
+  "maxzoom": 10,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
-    "base.mss",
-    "transport-energy.mss",
-    "palm-logging.mss",
-    "mining-oil.mss"
+    "base.mss"
   ],
   "Layer": [
     {
@@ -68,7 +65,8 @@
         "estimate_extent": "true"
       },
       "name": "hillshade_highzoom",
-      "layer": null
+      "layer": null,
+      "status": "off"
     },
     {
       "geometry": "raster",
@@ -114,7 +112,8 @@
       "advanced": {
         "band": "1"
       },
-      "name": "gfc_10S"
+      "name": "gfc_10S",
+      "status": "off"
     },
     {
       "geometry": "raster",
@@ -136,7 +135,8 @@
       "advanced": {
         "band": "1"
       },
-      "name": "gfc_00N"
+      "name": "gfc_00N",
+      "status": "off"
     },
     {
       "geometry": "raster",
@@ -158,7 +158,8 @@
       "advanced": {
         "band": "1"
       },
-      "name": "gfc_10N"
+      "name": "gfc_10N",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -180,7 +181,8 @@
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
-      "name": "contour_20"
+      "name": "contour_20",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -305,316 +307,6 @@
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "cities"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        12.229011154208719,
-        -11.832948194415977,
-        30.257901263305204,
-        5.388336188125172
-      ],
-      "id": "protected",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Dropbox/DRC Driver data/FIRST RISK MAP DATA/PROTECTED AREA/Protected_Area_2013/DRC_Protected_Area_JULY_2013.shp",
-        "id": "protected",
-        "project": "moabi_base",
-        "srs": ""
-      },
-      "srs-name": "custom",
-      "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
-      "advanced": {},
-      "name": "protected",
-      "status": "off",
-      "layer": null
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -77.0269901424856,
-        -15.050247715190558,
-        31.061324709265847,
-        38.926643473348015
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT * FROM planet_osm_polygon WHERE landuse = 'redd') AS data",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
-        "dbname": "moabi",
-        "id": "redd",
-        "project": "moabi_base",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "redd",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "redd",
-      "status": "off"
-    },
-    {
-      "extent": [
-        -77.0390025941279,
-        -13.455675940967357,
-        31.30277999987542,
-        38.920901318173705
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT boundary, way FROM planet_osm_polygon WHERE boundary='indigenous' ) AS data",
-        "key_field": "",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
-        "dbname": "moabi",
-        "id": "indigenous_psql",
-        "project": "moabi_base",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "indigenous",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "indigenous",
-      "geometry": "linestring",
-      "status": "off"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        12.27373550502737,
-        -10.917725695848821,
-        31.42175523748592,
-        5.158278739500458
-      ],
-      "id": "rivers_major",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
-        "id": "rivers_major",
-        "project": "moabi_base",
-        "srs": "",
-        "encoding": "LATIN1"
-      },
-      "srs-name": "custom",
-      "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
-      "advanced": {
-        "encoding": "LATIN1"
-      },
-      "name": "rivers_major",
-      "layer": null,
-      "status": "off"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -77.0269901424856,
-        -15.050247715190558,
-        31.061324709265847,
-        38.926643473348015
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT name, ref, highway, (tags -> 'proposed') as proposed, way FROM planet_osm_line WHERE highway = 'proposed') AS data",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
-        "dbname": "moabi",
-        "id": "road",
-        "project": "moabi_base",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "road",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "road",
-      "status": "off"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -77.0269901424856,
-        -15.050247715190558,
-        31.061324709265847,
-        38.926643473348015
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT name, power, (tags -> 'proposed' ) as proposed, way FROM planet_osm_line WHERE power = 'line' OR (power = 'proposed' AND (tags -> 'proposed') = 'line')) AS data",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
-        "dbname": "moabi"
-      },
-      "id": "transmission_lines",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "transmission_lines",
-      "status": "off"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        -77.01841913669675,
-        -12.393698444856394,
-        30.048532347419965,
-        38.91296889756999
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT name, waterway, (tags -> 'proposed') AS proposed, way FROM planet_osm_point WHERE waterway='dam' OR (waterway='proposed' AND (tags-> 'proposed') = 'dam')) as data",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-8573651.2,-1390546.93,3344987.32,4709212.77",
-        "dbname": "moabi",
-        "id": "hydropower",
-        "project": "moabi_base",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "hydropower",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "hydropower",
-      "status": "off"
-    },
-    {
-      "extent": [
-        -77.0390025941279,
-        -13.455675940967357,
-        31.30277999987542,
-        38.920901318173705
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT osm_id, landuse, (tags -> 'trees') as trees, way FROM planet_osm_polygon WHERE landuse = 'orchard' AND (tags -> 'trees') = 'oil_palms') as data",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
-        "dbname": "moabi"
-      },
-      "id": "palm_oil",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "palm_oil",
-      "status": "off"
-    },
-    {
-      "extent": [
-        -77.0390025941279,
-        -13.455675940967357,
-        31.30277999987542,
-        38.920901318173705
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT operator, way FROM planet_osm_polygon WHERE (tags -> 'industrial') = 'logging') AS data",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
-        "dbname": "moabi"
-      },
-      "id": "timber_concessions",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "timber_concessions",
-      "status": "off"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        -77.01841913669675,
-        -12.393698444856394,
-        30.048532347419965,
-        38.91296889756999
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT operator, way FROM planet_osm_point WHERE (tags -> 'industrial') = 'logging' AND (tags -> 'artisanal') = 'yes') AS data",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-8573651.2,-1390546.93,3344987.32,4709212.77",
-        "dbname": "moabi"
-      },
-      "id": "timber_artisanal",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "timber_artisanal",
-      "status": "off"
-    },
-    {
-      "extent": [
-        -77.0390025941279,
-        -13.455675940967357,
-        31.30277999987542,
-        38.920901318173705
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT osm_id, name, way FROM planet_osm_polygon WHERE (tags->'concession')='oil') AS data",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
-        "dbname": "moabi",
-        "id": "oil-concessions",
-        "project": "moabi_base",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "oil_concessions",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "oil_concessions",
-      "status": "off"
-    },
-    {
-      "extent": [
-        -77.0390025941279,
-        -13.455675940967357,
-        31.30277999987542,
-        38.920901318173705
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT osm_id, (tags->'license') AS license, \n  (tags->'status') as status, operator, (tags->'resource') as resource,\n  (tags->'application_date') as application_date, (tags->'grant_date') as grant_date,\n  (tags->'expiration_date') as expiration_date, way,\n  CASE\n    WHEN (tags->'license')='ZRG'\n    THEN 'research'\n    WHEN (tags->'license') in ('PR', 'PR (AS)', 'PR (PP)', 'ZRG', 'ARPC', 'ARPC (Car)')\n    THEN 'exploration'\n    WHEN (tags->'license') in ('PE', 'PEPM', 'PER', 'AECP', 'AECT', 'AECT (Car)', 'ZEA')\n    THEN 'exploitation'\n    ELSE 'other'\n  END AS type\n  FROM planet_osm_polygon \n  WHERE (tags -> 'concession') = 'mining') AS data",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
-        "dbname": "moabi"
-      },
-      "id": "mining",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "mining",
-      "status": "off"
     }
   ],
   "scale": 1,

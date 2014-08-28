@@ -19,7 +19,7 @@
 @water: #222;
 @admin_dark: #222222;
 @admin_light: #808080;
-@shadow: #000000;
+@shadow: #444;
 @shadow_opacity: 0.6;
 
 @orange: #E98017;
@@ -31,8 +31,10 @@ Map { background-color: white; buffer-size: 256; }
 
 @pattern-opacity: 0.8;
 
+@pattern-opacity: 1;
+
 #protected {
-  polygon-opacity: 0.3;
+  polygon-opacity: 0.5;
   polygon-fill: #d0ffab;
   /*[zoom <= 18]{ 
     //polygon-pattern-file: url('/Users/jamesconkling/Documents/Data/pattern/d_green_stripe/large_stripe_d_green.png');
@@ -51,8 +53,7 @@ Map { background-color: white; buffer-size: 256; }
     polygon-pattern-alignment: global;
   }*/
   line-color:black;
-  line-width: 0.6;
-  line-opacity:0.4;
+  line-opacity:0.8;
   line-dasharray:8,4;
   [zoom <= 3]{ line-width: 0.1; }
   [zoom = 4]{ line-width: 0.1; }
@@ -232,8 +233,7 @@ Map { background-color: white; buffer-size: 256; }
 
 /**************** Terrain ***************************/
 #hillshade [zoom < 6]{
-  raster-opacity: 0.6;
-  [zoom = 6]{ raster-opacity: 0.4; }
+  raster-opacity: 0.3;
   raster-scaling: lanczos;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
@@ -258,66 +258,15 @@ Map { background-color: white; buffer-size: 256; }
   [zoom >= 16]{ raster-opacity: 0.5; }
 }
 
-#slope [zoom >= 6]{
+#slope {
   raster-scaling: lanczos;
   raster-comp-op: multiply;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
-  [zoom = 6]{
-    raster-opacity: 0.6;
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(60, rgb(50, 50, 50))
-  }
-  [zoom >= 7]{
-    raster-opacity: 0.4;
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(60, rgb(0, 0, 0))
-  }
-  [zoom >= 9] { raster-opacity: 0.3; }
-  [zoom = 10]{
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(10, rgb(200, 200, 200))
-      stop(60, rgb(0, 0, 0))
-  }
-  [zoom = 11]{
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(10, rgb(190, 190, 190))
-      stop(60, rgb(0, 0, 0))
-  }
-  [zoom = 12]{
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(10, rgb(180, 180, 180))
-      stop(60, rgb(0, 0, 0))
-  }
-  [zoom = 13]{
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(10, rgb(170, 170, 170))
-      stop(60, rgb(0, 0, 0))
-  }
-  [zoom = 14]{
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(10, rgb(165, 165, 165))
-      stop(60, rgb(0, 0, 0))
-  }
-  [zoom = 15]{
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(10, rgb(160, 160, 160))
-      stop(60, rgb(0, 0, 0))
-  }
-  [zoom >= 16]{
-    raster-colorizer-stops: 
-      stop(0, rgb(255, 255, 255))
-      stop(10, rgb(150, 150, 150))
-      stop(60, rgb(0, 0, 0))
-  }
+  raster-opacity: 0.8;
+  raster-colorizer-stops: 
+    stop(0, rgb(255, 255, 255))
+    stop(60, rgb(60, 60, 60))
 }
 
 #contour_20 [zoom >= 9]{
