@@ -11,5 +11,5 @@ cd ~/app/replicate;~/app/osmosis/bin/osmosis -q --replicate-apidb authFile=dbAut
 # Read tiles.list and expire.
 while read -r line
 do
-    cat /home/moabi/expire.list | /home/moabi/src/mod_tile/render_expired --map=$line --min-zoom=2 --touch-from=10
+    cat /home/moabi/expire.list | /home/moabi/src/mod_tile/render_expired --map=$line --min-zoom=2
 done < /home/moabi/tiles.list
