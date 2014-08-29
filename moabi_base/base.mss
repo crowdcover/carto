@@ -19,7 +19,7 @@
 @water: #222;
 @admin_dark: #222222;
 @admin_light: #808080;
-@shadow: #444;
+@shadow: #222;
 @shadow_opacity: 0.6;
 
 @orange: #E98017;
@@ -100,6 +100,7 @@ Map { background-color: white; buffer-size: 256; }
 
 #admin0 {
   line-color: @admin_dark;
+  line-opacity:0.4;
   line-join: round;
   line-cap: round;
   [zoom <= 4]{ line-width: 0.8; }
@@ -130,7 +131,7 @@ Map { background-color: white; buffer-size: 256; }
 
 #ocean {
   polygon-opacity:1;
-  polygon-fill: lighten(@shadow, 15%);
+  polygon-fill: lighten(@shadow, 5%);
 }
 
 #lakes [DESCRIPTIO = 'Lac']{
