@@ -33,7 +33,9 @@ osmosis --read-xml file=/var/www/planet/planet.latest.osm.gz --tf accept-ways hi
 /home/moabi/osmtogeojson/osmtogeojson road_rehabilitation_projects.osm > road_rehabilitation_projects.geojson
 
 # protected areas
-ogr2ogr -f GeoJSON protected_area.geojson /home/moabi/dependencies/DRC_Protected_Area_JULY_2013.shp
+# ogr2ogr -f GeoJSON protected_area.geojson /home/moabi/dependencies/DRC_Protected_Area_JULY_2013.shp
+osmosis --read-xml file=/var/www/planet/planet.latest.osm.gz --tf accept-ways landuse=protected_area --used-node --write-xml protected_area.osm
+/home/moabi/osmtogeojson/osmtogeojson protected_area.osm > protected_area.geojson
 
 # energy transmission lines
 osmosis --read-xml file=/var/www/planet/planet.latest.osm.gz --tf accept-ways energy=transmission_line --used-node --write-xml transmission_lines.osm
