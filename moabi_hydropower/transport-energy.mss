@@ -75,7 +75,7 @@
 //to integrate the dams shapefile, filter ae_hydro by adding [duplicate != y]
 
 @energy: @red; //#dd4f3a;
-
+/*
 #hydropower {
   marker-opacity: 0;
   marker-line-width: 0;
@@ -91,14 +91,13 @@
     [zoom = 9]{ marker-width: 12; marker-line-width: 1.3; }
     [zoom >= 10]{ marker-width: 13; marker-line-width: 1.4; }
 }
-
+*/
 #hydropower::circle {
   marker-allow-overlap: true;
   //marker-fill-opacity: 0;
-  marker-fill: desaturate(lighten(@energy, 30), 20);
-  marker-line-width: 0;
-  marker-line-color: @energy;
-  [proposed = 'yes'] { marker-fill: white; }
+  marker-fill: @energy;
+  [proposed = 'yes'] { marker-fill: desaturate(lighten(@energy, 30), 25); }
+  marker-line-color: white;
     [zoom <= 2]{ marker-width: 2;  marker-line-width: 0.5;}
     [zoom = 3]{ marker-width: 2.5; marker-line-width: 0.5;}
     [zoom = 4]{ marker-width: 3.5; marker-line-width: 0.5;}
