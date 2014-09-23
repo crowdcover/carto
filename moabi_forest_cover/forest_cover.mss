@@ -25,10 +25,9 @@
 @5: desaturate(lighten(#6c561a, 10%), 10%);
 */
 
-
 @1: #ffefd1;
-@2: #dbb84d;
-@3: #c0c95e;
+@2: #eedca7;
+@3: #bac16d;
 @4: #95a12e;
 @5: #3a4100;
 
@@ -45,17 +44,18 @@
 #gfc_10N,
 #gfc_00N,
 #gfc_10S {
-  raster-opacity:0.3;
+  raster-opacity:0.8;
   //image-filters:agg-stack-blur(5,5);
   raster-scaling: lanczos;
-  [zoom >= 12]{ raster-scaling: gaussian; }
+  raster-comp-op:multiply;
+  //[zoom >= 12]{ raster-scaling: gaussian; }
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
   raster-colorizer-stops:
     stop(0, fadeout(@1, 100%))
     stop(10, @1)
-    stop(60, @2)
-    stop(70, @3)
+    stop(40, @2)
+    stop(60, @3)
     stop(90, @4)
     stop(100, @5);
 }
