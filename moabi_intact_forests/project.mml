@@ -22,15 +22,15 @@
     {
       "geometry": "polygon",
       "extent": [
-        -172.70314025878906,
-        -55.46234504659856,
-        178.23925781250006,
-        69.63531494140628
+        16.5422172546387,
+        -5.593746662139935,
+        30.169410641269536,
+        4.523166179656997
       ],
       "id": "intact_forests",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/environment/intact_forests/world_ifl.shp"
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/data/world_ifl/drc_ifl.shp"
       },
       "layer": null,
       "srs-name": "WGS84",
@@ -41,7 +41,7 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "_basemap": "",
+  "_basemap": "james-lane-conkling.46df1f21",
   "name": "Intact Forests",
   "description": "",
   "attribution": ""
