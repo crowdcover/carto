@@ -5,18 +5,20 @@
 @palm: darken(@forest_green, 6); //@d_orange;
 
 #palm_oil{
-  polygon-opacity:0.6;
-  polygon-fill:@palm;
-  line-color:@admin_dark;
-  line-opacity:0.8;
-  [zoom <= 3]{ line-width: 0.1; }
-  [zoom = 4]{ line-width: 0.2; }
-  [zoom = 5]{ line-width: 0.3; }
-  [zoom = 6]{ line-width: 0.4; }
-  [zoom = 7]{ line-width: 0.5; }
-  [zoom = 8]{ line-width: 0.6; }
-  [zoom = 9]{ line-width: 0.7; }
-  [zoom >= 10]{ line-width:0.8; }
+  ::polygon{
+    polygon-opacity:0.6;
+    polygon-fill:@palm;
+    line-color:@admin_dark;
+    line-opacity:0.8;
+    [zoom <= 3]{ line-width: 0.1; }
+    [zoom = 4]{ line-width: 0.2; }
+    [zoom = 5]{ line-width: 0.3; }
+    [zoom = 6]{ line-width: 0.4; }
+    [zoom = 7]{ line-width: 0.5; }
+    [zoom = 8]{ line-width: 0.6; }
+    [zoom = 9]{ line-width: 0.7; }
+    [zoom >= 10]{ line-width:0.8; }
+  }
   ::doublestroke{
     line-color: @palm;
     line-opacity:0.4;
@@ -30,29 +32,31 @@
     [zoom = 11]{ line-width: 4.0; line-offset: -2.0; }
     [zoom >= 12]{ line-width: 6.0; line-offset: -3.0; }
   }
+}
+#palm_oil_centroid{
   ::marker-white[zoom<=8] {
     marker-fill:transparent;
     marker-line-color:white;
-    marker-line-width:1;
+    marker-line-opacity:0.6;
     marker-clip:true;
     marker-allow-overlap:true;
     marker-width: 8;
-    marker-clip:true;
-    [zoom=6]{marker-width:12;}
-    [zoom=7]{marker-width:26;}
-    [zoom=8]{marker-width:38;}
+    [zoom<=5]{marker-width:8; marker-line-width:0.8+1.5;}
+    [zoom=6]{marker-width:12; marker-line-width:1.2+1.5;}
+    [zoom=7]{marker-width:26; marker-line-width:1.8+2;}
+    [zoom=8]{marker-width:38; marker-line-width:2.0+2;}
   }
-  ::marker-black[zoom<=8] {
+  ::marker-green[zoom<=8] {
     marker-fill:transparent;
     marker-line-color:@palm;
-    marker-line-width:1;
-    marker-line-opacity:0.4;
+    marker-line-opacity:0.5;
     marker-clip:true;
     marker-allow-overlap:true;
     marker-width: 8;
-    marker-clip:true;
-    [zoom=6]{marker-width:12+2;}
-    [zoom=7]{marker-width:26+2;}
-    [zoom=8]{marker-width:38+2;}
+    [zoom<=5]{marker-width:8; marker-line-width:0.8;}
+    [zoom=6]{marker-width:12; marker-line-width:1.2;}
+    [zoom=7]{marker-width:26; marker-line-width:1.8;}
+    [zoom=8]{marker-width:38; marker-line-width:2.0;}
   }
 }
+
