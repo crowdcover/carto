@@ -2,7 +2,7 @@
 @mining: @yellow; //@muted_green;
 @line1: @admin_dark;
 
-#oil_concessions {
+#oil {
   polygon-opacity:0.1;
   [license='exploration']{polygon-opacity:0.6;}
   [license='exploitation']{polygon-opacity:0.6;}

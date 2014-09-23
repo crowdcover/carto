@@ -50,36 +50,3 @@
   [zoom = 9]{ marker-width: 10.0; }
   [zoom >= 10]{ marker-width: 11.0; }
 }
-
-/***********************************************/
-/*******************Palm Oil********************/
-/***********************************************/
-@palm: darken(@forest_green, 6); //@d_orange;
-
-#palm_oil [zoom < 8]{
-  marker-fill: @palm;
-  marker-fill-opacity: 0.7;
-  marker-line-opacity: 0.4;
-  marker-line-width: 0.6;
-  [zoom <= 3]{ marker-width: 2.0; }
-  [zoom = 4]{ marker-width: 4.0; }
-  [zoom = 5]{ marker-width: 5.0; }
-  [zoom = 6]{ marker-width: 6.0 }
-  [zoom = 7]{ marker-width: 7.0; }
-}
-
-#palm_oil [zoom >= 8]{
-  polygon-opacity:0.8;
-  polygon-fill:@palm;
-  //comp-op: multiply;
-  line-color:@admin_dark;
-  line-opacity:0.4;
-  [zoom <= 3]{ line-width: 0.1; }
-  [zoom = 4]{ line-width: 0.2; }
-  [zoom = 5]{ line-width: 0.3; }
-  [zoom = 6]{ line-width: 0.4; }
-  [zoom = 7]{ line-width: 0.5; }
-  [zoom = 8]{ line-width: 0.6; }
-  [zoom = 9]{ line-width: 0.7; }
-  [zoom >= 10]{ line-width:0.8; }
-}
