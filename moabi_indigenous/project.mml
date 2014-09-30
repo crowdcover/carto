@@ -28,14 +28,14 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT * FROM planet_osm_polygon WHERE (tags->'territory'='indigenous') ) AS data",
-        "key_field": "",
+        "table": "(SELECT osm_id, (tags->'territory') as territory,\n  round((way_area/10000)::numeric, 1) as way_area, way\nFROM planet_osm_polygon \nWHERE (tags->'territory')='indigenous' ) AS data",
+        "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8575942.54,-1511840.58,3484609.53,4710347.69",
         "dbname": "moabi",
-        "id": "indigenous_psql",
-        "project": "moabi_base",
+        "id": "indigenous",
+        "project": "moabi_indigenous",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "indigenous",

@@ -29,7 +29,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, (tags->'status') AS status, (tags->'project_leader') AS project_leader, (tags->'methodology') AS methodology, (tags->'start_date') AS start_date, (tags->'end_date') AS end_date, (tags->'contact_person') AS contact_person, (tags->'contact_email') AS contact_email, way\nFROM planet_osm_polygon WHERE landuse = 'redd') AS data",
+        "table": "(SELECT osm_id, name, (tags->'status') AS status, \n  (tags->'project_leader') AS project_leader, (tags->'methodology') AS methodology,\n  (tags->'start_date') AS start_date, (tags->'end_date') AS end_date, \n  (tags->'contact_person') AS contact_person, \n  (tags->'contact_email') AS contact_email, \n  round((way_area/10000)::numeric, 1) as way_area, way\nFROM planet_osm_polygon WHERE landuse = 'redd') AS data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",

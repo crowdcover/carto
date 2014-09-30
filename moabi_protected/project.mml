@@ -28,7 +28,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, (tags->'short_name') as name, (tags->'type:en') as type, (tags->'status') as status, (tags->'valid') as valid, (tags->'source') as source, way\n  FROM planet_osm_polygon\n  WHERE landuse='protected_area'\n) as data",
+        "table": "(SELECT osm_id, (tags->'short_name') as name, (tags->'type:en') as type, \n  (tags->'status') as status, (tags->'valid') as valid, (tags->'source') as source, \n  round((way_area/10000)::numeric, 1) as way_area, way\nFROM planet_osm_polygon\nWHERE landuse='protected_area'\n) as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
