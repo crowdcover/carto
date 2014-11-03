@@ -42,9 +42,9 @@
     marker-allow-overlap:true;
     marker-width: 8;
     [zoom<=5]{marker-width:8; marker-line-width:0.8+1.5;}
-    [zoom=6]{marker-width:12; marker-line-width:1.2+1.5;}
-    [zoom=7]{marker-width:26; marker-line-width:1.8+2;}
-    [zoom=8]{marker-width:38; marker-line-width:2.0+2;}
+    [zoom=6]{marker-width:12; marker-line-width:1.0+1.5;}
+    [zoom=7]{marker-width:26; marker-line-width:1.2+2;}
+    [zoom=8]{marker-width:38; marker-line-width:1.2+2;}
   }
   ::marker-green[zoom<=8] {
     marker-fill:transparent;
@@ -54,9 +54,9 @@
     marker-allow-overlap:true;
     marker-width: 8;
     [zoom<=5]{marker-width:8; marker-line-width:0.8;}
-    [zoom=6]{marker-width:12; marker-line-width:1.2;}
-    [zoom=7]{marker-width:26; marker-line-width:1.8;}
-    [zoom=8]{marker-width:38; marker-line-width:2.0;}
+    [zoom=6]{marker-width:12; marker-line-width:1.0;}
+    [zoom=7]{marker-width:26; marker-line-width:1.2;}
+    [zoom=8]{marker-width:38; marker-line-width:1.2;}
   }
 }
 

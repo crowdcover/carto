@@ -31,8 +31,8 @@
       "Datasource": {
         "type": "postgis",
         "table": "(SELECT osm_id, name, (tags->'proposed') AS proposed, way FROM planet_osm_line WHERE (tags->'energy')='transmission_line') AS data",
-        "key_field": "",
-        "geometry_field": "",
+        "key_field": "osm_id",
+        "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
         "dbname": "moabi"
