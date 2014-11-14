@@ -1,0 +1,51 @@
+{
+  "bounds": [
+    17.6839,
+    -2.3847,
+    18.3115,
+    -1.6491
+  ],
+  "center": [
+    17.999,
+    -1.9765,
+    10
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 16,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        17.690920915000007,
+        -2.381596285438433,
+        18.309046971218944,
+        -1.6555020429999976
+      ],
+      "id": "forest_stratification",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/Mapping Projects/ERA-WWC shapefiles/Stratification forestière/Stratification_moabiready.shp",
+        "id": "forest_stratification",
+        "project": "era_forest_stratification",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "forest_stratification"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "",
+  "name": "Era Forest Stratification",
+  "description": "",
+  "attribution": ""
+}
