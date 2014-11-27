@@ -30,14 +30,14 @@
       "id": "forest_stratification",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/Mapping Projects/ERA-WWC shapefiles/Stratification forestière/Stratification_moabiready.shp",
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/Mapping Projects/ERA-WWC/data/Stratification forestière/Stratification_moabiready.shp",
         "id": "forest_stratification",
         "project": "era_forest_stratification",
         "srs": ""
       },
       "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "forest_stratification"
     }
