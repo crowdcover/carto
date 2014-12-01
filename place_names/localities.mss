@@ -26,16 +26,17 @@
     text-halo-radius:1.8;
     text-halo-fill:@text_halo_fill;
     text-character-spacing:2;
-    text-placement-type:simple;
-    text-placements: "E,NE,SE,W,NW,SW";
+    //text-placement-type:simple;
+    //text-placements: "E,NE,SE,W,NW,SW";
     text-transform:capitalize;
-    /*text-dy:-20;
+    text-vertical-alignment: middle;
+    text-dy:-12;
     ::point{
-      marker-width:3;
-      marker-fill:black;
+      marker-width:2.5;
+      marker-fill:#444;
       marker-line-width:0;
       marker-allow-overlap:true;
-    }*/
+    }
   }
   [zoom=5]{
     [scalerank=1]{text-size:10;}
