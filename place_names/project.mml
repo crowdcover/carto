@@ -1,0 +1,504 @@
+{
+  "bounds": [
+    11.8652,
+    -14.4347,
+    36.6504,
+    7.7981
+  ],
+  "center": [
+    22.8516,
+    -2.7455,
+    6
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "localities.mss",
+    "terrain.mss",
+    "roads.mss",
+    "data.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "raster",
+      "extent": [
+        9.999583454395179,
+        -15.000416545624999,
+        45.00041678772851,
+        10.000416787708337
+      ],
+      "id": "slope",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_slope.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "slope",
+      "status": "off"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "hillshade_lowzoom",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/natural-earth/10m_raster/SR_HR/SR_HR.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "hillshade_lowzoom"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        9.999583454395179,
+        -15.000416545624999,
+        45.00041678772851,
+        10.000416787708337
+      ],
+      "id": "hillshade",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/regions/c_africa_hillshade.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "hillshade"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        9.999861111111102,
+        -20.00013888888889,
+        40.000138888888884,
+        -9.999861111111116
+      ],
+      "id": "gfc_10S",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/environment/umd_global forest cover/drc_treecover2000_10S.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "gfc_10S",
+      "status": "off"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        9.999861111111102,
+        -10.000138888888893,
+        40.000138888888884,
+        0.00013888888888402562
+      ],
+      "id": "gfc_00N",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/environment/umd_global forest cover/drc_treecover2000_00N.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "gfc_00N",
+      "status": "off"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        9.999861111111102,
+        -0.0001388888888929074,
+        40.000138888888884,
+        10.000138888888884
+      ],
+      "id": "gfc_10N",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/environment/umd_global forest cover/drc_treecover2000_10N.tif",
+        "band": "1"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "band": "1"
+      },
+      "name": "gfc_10N",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.663410811985164,
+        -14.457671056032659,
+        32.26501837351091,
+        6.3749185180001
+      ],
+      "id": "contour_20",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/regions/drc_contour_25_resampled_18k/contour_gt500m.shp"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "contour_20",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.27373550502737,
+        -10.917725695848821,
+        31.42175523748592,
+        5.158278739500458
+      ],
+      "id": "rivers-lakes",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Google Drive/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
+        "encoding": "LATIN1",
+        "id": "rivers-lakes",
+        "project": "place_names",
+        "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+      },
+      "layer": null,
+      "srs-name": "custom",
+      "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
+      "advanced": {
+        "encoding": "LATIN1"
+      },
+      "name": "rivers-lakes"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "countries",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Data/quatroshapes/qs_adm0/qs_adm0.shp",
+        "id": "quattroshapes",
+        "project": "place_names",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "layer": null,
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "countries"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.206629753560321,
+        -13.45567607918764,
+        31.30591201772551,
+        5.386097907592394
+      ],
+      "id": "admin3",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Projects/moabi/datas/LIMITE_ADMIN/Territories_boundaries.shp",
+        "id": "admin3",
+        "project": "place_names",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "admin3"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.206629753560321,
+        -13.455676079187635,
+        31.3059120177255,
+        5.386097907592423
+      ],
+      "id": "admin2",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Projects/moabi/datas/LIMITE_ADMIN/District_boundaries.shp",
+        "id": "admin2",
+        "project": "place_names",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "admin2"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.206629753112816,
+        -13.455676078795548,
+        31.30591201782231,
+        5.386097908019528
+      ],
+      "id": "admin1",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/jamesconkling/Documents/Projects/moabi/datas/LIMITE_ADMIN/Province_boundaries.shp",
+        "id": "admin1",
+        "project": "place_names",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "admin1"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        12.275798369678062,
+        -13.234265049206385,
+        31.233538691182915,
+        5.134141775863783
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT name, popmean, popsum, gid, way,\n  CASE \n    WHEN popsum > 300000 THEN 1\n    WHEN popsum > 180000 THEN 2\n    WHEN popsum > 100000 THEN 3\n    WHEN popsum > 50000 THEN 4\n    WHEN popsum > 25000 THEN 5\n    WHEN popsum > 10000 THEN 6\n    WHEN popsum > 5000 THEN 7\n    WHEN popsum > 2000 THEN 8\n    WHEN popsum > 500 THEN 9\n    WHEN popsum > 50 THEN 10\n    ELSE 11\n  END as scalerank \n  FROM localities_pop ORDER BY popsum DESC\n)as data",
+        "key_field": "gid",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1366535.62359346,-1486509.21805086,3476901.62277449,572296.440610774",
+        "dbname": "drc_place",
+        "id": "localities",
+        "project": "place_names",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "cities",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "cities"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -25.245662731416417,
+        -34.82845248302447,
+        57.75507958385743,
+        37.30092872076407
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, highway AS type, 0 as bridge, 0 as tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk', 'primary')\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "-2810334.32,-4140592.89,6429266.05,4481135.79",
+        "dbname": "osm_africa_highway",
+        "id": "roads_low",
+        "project": "place_names",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "roads_low",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads_low",
+      "status": "off"
+    },
+    {
+      "extent": [
+        12.206629767319301,
+        -13.455675940967357,
+        31.30277999987542,
+        5.388336217118854
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, name, (tags->'license') as license, way \n FROM planet_osm_polygon\n WHERE (tags->'concession')='oil') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1358835.81,-1511840.58,3484609.53,600712.98",
+        "dbname": "moabi"
+      },
+      "id": "oil",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "oil",
+      "status": "off"
+    },
+    {
+      "extent": [
+        12.206629767319301,
+        -13.455675940967357,
+        31.30277999987542,
+        5.388336217118854
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, (tags->'license') AS license,\n  (tags->'status') as status, operator, (tags->'resource') as resource,\n  (tags->'application_date') as application_date, (tags->'grant_date') as grant_date,\n  (tags->'expiration_date') as expiration_date, way,  \n  CASE\n    WHEN (tags->'license')='ZRG'\n    THEN 'research'\n    WHEN (tags->'license') in ('PR', 'PR (AS)', 'PR (PP)', 'ZRG', 'ARPC', 'ARPC (Car)')\n    THEN 'exploration'\n    WHEN (tags->'license') in ('PE', 'PEPM', 'PER', 'AECP', 'AECT', 'AECT (Car)', 'ZEA')\n    THEN 'exploitation'\n    ELSE 'other'\n  END AS type\n  FROM planet_osm_polygon\n  WHERE (tags -> 'concession') = 'mining') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1358835.81,-1511840.58,3484609.53,600712.98",
+        "dbname": "moabi"
+      },
+      "id": "mining",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "mining",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.911401862791497,
+        -15.050247715190558,
+        31.061324709265847,
+        4.3413599472307745
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, name, ref, highway, (tags -> 'proposed') as proposed, way \nFROM planet_osm_line \nWHERE highway IS NOT NULL AND (tags->'proposed')='yes') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3457730.85,483741.08",
+        "dbname": "moabi"
+      },
+      "id": "road",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "road",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.911401862791497,
+        -15.050247715190558,
+        31.061324709265847,
+        4.3413599472307745
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, name, (tags->'proposed') AS proposed, way \nFROM planet_osm_line \nWHERE (tags->'energy')='transmission_line') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3457730.85,483741.08",
+        "dbname": "moabi"
+      },
+      "id": "transmission_lines",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "transmission_lines",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        11.911401862791497,
+        -15.050247715190558,
+        31.061324709265847,
+        5.133333308874133
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, name, (tags->'proposed') AS proposed, way \nFROM planet_osm_point \nWHERE (tags->'energy')='dam') as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3457730.85,572206.08",
+        "dbname": "moabi"
+      },
+      "id": "hydropower",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "hydropower",
+      "status": "off"
+    },
+    {
+      "extent": [
+        12.206629767319301,
+        -13.455675940967357,
+        31.30277999987542,
+        5.388336217118854
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, name, (tags->'status') AS status, (tags->'project_leader') AS project_leader, (tags->'methodology') AS methodology, (tags->'start_date') AS start_date, (tags->'end_date') AS end_date, (tags->'contact_person') AS contact_person, (tags->'contact_email') AS contact_email, way\nFROM planet_osm_polygon \nWHERE landuse = 'redd') AS data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1358835.81,-1511840.58,3484609.53,600712.98",
+        "dbname": "moabi"
+      },
+      "id": "redd",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "redd",
+      "status": "off"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "",
+  "name": "Place Names",
+  "description": "",
+  "attribution": ""
+}
