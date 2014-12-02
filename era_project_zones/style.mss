@@ -3,7 +3,7 @@
 
 @text_fill: #333;
 @text_halo_fill: rgba(255,255,255,1);
-
+Map { buffer-size: 256; }
 #zone{
   ::doublestroke{
     line-color:#ddd;
@@ -17,10 +17,12 @@
     [zoom=11]{line-width:1.9 + 4.0;}
     [zoom=12]{line-width:2.2 + 4.0;}
     [zoom>=13]{line-width:2.5 + 4.0;}
-    [zoom>=11]{
-      text-name:[project];
+    [zoom>=9]{
+      text-name:[zone];
       text-face-name:@sans;
-      text-size:14;
+      text-size:10;
+      [zoom>=10]{ text-size:12; }
+      [zoom>=12]{ text-size:20; }
       text-fill:lighten(@text_fill,25%);
       text-halo-radius:1;
       text-halo-fill:@text_halo_fill;
