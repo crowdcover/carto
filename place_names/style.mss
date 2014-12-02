@@ -1,12 +1,12 @@
-@ocean:#fafafa;
+@ocean:#fff;
 @water:#eaeaea;
-@admin:#444;
+@admin:#333;
 @admin-doublestroke: #eee;
 
 Map { background-color: @ocean; }
 
 #countries {
-  polygon-fill: #ddd;
+  polygon-fill: #bbb;
   polygon-comp-op:multiply;
   line-color: lighten(@admin,25%);
   [qs_adm0 = 'Democratic Republic of the Congo']{
@@ -40,7 +40,7 @@ Map { background-color: @ocean; }
       text-name:[PROVINCE];
       text-face-name:@sans;
       text-size:8;
-      text-fill:lighten(@text_fill,25%);
+      text-fill:lighten(@text_fill,35%);
       text-halo-radius:1;
       text-halo-fill:@text_halo_fill;
       text-character-spacing:1.5;
@@ -78,7 +78,7 @@ Map { background-color: @ocean; }
       text-name:[DISTRICT];
       text-face-name:@sans;
       text-size:8;
-      text-fill:lighten(@text_fill,25%);
+      text-fill:lighten(@text_fill,35%);
       text-halo-radius:1;
       text-halo-fill:@text_halo_fill;
       text-character-spacing:1.5;
@@ -118,7 +118,7 @@ Map { background-color: @ocean; }
       text-name:[TERRITOIRE];
       text-face-name:@sans;
       text-size:8;
-      text-fill:lighten(@text_fill,25%);
+      text-fill:lighten(@text_fill,35%);
       text-halo-radius:1;
       text-halo-fill:@text_halo_fill;
       text-character-spacing:1.5;

@@ -13,7 +13,7 @@
   raster-colorizer-default-mode: linear;
   raster-colorizer-stops: 
     stop(0, rgb(150,150,150))
-    stop(205, rgb(250,250,250))
+    stop(205, rgb(255,255,255))
     stop(255, rgb(255,255,255));
 }
     //stop(0, #000)
@@ -28,7 +28,7 @@
   raster-colorizer-default-mode: linear;
   raster-colorizer-stops:
     stop(0, rgb(150,150,150))
-    stop(175, rgb(250,250,250))
+    stop(180, rgb(255,255,255))
     stop(255, rgb(255,255,255));
 }
 

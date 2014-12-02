@@ -1,8 +1,8 @@
 @sans:"Droid Sans Book","Arial Regular","DejaVu Sans Book";
 @sans_bold:"Droid Sans Bold","Arial Bold","DejaVu Sans Bold";
 
-@text_fill: #111;
-@text_halo_fill: rgba(255,255,255,1);
+@text_fill: #000;
+@text_halo_fill: #fff;
 
 #cities {
   [scalerank<=2][zoom>=5],
@@ -31,12 +31,10 @@
     text-transform:capitalize;
     text-vertical-alignment: middle;
     text-dy:-12;
-    ::point{
-      marker-width:2.5;
-      marker-fill:#444;
-      marker-line-width:0;
-      marker-allow-overlap:true;
-    }
+    a/marker-width:2.5;
+    a/marker-fill:#444;
+    a/marker-line-width:0;
+    a/marker-allow-overlap: false;
   }
   [zoom=5]{
     [scalerank=1]{text-size:10;}
