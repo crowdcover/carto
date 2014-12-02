@@ -1,0 +1,53 @@
+{
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "center": [
+    18.1425,
+    -1.8673,
+    10
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "extent": [
+        11.911401862791497,
+        -15.050247715190558,
+        31.233538666259246,
+        5.134141770399119
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, name, population, (tags->'agriculture_project_count') as agriculture_project_count, way\n FROM planet_osm_point \n WHERE (tags->'agriculture_project_count')::int > 0\n) as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
+        "dbname": "moabi"
+      },
+      "id": "ag_project",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "ag_project"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "james-lane-conkling.moabi_base",
+  "name": "Era Community Projects",
+  "description": "",
+  "attribution": ""
+}
