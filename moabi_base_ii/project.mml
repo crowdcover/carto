@@ -306,21 +306,21 @@
     {
       "geometry": "point",
       "extent": [
-        12.275798369678062,
-        -13.234265049206385,
-        31.233538691182915,
-        5.134141775863783
+        11.911401862791497,
+        -15.050247715190558,
+        31.233538666259246,
+        5.134141770399119
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT name, popmean, popsum, gid, way,\n  CASE \n    WHEN popsum > 300000 THEN 1\n    WHEN popsum > 180000 THEN 2\n    WHEN popsum > 100000 THEN 3\n    WHEN popsum > 50000 THEN 4\n    WHEN popsum > 25000 THEN 5\n    WHEN popsum > 10000 THEN 6\n    WHEN popsum > 5000 THEN 7\n    WHEN popsum > 2000 THEN 8\n    WHEN popsum > 500 THEN 9\n    WHEN popsum > 50 THEN 10\n    ELSE 11\n  END as scalerank \n  FROM localities_pop ORDER BY popsum DESC\n)as data",
-        "key_field": "gid",
+        "table": "(SELECT osm_id, name, (tags->'population:estimate')::real as pop_estimate, way,\n  CASE \n    WHEN (tags->'population:estimate')::real > 300000 THEN 1\n    WHEN (tags->'population:estimate')::real > 180000 THEN 2\n    WHEN (tags->'population:estimate')::real > 100000 THEN 3\n    WHEN (tags->'population:estimate')::real > 50000 THEN 4\n    WHEN (tags->'population:estimate')::real > 25000 THEN 5\n    WHEN (tags->'population:estimate')::real > 10000 THEN 6\n    WHEN (tags->'population:estimate')::real > 5000 THEN 7\n    WHEN (tags->'population:estimate')::real > 2000 THEN 8\n    WHEN (tags->'population:estimate')::real > 500 THEN 9\n    WHEN (tags->'population:estimate')::real > 50 THEN 10\n    ELSE 11\n  END as scalerank \n  FROM planet_osm_point\n  WHERE place='locality'\n  ORDER BY pop_estimate DESC\n)as data",
+        "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
-        "extent": "1366535.62359346,-1486509.21805086,3476901.62277449,572296.440610774",
-        "dbname": "drc_place",
-        "id": "localities",
-        "project": "place_names",
+        "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
+        "dbname": "moabi",
+        "id": "cities",
+        "project": "moabi_base_ii",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "cities",

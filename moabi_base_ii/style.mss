@@ -6,7 +6,8 @@
 @sans:"Droid Sans Book","Arial Regular","DejaVu Sans Book";
 @sans_bold:"Droid Sans Bold","Arial Bold","DejaVu Sans Bold";
 
-@text_fill: #000;
+@cities_text: #000;
+@admin_text: #888;
 @text_halo_fill: #fff;
 
 Map { background-color: @ocean; }
@@ -48,7 +49,7 @@ Map { background-color: @ocean; }
       text-name:[NAME_1];
       text-face-name:@sans;
       text-size:8;
-      text-fill:lighten(@text_fill,35%);
+      text-fill:@admin_text;
       text-halo-radius:1;
       text-halo-fill:@text_halo_fill;
       text-character-spacing:1.5;
@@ -88,7 +89,7 @@ Map { background-color: @ocean; }
       text-name:[NAME_2];
       text-face-name:@sans;
       text-size:8;
-      text-fill:lighten(@text_fill,35%);
+      text-fill:@admin_text;
       text-halo-radius:1;
       text-halo-fill:@text_halo_fill;
       text-character-spacing:1.5;
@@ -122,7 +123,7 @@ Map { background-color: @ocean; }
       text-name:[NAME_3];
       text-face-name:@sans;
       text-size:8;
-      text-fill:lighten(@text_fill,35%);
+      text-fill:@admin_text;
       text-halo-radius:1;
       text-halo-fill:@text_halo_fill;
       text-character-spacing:1.5;
@@ -158,7 +159,7 @@ Map { background-color: @ocean; }
     shield-wrap-width:1;
     shield-wrap-character:'-';
     shield-face-name:@sans;
-    shield-fill:@text_fill;
+    shield-fill:@cities_text;
     shield-size:10;
     shield-halo-radius:1.8;
     shield-halo-fill:@text_halo_fill;
