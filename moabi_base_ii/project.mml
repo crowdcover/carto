@@ -17,7 +17,6 @@
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss",
-    "localities.mss",
     "terrain.mss",
     "roads.mss",
     "data.mss"
@@ -242,8 +241,8 @@
       "Datasource": {
         "file": "/Users/jamesconkling/Documents/Data/gadm_v2_shp/COD_adm-1/COD_adm3.shp",
         "id": "admin3",
-        "project": "place_names",
-        "srs": "",
+        "project": "moabi_base_ii",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
         "encoding": "LATIN1"
       },
       "layer": null,
