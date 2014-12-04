@@ -9,7 +9,7 @@ Map { background-color: @ocean; }
   polygon-fill: #bbb;
   polygon-comp-op:multiply;
   line-color: lighten(@admin,25%);
-  [qs_adm0 = 'Democratic Republic of the Congo']{
+  [ISO = 'COD']{
     polygon-fill:transparent;
   }
   [zoom<=5]{line-width:0.4;}
@@ -23,6 +23,7 @@ Map { background-color: @ocean; }
   [zoom>=13]{line-width:2.5;}
 }
 
+// Province
 #admin1 [zoom>=5]{
   ::doublestroke{
     line-color:@admin-doublestroke;
@@ -37,7 +38,7 @@ Map { background-color: @ocean; }
     [zoom=12]{line-width:2.2 + 4.0;}
     [zoom>=13]{line-width:2.5 + 4.0;}
     [zoom>=7][zoom<9]{
-      text-name:[PROVINCE];
+      text-name:[NAME_1];
       text-face-name:@sans;
       text-size:8;
       text-fill:lighten(@text_fill,35%);
@@ -64,6 +65,7 @@ Map { background-color: @ocean; }
   [zoom>=13]{line-width:2.5 - 0.4;}
 }
 
+// District
 #admin2 [zoom>=8]{
   ::doublestroke{
     line-color:@admin-doublestroke;
@@ -75,7 +77,7 @@ Map { background-color: @ocean; }
     [zoom=12]{line-width:2.2 + 4.0;}
     [zoom>=13]{line-width:2.5 + 4.0;}
     [zoom>=9][zoom<11]{
-      text-name:[DISTRICT];
+      text-name:[NAME_2];
       text-face-name:@sans;
       text-size:8;
       text-fill:lighten(@text_fill,35%);
@@ -87,14 +89,7 @@ Map { background-color: @ocean; }
       text-dy:-8;
       text-line-spacing:4000;
       text-min-path-length:400;
-    }/*
-    [DISTRICT = 'Mai-Ndombe']{
-      line-color: purple;
-      line-opacity:0.2;
-      line-width:8;
-      line-offset:-4;
-      image-filters:agg-stack-blur(8,8);
-    }*/
+    }
   }
   line-dasharray: 4,2;
   line-color:@admin;
@@ -106,6 +101,7 @@ Map { background-color: @ocean; }
   [zoom>=13]{line-width:2.5 - 0.8;}
 }
 
+// Territoire
 #admin3 [zoom>=10]{
   ::doublestroke{
     line-color:@admin-doublestroke;
@@ -115,7 +111,7 @@ Map { background-color: @ocean; }
     [zoom=12]{line-width:2.2 + 4.0;}
     [zoom>=13]{line-width:2.5 + 4.0;}
     [zoom>=11]{
-      text-name:[TERRITOIRE];
+      text-name:[NAME_3];
       text-face-name:@sans;
       text-size:8;
       text-fill:lighten(@text_fill,35%);

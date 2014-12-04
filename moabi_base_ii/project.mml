@@ -210,86 +210,98 @@
         -180,
         -85.051,
         180,
-        85.051
+        83.6274185180664
       ],
       "id": "countries",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/quatroshapes/qs_adm0/qs_adm0.shp",
+        "file": "/Users/jamesconkling/Documents/Data/gadm_v2_shp/gadm2_admin0.shp",
         "id": "quattroshapes",
         "project": "place_names",
-        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+        "encoding": "LATIN1"
       },
       "layer": null,
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
+      "advanced": {
+        "encoding": "LATIN1"
+      },
       "name": "countries"
     },
     {
       "geometry": "polygon",
       "extent": [
-        12.206629753560321,
-        -13.45567607918764,
-        31.30591201772551,
-        5.386097907592394
+        12.206628799438704,
+        -13.455676078796387,
+        31.30572319030763,
+        5.386097908020119
       ],
       "id": "admin3",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/moabi/datas/LIMITE_ADMIN/Territories_boundaries.shp",
+        "file": "/Users/jamesconkling/Documents/Data/gadm_v2_shp/COD_adm-1/COD_adm3.shp",
         "id": "admin3",
         "project": "place_names",
-        "srs": ""
+        "srs": "",
+        "encoding": "LATIN1"
       },
       "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "encoding": "LATIN1"
+      },
       "name": "admin3"
     },
     {
       "geometry": "polygon",
       "extent": [
-        12.206629753560321,
-        -13.455676079187635,
-        31.3059120177255,
-        5.386097907592423
+        12.206628799438874,
+        -13.455676078796387,
+        31.30572319030778,
+        5.386097908020119
       ],
       "id": "admin2",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/moabi/datas/LIMITE_ADMIN/District_boundaries.shp",
+        "file": "/Users/jamesconkling/Documents/Data/gadm_v2_shp/COD_adm-1/COD_adm2.shp",
         "id": "admin2",
         "project": "place_names",
-        "srs": ""
+        "srs": "",
+        "encoding": "LATIN1"
       },
       "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "encoding": "LATIN1"
+      },
       "name": "admin2"
     },
     {
       "geometry": "polygon",
       "extent": [
-        12.206629753112816,
-        -13.455676078795548,
-        31.30591201782231,
-        5.386097908019528
+        12.206628799438874,
+        -13.455676078796387,
+        31.305723190307795,
+        5.38609790802014
       ],
       "id": "admin1",
       "class": "",
       "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Projects/moabi/datas/LIMITE_ADMIN/Province_boundaries.shp",
+        "file": "/Users/jamesconkling/Documents/Data/gadm_v2_shp/COD_adm-1/COD_adm1.shp",
         "id": "admin1",
-        "project": "place_names",
-        "srs": ""
+        "project": "moabi_base_ii",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+        "encoding": "LATIN1"
       },
       "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {
+        "encoding": "LATIN1"
+      },
       "name": "admin1"
     },
     {
@@ -498,7 +510,7 @@
   "scale": 1,
   "metatile": 2,
   "_basemap": "",
-  "name": "Place Names",
+  "name": "Moabi Base New",
   "description": "",
   "attribution": ""
 }
