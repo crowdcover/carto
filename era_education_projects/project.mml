@@ -29,24 +29,24 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, population, (tags->'agriculture_project_count') as agriculture_project_count, way\n FROM planet_osm_point \n WHERE (tags->'agriculture_project_count')::int > 0\n) as data",
+        "table": "(SELECT osm_id, name, population, (tags->'education_project_count') as agriculture_project_count, way\n FROM planet_osm_point \n WHERE (tags->'education_project_count')::int > 0\n) as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
         "dbname": "moabi"
       },
-      "id": "ag_project",
+      "id": "edu_project",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "ag_project"
+      "name": "edu_project"
     }
   ],
   "scale": 1,
   "metatile": 2,
-  "_basemap": "james-lane-conkling.moabi_base",
+  "_basemap": "crowdcover.moabi_base_ii",
   "name": "Era Education Projects",
   "description": "",
   "attribution": ""

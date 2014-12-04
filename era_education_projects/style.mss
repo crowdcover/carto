@@ -1,20 +1,21 @@
-#ag_project {
-  [zoom<6]{ 
-    marker-file: url('../img/icon/education.svg');
-    marker-transform: "scale(0.1)"; 
-  }
+#edu_project {
+  a/marker-width: 12;
+  a/marker-fill: #fff;
+  a/marker-line-width:0.6;
+  a/marker-line-color: #a9b918;
+  a/marker-line-opacity: 0.6;
+  a/marker-allow-overlap: true;
+  a/marker-fill-opacity:0.4;
+  marker-file: url('../img/icon/education.svg');
+  marker-transform: "scale(0.07)";
+  marker-allow-overlap:true;
   [zoom>=6]{ 
-    a/marker-width: 22;
-    a/marker-fill: white;
+    a/marker-width: 20;
     a/marker-line-width:1;
-    a/marker-line-opacity: 0.2;
-    a/marker-allow-overlap: true;
-    a/marker-fill-opacity:0.8;
     marker-file: url('../img/icon/education.svg');
-    marker-transform: "scale(0.15)";
-    marker-allow-overlap:true;
+    marker-transform: "scale(0.12)";
   }
-  [zoom>=9]{ 
+  [zoom>=8]{ 
     a/marker-width: 32;
     marker-transform: "scale(0.2)"; 
   }
