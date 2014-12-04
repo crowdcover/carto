@@ -17,7 +17,7 @@
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "base.mss",
-    "palm-logging.mss"
+    "logging.mss"
   ],
   "Layer": [
     {
@@ -45,33 +45,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "timber_concessions"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        -77.01841913669675,
-        -12.393698444856394,
-        30.048532347419965,
-        38.91296889756999
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(SELECT osm_id, name, operator, way FROM planet_osm_point WHERE (tags -> 'concession') = 'logging' AND (tags -> 'artisanal') = 'yes') AS data",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "-8573651.2,-1390546.93,3344987.32,4709212.77",
-        "dbname": "moabi",
-        "id": "timber_artisanal",
-        "project": "moabi_logging",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "timber_artisanal",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "timber_artisanal"
     }
   ],
   "scale": 1,
