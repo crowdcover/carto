@@ -5,9 +5,11 @@
 
 @sans:"Droid Sans Book","Arial Regular","DejaVu Sans Book";
 @sans_bold:"Droid Sans Bold","Arial Bold","DejaVu Sans Bold";
+@serif: "FreeSerif Italic", "DejaVu Serif Italic";
 
 @cities_text: #000;
 @admin_text: #888;
+@rivers_text: #888;
 @text_halo_fill: #fff;
 
 Map { background-color: @ocean; }
@@ -259,8 +261,28 @@ Map { background-color: @ocean; }
     line-color:darken(@water,10%);
     line-width:0.2;
     line-opacity:0.8;
+    [zoom=7]{line-width:0.6;}
+    [zoom=8]{line-width:1.0;}
+    [zoom>=9]{line-width:1.2;}
   }
-  [zoom=7]{line-width:0.6;}
-  [zoom=8]{line-width:1.0;}
-  [zoom>=9]{line-width:1.2;}
+  [zoom>=8][TOPONYME != '']{
+    text-face-name:@serif;
+    text-name:[TOPONYME];
+    text-placement:line;
+    text-fill:@rivers_text;
+    text-halo-fill:@text_halo_fill;
+    text-halo-radius:2;
+    text-line-spacing:200;
+    text-min-path-length:400;
+    text-size:10;
+    [zoom>=10]{ 
+      text-size: 14;
+      text-line-spacing:1000;
+      text-min-path-length:1000;
+    }
+    [zoom>=12]{ 
+      text-size: 17; 
+      text-line-spacing:1500;
+    }
+  }
 }

@@ -192,7 +192,7 @@
         "file": "/Users/jamesconkling/Google Drive/Moabi DRC/data/WRI_Hydrographie/RDC_hydro_surface_2009.shp",
         "encoding": "LATIN1",
         "id": "rivers-lakes",
-        "project": "place_names",
+        "project": "moabi_base_ii",
         "srs": "+proj=merc +lon_0=0 +lat_ts=5 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
       },
       "layer": null,
