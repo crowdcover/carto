@@ -159,26 +159,6 @@
       "status": "off"
     },
     {
-      "geometry": "linestring",
-      "extent": [
-        11.663410811985164,
-        -14.457671056032659,
-        32.26501837351091,
-        6.3749185180001
-      ],
-      "id": "contour_20",
-      "class": "",
-      "Datasource": {
-        "file": "/Users/jamesconkling/Documents/Data/regions/drc_contour_25_resampled_18k/contour_gt500m.shp"
-      },
-      "layer": null,
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "contour_20",
-      "status": "off"
-    },
-    {
       "geometry": "polygon",
       "extent": [
         12.27373550502737,
