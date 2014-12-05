@@ -25,9 +25,9 @@
 @5: desaturate(lighten(#6c561a, 10%), 10%);
 */
 
-@1: #ffefd1;
-@2: #eedca7;
-@3: #bac16d;
+@1: #fff6e5;
+@2: #fffbe9;
+@3: #cdd488;
 @4: #95a12e;
 @5: #3a4100;
 
@@ -44,25 +44,42 @@
 #gfc_10N,
 #gfc_00N,
 #gfc_10S {
-  raster-opacity:0.8;
-  //image-filters:agg-stack-blur(5,5);
-  raster-scaling: lanczos;
+  raster-opacity:0.5;
   raster-comp-op:multiply;
-  //[zoom >= 12]{ raster-scaling: gaussian; }
+  raster-scaling:lanczos;
   raster-colorizer-default-mode: linear;
-  raster-colorizer-default-color: transparent;
   raster-colorizer-stops:
     stop(0, fadeout(@1, 100%))
-    stop(10, @1)
-    stop(40, @2)
-    stop(60, @3)
+    stop(30, @1)
+    stop(50, @2)
+    stop(70, @3)
     stop(90, @4)
     stop(100, @5);
 }
 
 
-#intact_forest {
-  line-color:#594;
-  line-width:0.5;
-  line-opacity:0.2;
+#slope {
+  raster-opacity: 0.6;
+  [zoom>=8]{raster-opacity: 0.5;}
+  [zoom>=9]{raster-opacity: 0.4;}
+  raster-scaling: lanczos;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops: 
+    stop(5, rgb(255, 255, 255))
+    stop(60, rgb(60, 60, 60))
 }
+/*
+#gfc_10N,
+#gfc_00N,
+#gfc_10S {
+  raster-scaling:gaussian;
+  raster-comp-op: multiply;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(80, rgba(255, 255, 255,0))
+    stop(100, rgb(240, 240, 240));
+}*/
+
+
