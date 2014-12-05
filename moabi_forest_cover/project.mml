@@ -210,7 +210,7 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "_basemap": "crowdcover.moabi_base_ii",
+  "_basemap": "http://crowdcover.github.io/site/osm.layer",
   "name": "Moabi Forest Cover",
   "description": "",
   "attribution": ""
