@@ -15,7 +15,7 @@ do
 done < /home/moabi/tiles.list
 
 # List all the grids and clear them based on expire.list
-grep -o '^    ".*":$' tilestache.cfg | grep -E -o '[a-z_]+' > /home/moabi/grids.list
+grep -o '^    ".*":$' /home/moabi/tilestache.cfg | grep -E -o '[a-z_]+' > /home/moabi/grids.list
 while read -r line
 do
     /usr/local/bin/tilestache-clean.py --config=/home/moabi/tilestache.cfg --bbox=-35.8 52.0 37.7 -26.0 --tile-list=/home/moabi/expire.list --layer=$line -q -e json;
