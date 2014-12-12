@@ -19,4 +19,4 @@ grep -o '^    ".*":$' /home/moabi/tilestache.cfg | grep -E -o '[a-z_]+' > /home/
 while read -r line
 do
     /usr/local/bin/tilestache-clean.py --config=/home/moabi/tilestache.cfg --bbox=-35.8 52.0 37.7 -26.0 --tile-list=/home/moabi/expire.list --layer=$line -q -e json;
-done < grids.list
+done < /home/moabi/grids.list
