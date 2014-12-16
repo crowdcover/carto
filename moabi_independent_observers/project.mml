@@ -1,0 +1,56 @@
+{
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "center": [
+    18.0533,
+    -1.9168,
+    9
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 18,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "extent": [
+        11.911401862791497,
+        -15.050247715190558,
+        31.233538666259246,
+        5.134141770399119
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT osm_id, name, (tags->'local_observer_photo') as local_observer_photo, \n              way, 'node' as elementType\n FROM planet_osm_point\n WHERE (tags->'local_observer_photo') IS NOT NULL\n) as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
+        "dbname": "moabi",
+        "id": "observers",
+        "project": "moabi_independent_observers",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "observers",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "observers"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "crowdcover.moabi_base_ii",
+  "name": "Independent Observers",
+  "description": "",
+  "attribution": ""
+}
