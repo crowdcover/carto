@@ -28,7 +28,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, (tags->'territory') as territory,\n  round((way_area/10000)::numeric, 1) as way_area, way\nFROM planet_osm_polygon \nWHERE (tags->'territory')='indigenous' ) AS data",
+        "table": "(SELECT osm_id, (tags->'territory') as territory,\n  round((way_area/10000)::numeric, 1) as way_area, way, 'way' as elementType\nFROM planet_osm_polygon \nWHERE (tags->'territory')='indigenous' ) AS data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",

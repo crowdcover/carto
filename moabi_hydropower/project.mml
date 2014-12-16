@@ -30,7 +30,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, (tags->'proposed') AS proposed, way FROM planet_osm_point WHERE (tags->'energy')='dam') as data",
+        "table": "(SELECT osm_id, name, (tags->'proposed') AS proposed, way, 'node' as elementType\n FROM planet_osm_point\n WHERE (tags->'energy')='dam') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",

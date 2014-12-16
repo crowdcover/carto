@@ -28,7 +28,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, way\n FROM planet_osm_polygon\n WHERE boundary='clan'\n)as data",
+        "table": "(SELECT osm_id, name, way, 'way' as elementType\n FROM planet_osm_polygon\n WHERE boundary='clan'\n)as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",

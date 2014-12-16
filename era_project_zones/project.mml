@@ -28,7 +28,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, (tags->'zone') as zone, way\n FROM planet_osm_polygon\n WHERE (tags->'project')='zone'\n)as data",
+        "table": "(SELECT osm_id, (tags->'zone') as zone, way, 'way' as elementType\n FROM planet_osm_polygon\n WHERE (tags->'project')='zone'\n)as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",

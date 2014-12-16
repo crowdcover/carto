@@ -29,7 +29,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, population, (tags->'community_project_count') as community_project_count, way\n FROM planet_osm_point \n WHERE (tags->'community_project_count')::int > 0\n) as data",
+        "table": "(SELECT osm_id, name, population, (tags->'community_project_count') as community_project_count, way, 'node' as elementType\n FROM planet_osm_point \n WHERE (tags->'community_project_count')::int > 0\n) as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",

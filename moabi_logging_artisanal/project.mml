@@ -30,7 +30,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, operator, way FROM planet_osm_point WHERE (tags -> 'concession') = 'logging' AND (tags -> 'artisanal') = 'yes') AS data",
+        "table": "(SELECT osm_id, operator, way, 'node' as elementType\n FROM planet_osm_point\n WHERE (tags -> 'concession') = 'logging' AND (tags -> 'artisanal') = 'yes') AS data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",

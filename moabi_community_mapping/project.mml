@@ -29,7 +29,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT (tags->'type') AS type, way FROM planet_osm_point WHERE (tags->'project') = 'community_mapping') AS data",
+        "table": "(SELECT (tags->'type') AS type, way, 'node' as elementType\n FROM planet_osm_point\n WHERE (tags->'project') = 'community_mapping') AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -49,6 +49,7 @@
   ],
   "scale": 1,
   "metatile": 2,
+  "_basemap": "",
   "name": "Community Mapping",
   "description": "",
   "attribution": ""

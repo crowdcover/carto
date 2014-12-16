@@ -30,7 +30,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, ref, highway, (tags -> 'proposed') as proposed, way FROM planet_osm_line WHERE highway IS NOT NULL AND (tags->'proposed')='yes') AS data",
+        "table": "(SELECT osm_id, name, ref, highway, (tags -> 'proposed') as proposed, way, 'way' as elementType\n FROM planet_osm_line\n WHERE highway IS NOT NULL AND (tags->'proposed')='yes') AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
