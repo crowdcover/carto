@@ -29,7 +29,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select osm_id, name\n,(tags->'NGO') as NGO \n,(tags->'Essence1') as Essence1 \n,(tags->'Essence1') as Essence1 \n,(tags->'Essence3') as Essence3 \n,(tags->'Ecartement') as Ecartement \n,(tags->'Saison') as Saison \n,(tags->'Forestier') as Forestier \n,way, 'polygon' as elementType\nfrom planet_osm_polygon where concession = 'agriculture:ecomakala'\n) as data",
+        "table": "(select osm_id, name\n,(tags->'NGO') as NGO \n,(tags->'Essence1') as Essence1 \n,(tags->'Essence2') as Essence2 \n,(tags->'Essence3') as Essence3 \n,(tags->'Ecartement') as Ecartement \n,(tags->'Saison') as Saison \n,(tags->'Forestier') as Forestier \n,way, 'polygon' as elementType\nfrom planet_osm_polygon where concession = 'agriculture:ecomakala'\n) as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
