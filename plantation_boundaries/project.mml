@@ -1,0 +1,52 @@
+{
+  "bounds": [
+    28.1909,
+    -2.2077,
+    30.2783,
+    -0.011
+  ],
+  "center": [
+    29.2236,
+    -1.1095,
+    6
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.206629767319301,
+        -13.455675940967357,
+        31.30277999987542,
+        5.388336217118854
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select osm_id, name\n,(tags->'NGO') as NGO \n,(tags->'Essence1') as Essence1 \n,(tags->'Essence1') as Essence1 \n,(tags->'Essence3') as Essence3 \n,(tags->'Ecartement') as Ecartement \n,(tags->'Saison') as Saison \n,(tags->'Forestier') as Forestier \n,way, 'polygon' as elementType\nfrom planet_osm_polygon where concession = 'agriculture:ecomakala'\n) as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1358835.81,-1511840.58,3484609.53,600712.98",
+        "dbname": "moabi"
+      },
+      "id": "plantation_boudaries",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "plantation_boudaries"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "",
+  "description": "",
+  "attribution": ""
+}
