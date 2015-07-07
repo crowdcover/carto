@@ -70,4 +70,6 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install -y apache2
   # SHELL
   config.vm.provision :shell, :path => "bootstrap.sh", :args => ENV['USER']
+
+  config.vm.boot_timeout = 300
 end
