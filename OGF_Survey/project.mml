@@ -34,7 +34,8 @@
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
-        "dbname": "moabi"
+        "dbname": "moabi",
+        "host": "localhost"
       },
       "id": "ogf_survey",
       "class": "",
