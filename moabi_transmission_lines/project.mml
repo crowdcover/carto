@@ -35,7 +35,8 @@
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "-8574605.32,-1694991.69,3457730.85,4711169.32",
-        "dbname": "moabi"
+        "dbname": "moabi",
+        "host": "localhost"
       },
       "id": "transmission_lines",
       "class": "",
@@ -47,7 +48,6 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "_basemap": "james-lane-conkling.moabi_base",
   "name": "Transmission Lines",
   "description": "",
   "attribution": ""

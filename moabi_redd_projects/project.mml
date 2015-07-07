@@ -20,7 +20,7 @@
   ],
   "Layer": [
     {
-      "geometry": "linestring",
+      "geometry": "polygon",
       "extent": [
         -77.0269901424856,
         -15.050247715190558,
@@ -37,7 +37,8 @@
         "dbname": "moabi",
         "id": "redd",
         "project": "moabi_redd_projects",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "host": "localhost"
       },
       "id": "redd",
       "class": "",
@@ -49,7 +50,6 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "_basemap": "http://planet.osm.moabi.org/tile.json",
   "name": "REDD Projects",
   "description": "",
   "attribution": ""

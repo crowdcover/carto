@@ -34,7 +34,8 @@
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "1358835.81,-1511840.58,3484609.53,600712.98",
-        "dbname": "moabi"
+        "dbname": "moabi",
+        "host": "localhost"
       },
       "id": "plantation_boudaries",
       "class": "",

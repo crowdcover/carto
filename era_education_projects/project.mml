@@ -29,12 +29,13 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, population, (tags->'education_project_count') as education_project_count, way, 'node' as elementType\n FROM planet_osm_point \n WHERE (tags->'education_project_count')::int > 0\n) as data",
+        "table": "(SELECT osm_id, name, (tags->'population') as population, (tags->'education_project_count') as education_project_count, way, 'node' as elementType\n FROM planet_osm_point \n WHERE (tags->'education_project_count')::int > 0\n) as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
-        "dbname": "moabi"
+        "dbname": "moabi",
+        "host": "localhost"
       },
       "id": "edu_project",
       "class": "",
@@ -46,7 +47,6 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "_basemap": "crowdcover.moabi_base_ii",
   "name": "Era Education Projects",
   "description": "",
   "attribution": ""
