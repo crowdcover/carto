@@ -44,13 +44,13 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+  config.vm.provider "virtualbox" do |vb|
+     # Display the VirtualBox GUI when booting the machine
+     vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
-  # end
+   end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -71,5 +71,5 @@ Vagrant.configure(2) do |config|
   # SHELL
   config.vm.provision :shell, :path => "bootstrap.sh", :args => ENV['USER']
 
-  config.vm.boot_timeout = 300
+  config.vm.boot_timeout = 600
 end
