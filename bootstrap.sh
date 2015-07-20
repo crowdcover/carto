@@ -30,8 +30,4 @@ git checkout tags/0.84.0
 ./configure && make && make install
 cd ~vagrant
 sudo -u vagrant -H sh -c "wget http://planet.osm.moabi.org/planet.latest.osm.gz"
-sudo -u vagrant -H sh -c "wget https://raw.githubusercontent.com/crowdcover/carto/master/moabi.style?token=ACUaUnwI_rZWfGosf-cleUgIWwtoy6odks5VpVS_wA%3D%3D"
-sudo -u vagrant -H sh -c "mv moabi.style?token* moabi.style"
-sudo -u vagrant -H sh -c "osm2pgsql --create --hstore-all --multi-geometry --slim --cache 64 --cache-strategy sparse --database moabi --style moabi.style planet.latest.osm.gz"
-sudo -u vagrant -H sh -c "wget https://raw.githubusercontent.com/crowdcover/carto/master/vagrantupdate.sh?token=ACUaUjt334wT9BqpPqBVOzfxcjo0BXxKks5VqCbuwA%3D%3D"
-sudo -u vagrant -H sh -c "mv vagrantupdate.sh?token* vagrantupdate.sh"
+sudo -u vagrant -H sh -c "osm2pgsql --create --hstore-all --multi-geometry --slim --cache 64 --cache-strategy sparse --database moabi --style carto/moabi.style planet.latest.osm.gz"
