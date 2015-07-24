@@ -4,8 +4,8 @@
     polygon-fill: spin(darken(@fip, 0%), 0%);
     polygon-pattern-comp-op: color-burn;
     polygon-pattern-alignment:global;
-    [zoom <= 8]{polygon-pattern-file: url('../img/stripe_m_gray_#999999/128-215.jpg');}
-    [zoom > 8]{polygon-pattern-file: url('../img/stripe_m_gray_#999999/128-215.jpg');}
+    [zoom <= 8]{polygon-pattern-file: url('../img/stripe_m_gray_#999999/grid-pattern.png');}
+    [zoom > 8]{polygon-pattern-file: url('../img/stripe_m_gray_#999999/grid-pattern.png');}
     line-opacity:0.5;
   }
   ::doublestroke{
