@@ -1,0 +1,55 @@
+{
+  "bounds": [
+    -180,
+    -85.05112877980659,
+    180,
+    85.05112877980659
+  ],
+  "center": [
+    0,
+    0,
+    2
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "extent": [
+        11.911401862791498,
+        -15.050247715190558,
+        31.233538666259243,
+        5.134141770399107
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select osm_id, name, \nway, 'point' as elementType\nfrom planet_osm_point where place = 'deforestation_point') as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
+        "dbname": "moabi",
+        "host": "localhost",
+        "id": "moabi_deforestation_drivers",
+        "project": "moabi_era_deforestation",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "moabi_deforestation_drivers",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "moabi_deforestation_drivers"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "ERA Deforestation Drivers",
+  "description": ""
+}
