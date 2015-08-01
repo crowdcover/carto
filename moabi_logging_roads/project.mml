@@ -1,16 +1,16 @@
 {
   "bounds": [
-    15.994,
-    -4.7495,
-    19.0318,
-    -1.8598
+    -180,
+    -85.05112877980659,
+    180,
+    85.05112877980659
   ],
   "center": [
-    16.4342,
-    -2.6776,
-    10
+    0,
+    0,
+    2
   ],
-  "format": "png8",
+  "format": "png",
   "interactivity": false,
   "minzoom": 0,
   "maxzoom": 22,
@@ -20,37 +20,36 @@
   ],
   "Layer": [
     {
-      "geometry": "polygon",
+      "geometry": "linestring",
       "extent": [
-        12.206629767319301,
-        -13.455675940967357,
-        31.30277999987542,
-        5.388336217118854
+        11.911401862791498,
+        -15.050247715190558,
+        31.247880000275625,
+        4.3413599472307745
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select osm_id, name, (tags->'Occupation') as occupation, \nway, 'polygon' as elementType\nfrom planet_osm_polygon where territory = 'landuse') as data",
+        "table": "(select osm_id, \nway, 'way' as elementType, (tags->'start_date') AS start_date\nfrom planet_osm_line where highway = 'track' and (tags -> 'access') = 'forestry') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
-        "extent": "1358835.81,-1511840.58,3484609.53,600712.98",
+        "extent": "1325971.19,-1694991.69,3478498.09,483741.08",
         "dbname": "moabi",
         "host": "localhost",
-        "id": "landuse",
-        "project": "moabi_landuse",
+        "id": "moabi_logging_roads",
+        "project": "moabi_logging_roads",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "id": "landuse",
+      "id": "moabi_logging_roads",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landuse"
+      "name": "moabi_logging_roads"
     }
   ],
   "scale": 1,
   "metatile": 2,
-  "name": "",
-  "description": "",
-  "attribution": ""
+  "name": "Logging Roads",
+  "description": ""
 }

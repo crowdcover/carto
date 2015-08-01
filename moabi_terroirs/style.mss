@@ -1,11 +1,10 @@
-@sans:"Arial Regular","DejaVu Sans Book", "Droid Sans Book",;
+@1: #f02323;
+
 #terroirs {
-  line-color:rgba(16, 141, 36, 0.7);
-  line-width:5;
-  text-name: [name];
-  text-face-name: @sans;
-  text-fill: #005;
-  text-size: 12;
-  text-halo-fill: fadeout(white, 30%);
-  text-halo-radius: 2.5;
+  polygon-opacity:0.5;
+  polygon-comp-op: multiply;
+  polygon-fill: @1;
+  line-color:#000000;
+  line-width:0.3;
+  line-opacity: 0.6;
 }
