@@ -28,7 +28,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select osm_id, name,\nway, 'polygon' as elementType,\n(tags->'type') as type\nfrom planet_osm_polygon where \nlanduse = 'redd' and (tags->'type')= 'maindombe' \nor landuse = 'redd' and (tags->'type')= 'district' \nor landuse = 'redd' and (tags->'type')= 'territory'\nor landuse = 'redd' and (tags->'type')= 'sector') \nas data",
+        "table": "(select osm_id, name,\nway, 'polygon' as elementType,\n(tags->'type') as type\nfrom planet_osm_polygon where \nlanduse = 'redd' and (tags->'type')= 'project_zone' \nor landuse = 'redd' and (tags->'type')= 'district' \nor landuse = 'redd' and (tags->'type')= 'territory'\nor landuse = 'redd' and (tags->'type')= 'sector') \nas data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
