@@ -22,14 +22,14 @@
     {
       "geometry": "point",
       "extent": [
-        11.911401862791498,
+        11.911401862791497,
         -15.050247715190558,
-        31.233538666259243,
-        5.134141770399107
+        31.233538666259246,
+        5.134141770399119
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select osm_id, name, \nway, 'point' as elementType\nfrom planet_osm_point where place = 'deforestation_point') as data",
+        "table": "(select osm_id, \n(tags->'Village') AS village,\n(tags->'Type') AS type,\n(tags->'photo_url') AS photo_url,\n(tags->'Picture') AS picture,\nway, 'point' as elementType\nfrom planet_osm_point where place = 'deforestation_point') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
