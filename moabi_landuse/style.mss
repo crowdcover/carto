@@ -1,25 +1,35 @@
-@1: white;//#fff6e5;
-@2: #fffbe9;
-@3: #cdd488;
-@4: #95a12e;
-@5: #58600e;
-
-#landuse {
-  polygon-opacity:0.5;
-  polygon-comp-op: multiply;
-  polygon-fill: transparent;
+#landuse{
+  polygon-fill: #c33232;
+  polygon-opacity: .8;
+  line-color:#000000;
+  line-opacity:1; 
+  
   [occupation = 'Foret']{
-    polygon-fill: @5;
+  polygon-fill: #c33232;
+  polygon-opacity: .8;
+  line-color:#000000;
+  line-opacity:1;  
   }
-  [occupation = 'Mosaïq F&Ag']{
-    polygon-fill: @4;
+  
+  [occupation = 'Mosaic']{
+  polygon-fill: #71c232;
+  polygon-opacity: .8;
+  line-color:#000000;
+  line-opacity:1;  
   }
-  //swamp
+  
   [occupation = 'Savane']{
-    polygon-fill: @3;
+  polygon-fill: #2d3fa5;
+  polygon-opacity: .8;
+  line-color:#000000;
+  line-opacity:1;  
   }
-  //line-color:#000000;
-  //line-width:0.3;
-  //line-opacity: 0.6;
+  
+  [occupation = 'Habitation']{
+  polygon-fill: #9b32c2;
+  polygon-opacity: .8;
+  line-color:#000000;
+  line-opacity:1;  
+  }
+  
 }
-

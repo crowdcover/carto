@@ -20,16 +20,16 @@
   ],
   "Layer": [
     {
-      "geometry": "polygon",
+      "geometry": "linestring",
       "extent": [
-        12.206629767319301,
+        12.2066297673193,
         -13.455675940967357,
         31.30277999987542,
-        5.388336217118854
+        5.388336217118841
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select osm_id, name, (tags->'Occupation') as occupation, \nway, 'polygon' as elementType\nfrom planet_osm_polygon where territory = 'landuse') as data",
+        "table": "(select osm_id, name, \n(tags->'Occupation') as occupation,\nway, 'line' as elementType\nfrom planet_osm_line where territory='landuse') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
