@@ -7,7 +7,7 @@
 Map {buffer-size: 512;}
 
 #terroirs{
-  polygon-opacity:0.08;
+  polygon-opacity:0.0;
   polygon-comp-op: multiply;
   polygon-fill: #ffc919;
   ::doublestroke{
@@ -48,6 +48,7 @@ Map {buffer-size: 512;}
   [zoom=12]{line-width:2.2 - 0.4;}
   [zoom>=13]{line-width:2.5 - 0.4;}
 }
+
 
 
 

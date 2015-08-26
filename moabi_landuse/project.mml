@@ -29,7 +29,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select osm_id, name, \n(tags->'Occupation') as occupation,\nway, 'line' as elementType\nfrom planet_osm_line where territory='landuse') as data",
+        "table": "(select osm_id, name, \n(tags->'Occupation') as occupation,\nway, 'polygon' as elementType\nfrom planet_osm_polygon where territory='landuse') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -46,6 +46,31 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "landuse"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.911401862791498,
+        -15.050247715190558,
+        31.247880000275625,
+        4.3413599472307745
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select osm_id, name, \n(tags->'Occupation') as occupation,\nway, 'polygon' as elementType\nfrom planet_osm_line where territory='landuse') as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3478498.09,483741.08",
+        "dbname": "moabi",
+        "host": "localhost"
+      },
+      "id": "landuse_lines",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landuse_lines"
     }
   ],
   "scale": 1,
