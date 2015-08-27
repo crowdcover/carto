@@ -1,66 +1,71 @@
 #landuse{
   [occupation = 'Foret']{
-  polygon-fill: #1f7d0e;
-  polygon-opacity: .8;
-  line-color:#000000;
-  line-opacity:1;  
+  polygon-fill: #487427;
+  polygon-opacity: .6;
+  line-width:0;
+  line-color:#444343;
+  line-opacity:0;  
   }
   
   [occupation = 'Mosaique']{
-  polygon-fill: #70da1e;
-  polygon-opacity: .8;
-  line-color:#000000;
-  line-opacity:1;  
+  polygon-fill: #859f68;
+  polygon-opacity: .6;
+  line-width:0;
+  line-color:#444343;
+  line-opacity:0;  
   }
   
   [occupation = 'Savane']{
-  polygon-fill: #b3b612;
-  polygon-opacity: .8;
-  line-color:#000000;
-  line-opacity:1;  
+  polygon-fill: #bdc177;
+  polygon-opacity: .6;
+  line-width:0;
+  line-color:#444343;
+  line-opacity:0;  
   }
   
   [occupation = 'Habitation']{
-  polygon-fill: #eb0404;
-  polygon-opacity: .8;
-  line-color:#000000;
-  line-opacity:1;  
+  polygon-fill: #d70e0e;
+  polygon-opacity: .6;
+  line-width:0;
+  line-color:#444343;
+  line-opacity:0;  
   }
   
 }
+
 
 
 #landuse_lines{
   [occupation = 'Foret']{
-  polygon-fill: #1f7d0e;
-  polygon-opacity: .8;
-  line-color:#000000;
-  line-opacity:1;  
+  polygon-fill: #487427;
+  polygon-opacity: .6;
+  line-color:#444343;
+  line-opacity:0;  
   }
   
   [occupation = 'Mosaique']{
-  polygon-fill: #70da1e;
-  polygon-opacity: .8;
-  line-color:#000000;
-  line-opacity:1;  
+  polygon-fill: #859f68;
+  polygon-opacity: .6;
+  line-color:#444343;
+  line-opacity:0;  
   }
   
   [occupation = 'Savane']{
-  polygon-fill: #b3b612;
-  polygon-opacity: .8;
-  line-color:#000000;
-  line-opacity:1;  
+  polygon-fill: #bdc177;
+  polygon-opacity: .6;
+  line-color:#444343;
+  line-opacity:0;  
   }
   
   [occupation = 'Habitation']{
-  polygon-fill: #eb0404;
-  polygon-opacity: .8;
-  line-color:#000000;
-  line-opacity:1;  
+  polygon-fill: #d70e0e;
+  polygon-opacity: .6;
+  line-color:#444343;
+  line-opacity:0;  
   }
-
   
 }
+
 
 
 
