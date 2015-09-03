@@ -28,7 +28,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select osm_id, name, \nway, 'polygon' as elementType\nfrom planet_osm_polygon) as data",
+        "table": "(select osm_id, name, \nway, 'polygon' as elementType\nfrom planet_osm_polygon where territory = 'landuse') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",

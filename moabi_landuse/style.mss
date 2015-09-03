@@ -31,8 +31,14 @@
   line-opacity:0;  
   }
   
+  [occupation = 'Agricole']{
+  polygon-fill: #10d609;
+  polygon-opacity: .6;
+  line-color:#444343;
+  line-opacity:0;  
+  }
+  
 }
-
 
 
 #landuse_lines{
@@ -64,7 +70,17 @@
   line-opacity:0;  
   }
   
+  [occupation = 'Agricole']{
+  polygon-fill: #10d609;
+  polygon-opacity: .6;
+  line-color:#444343;
+  line-opacity:0;  
+  }
+  
 }
+
+
+
 
 
 
