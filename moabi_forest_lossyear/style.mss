@@ -1,24 +1,29 @@
-/*yellow-red*/
-//'#ffffe0', '#fda100', '#ffbe84', '#ff986d', '#f47361', '#e35056', '#cb2f44', '#ae112a', '#8b0000'
+//Yellow Orange Red
+
+
+
+@2001-2005: #ffffb2;
+@2006-2010: #fed66d;
+@2011: #fda648;
+@2012: #fd4c00;
+@2013: #e52f21;
+@2014: #bd0026;
+
+
 /*
-@2001: #ffffe0;
-@2003: #ffbe84;
-@2006: #f47361;
-@2009: #cb2f44;
-@2012: #8b0000;
+@orange:   #FF3700;
+@red: #FF2600;
+
+@2001-2005: #ffffb2;
+@2006-2010: #fed66d;
+@2011: #ff6b01;
+@2012: #ff01fb;
+@2013: #b000ff;
+@2014: #FF2600;
 */
-
-//light yellow to orange red
-//['#ffffa0', '#ffeb8f', '#ffd67f', '#ffc26e', '#ffab5c', '#ff9448', '#ff7a35', '#ff5c1f', '#ff3000']
-@2001: #ffffe0;
-@2003: #ffd67f;
-@2006: #ffab5c;
-@2009: #ff7a35;
-@2012: #ff3000;
-
 /*pink-purple*/
 /*
-@purple: #6b17ff;
+@purple: #6c17ff;
 @2001: lighten(@purple, 60%);
 @2003: lighten(@purple, 45%);
 @2006: lighten(@purple, 30%);
@@ -41,9 +46,20 @@
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
   raster-colorizer-stops:
-    stop(1, @2001)
-    stop(3, @2003)
-    stop(6, @2006)
-    stop(9, @2009)
-    stop(12, @2012)
+	stop(1, @2001-2005)
+    stop(2, @2001-2005)
+    stop(3, @2001-2005)
+    stop(4, @2001-2005)
+    stop(5, @2001-2005)
+   	stop(6, @2006-2010)
+    stop(7, @2006-2010)
+    stop(8, @2006-2010)
+   	stop(9, @2006-2010)
+    stop(10, @2006-2010)
+    stop(11, @2011)
+   	stop(12, @2012)
+    stop(13, @2013)
+    stop(14, @2014)
 }
+  
+
