@@ -1,19 +1,19 @@
 {
   "bounds": [
     10.5743,
-    -15.2471,
-    34.173,
+    -9.1943,
+    26.2189,
     7.4006
   ],
   "center": [
-    22.8296,
-    -2.8772,
-    6
+    18.8361,
+    -2.4657,
+    5
   ],
-  "format": "png",
+  "format": "png8",
   "interactivity": false,
   "minzoom": 0,
-  "maxzoom": 18,
+  "maxzoom": 22,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "base.mss"
@@ -29,7 +29,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, (tags->'status') AS status, \n  (tags->'project_leader') AS project_leader, (tags->'methodology') AS methodology,\n  (tags->'start_date') AS start_date, (tags->'end_date') AS end_date, \n  (tags->'contact_person') AS contact_person, \n  (tags->'contact_email') AS contact_email, \n  round((way_area/10000)::numeric, 1) as way_area, way, 'way' as elementType\nFROM planet_osm_polygon WHERE landuse = 'redd' AND ((tags->'Othername') IS NULL OR (tags->'Othername') <> 'R Program')  ) AS data",
+        "table": "(SELECT osm_id, name, (tags->'status') AS status, \n  (tags->'project_leader') AS project_leader, (tags->'methodology') AS methodology,\n  (tags->'start_date') AS start_date, (tags->'end_date') AS end_date, \n  (tags->'contact_person') AS contact_person, \n  (tags->'contact_email') AS contact_email, \n  round((way_area/10000)::numeric, 1) as way_area, way, 'way' as elementType\nFROM planet_osm_polygon WHERE landuse = 'redd' AND (tags->'Othername') = 'R Program') AS data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -50,7 +50,7 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "name": "REDD Projects",
+  "name": "Mai Ndombe R Program",
   "description": "",
   "attribution": ""
 }
