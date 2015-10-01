@@ -1,19 +1,19 @@
 {
   "bounds": [
     10.5743,
-    -9.1943,
-    26.2189,
+    -15.2471,
+    34.173,
     7.4006
   ],
   "center": [
-    18.8361,
-    -2.4657,
-    5
+    22.8296,
+    -2.8772,
+    6
   ],
-  "format": "png8",
+  "format": "png",
   "interactivity": false,
   "minzoom": 0,
-  "maxzoom": 22,
+  "maxzoom": 18,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "base.mss"
