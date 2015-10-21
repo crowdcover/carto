@@ -2,7 +2,7 @@
 
 #feronia_concessions{
   ::polygon{
-    polygon-opacity:0.6;
+    polygon-opacity:0.4;
     polygon-fill:@palm;
     line-color:@admin_dark;
     line-opacity:0.8;
