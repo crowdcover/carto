@@ -29,7 +29,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, landuse, (tags -> 'concession') as concessions, \n(tags -> 'name') as name,\n(tags -> 'operator') as operator, \n(tags -> 'region') as region,  \n(tags -> 'resource') as resource,\n  round((way_area/10000)::numeric, 1) as way_area, 'way' as elementType, way \nFROM planet_osm_polygon \nWHERE (tags -> 'concession') = 'agriculture') as data",
+        "table": "(SELECT osm_id, landuse, (tags -> 'concession') as concessions, \n(tags -> 'name') as name,\n(tags -> 'operator') as operator, \n(tags -> 'region') as region, \n(tags -> 'validation') as validation,  \n(tags -> 'resource') as resource,\n  round((way_area/10000)::numeric, 1) as way_area, 'way' as elementType, way \nFROM planet_osm_polygon \nWHERE (tags -> 'concession') = 'agriculture') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
