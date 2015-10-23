@@ -1,24 +1,24 @@
 {
   "bounds": [
     -180,
-    -85.05112877980659,
+    -85.0511,
     180,
-    85.05112877980659
+    85.0511
   ],
   "center": [
     0,
     0,
     2
   ],
-  "format": "png",
+  "format": "png8",
   "interactivity": false,
   "minzoom": 0,
   "maxzoom": 22,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss",
+    "boteka_rivers_and_roads",
     "feronia_concessions.mss",
-    "feronia_plantation_areas.mss",
     "base.mss"
   ],
   "Layer": [
@@ -49,6 +49,118 @@
       "advanced": {},
       "name": "feronia_concessions",
       "geometry": "polygon"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        12.206629767319301,
+        -13.455675940967357,
+        31.30277999987542,
+        5.388336217118854
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select osm_id, \n(tags->'layer') AS type,\n(tags->'name') AS name,\nway, 'polygon' as elementType\nfrom planet_osm_polygon where (tags->'layer')= 'plant_area' and (tags->'area')= 'true') as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1358835.81,-1511840.58,3484609.53,600712.98",
+        "dbname": "moabi",
+        "host": "localhost",
+        "id": "boteka_plantation_areas_poly",
+        "project": "moabi_feronia_concessions",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "boteka_plantation_areas",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "boteka_plantation_areas"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.911401862791497,
+        -15.050247715190558,
+        31.247880000275625,
+        4.3413599472307745
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select osm_id, \n(tags->'layer') AS type,\n(tags->'name') AS name,\n(tags->'type') AS rivertype,\nway, 'polyline' as elementType\nfrom planet_osm_line where (tags->'layer')= 'plant_river') as data",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3478498.09,483741.08",
+        "dbname": "moabi",
+        "host": "localhost",
+        "id": "boteka_rivers",
+        "project": "moabi_feronia_concessions",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "boteka_rivers",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "boteka_rivers"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.911401862791497,
+        -15.050247715190558,
+        31.233538666259246,
+        5.134141770399119
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select osm_id, \n(tags->'layer') AS type,\n(tags->'name') AS name,\nway, 'polyline' as elementType\nfrom planet_osm_line where (tags->'layer')= 'plant_road') as data\n",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
+        "dbname": "moabi",
+        "host": "localhost",
+        "id": "boteka_roads",
+        "project": "moabi_feronia_concessions",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "boteka_roads",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "boteka_roads"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        11.911401862791497,
+        -15.050247715190558,
+        31.247880000275625,
+        4.3413599472307745
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select osm_id, \n(tags->'layer') AS type,\nway, 'line' as elementType\nfrom planet_osm_line where (tags->'layer')= 'plant_plantroad') as data\n",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1325971.19,-1694991.69,3478498.09,483741.08",
+        "dbname": "moabi",
+        "host": "localhost",
+        "id": "boteka_plantation_roads",
+        "project": "moabi_feronia_concessions",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "boteka_plantation_roads",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "boteka_plantation_roads"
     },
     {
       "geometry": "point",
@@ -135,34 +247,6 @@
       "name": "boteka_cemetaries"
     },
     {
-      "geometry": "linestring",
-      "extent": [
-        11.911401862791497,
-        -15.050247715190558,
-        31.247880000275625,
-        4.3413599472307745
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select osm_id, \n(tags->'layer') AS type,\nway, 'line' as elementType\nfrom planet_osm_line where (tags->'layer')= 'plant_plantroad') as data\n",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "1325971.19,-1694991.69,3478498.09,483741.08",
-        "dbname": "moabi",
-        "host": "localhost",
-        "id": "boteka_plantation_roads",
-        "project": "moabi_feronia_concessions",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "boteka_plantation_roads",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "boteka_plantation_roads"
-    },
-    {
       "geometry": "point",
       "extent": [
         11.911401862791497,
@@ -191,62 +275,6 @@
       "name": "boteka_villages"
     },
     {
-      "geometry": "linestring",
-      "extent": [
-        11.911401862791497,
-        -15.050247715190558,
-        31.233538666259246,
-        5.134141770399119
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select osm_id, \n(tags->'layer') AS type,\n(tags->'name') AS name,\nway, 'polyline' as elementType\nfrom planet_osm_line where (tags->'layer')= 'plant_road') as data\n",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "1325971.19,-1694991.69,3476901.62,572296.44",
-        "dbname": "moabi",
-        "host": "localhost",
-        "id": "boteka_roads",
-        "project": "moabi_feronia_concessions",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "boteka_roads",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "boteka_roads"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        11.911401862791497,
-        -15.050247715190558,
-        31.247880000275625,
-        4.3413599472307745
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select osm_id, \n(tags->'layer') AS type,\n(tags->'name') AS name,\n(tags->'type') AS rivertype,\nway, 'polyline' as elementType\nfrom planet_osm_line where (tags->'layer')= 'plant_river') as data",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "1325971.19,-1694991.69,3478498.09,483741.08",
-        "dbname": "moabi",
-        "host": "localhost",
-        "id": "boteka_rivers",
-        "project": "moabi_feronia_concessions",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "boteka_rivers",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "boteka_rivers"
-    },
-    {
       "geometry": "point",
       "extent": [
         11.911401862791497,
@@ -273,38 +301,11 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "boteka_mills"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        12.206629767319301,
-        -13.455675940967357,
-        31.30277999987542,
-        5.388336217118854
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select osm_id, \n(tags->'layer') AS type,\n(tags->'name') AS name,\nway, 'polygon' as elementType\nfrom planet_osm_polygon where (tags->'layer')= 'plant_area' and (tags->'area')= 'true') as data",
-        "key_field": "osm_id",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "1358835.81,-1511840.58,3484609.53,600712.98",
-        "dbname": "moabi",
-        "host": "localhost",
-        "id": "boteka_plantation_areas_poly",
-        "project": "moabi_feronia_concessions",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "boteka_plantation_areas",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "boteka_plantation_areas"
     }
   ],
   "scale": 1,
   "metatile": 2,
-  "name": "Feronia Concessions",
-  "description": ""
+  "name": "Feronia Concessions and Plantation Areas",
+  "description": "",
+  "attribution": ""
 }
