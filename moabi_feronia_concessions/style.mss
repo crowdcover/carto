@@ -1,6 +1,5 @@
 @palm: darken(@forest_green, 6); //@d_orange;
 
-<<<<<<< HEAD
 #boteka_rivers[rivertype = 'river']{
    ::case {
     line-width: 5;
@@ -35,13 +34,6 @@
     [zoom>=12]{line-width: 5;}
     }
   ::fill {
-=======
-#feronia_concessions{
-  ::polygon{
-    polygon-opacity:0.4;
-    polygon-fill:@palm;
-    line-color:@admin_dark;
->>>>>>> origin/master
     line-opacity:0.8;
     line-color:#bb9130;
     [zoom>=0]{line-width: 0;}
@@ -187,6 +179,3 @@
     marker-transform: "scale(2)"; 
   }
 }
-
-  
-
