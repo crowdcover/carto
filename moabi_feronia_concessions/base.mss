@@ -13,7 +13,7 @@
 @l_purple: #9c97c9;
 @d_red: #672c2d;
 @l_red: #bd5f3a;
-@d_orange: #d8912e;
+@d_orange: #a78e4a;
 @l_yellow: #fae78f;
 
 @water: #222;
