@@ -11,12 +11,12 @@
   marker-file: url('../img/industrial-24.svg');
   marker-allow-overlap:true;
   
-  marker-transform: "scale(0.5)";
+  marker-transform: "scale(1)";
   [zoom>=14]{ 
-    marker-transform: "scale(1)"; 
+    marker-transform: "scale(2)"; 
   }  
    [zoom>=18]{ 
-    marker-transform: "scale(2)"; 
+    marker-transform: "scale(3)"; 
   }
 }
 
@@ -29,12 +29,12 @@
   marker-file: url('../img/library-24.svg');
   marker-allow-overlap:true;
   
-  marker-transform: "scale(0.5)";
+  marker-transform: "scale(1)";
   [zoom>=14]{ 
-    marker-transform: "scale(1)"; 
+    marker-transform: "scale(2)"; 
   }  
    [zoom>=18]{ 
-    marker-transform: "scale(2)"; 
+    marker-transform: "scale(3)"; 
   }
 }
 
@@ -47,12 +47,12 @@
   marker-file: url('../img/hospital-24.svg'); 
   marker-allow-overlap:true;
   
-  marker-transform: "scale(0.5)";
+   marker-transform: "scale(1)";
   [zoom>=14]{ 
-    marker-transform: "scale(1)"; 
+    marker-transform: "scale(2)"; 
   }  
    [zoom>=18]{ 
-    marker-transform: "scale(2)"; 
+    marker-transform: "scale(3)"; 
   }
 }
 
@@ -65,12 +65,12 @@
   marker-file: url('../img/cemetery-24.svg');
   marker-allow-overlap:true;
   
-  marker-transform: "scale(0.5)";
+  marker-transform: "scale(1)";
   [zoom>=14]{ 
-    marker-transform: "scale(1)"; 
+    marker-transform: "scale(2)"; 
   }  
    [zoom>=18]{ 
-    marker-transform: "scale(2)"; 
+    marker-transform: "scale(3)"; 
   }
 }
 
@@ -82,12 +82,12 @@
   marker-file: url('../img/village-24.svg');
   marker-allow-overlap:true;
   
-  marker-transform: "scale(0.5)";
+   marker-transform: "scale(1)";
   [zoom>=14]{ 
-    marker-transform: "scale(1)"; 
+    marker-transform: "scale(2)"; 
   }  
    [zoom>=18]{ 
-    marker-transform: "scale(2)"; 
+    marker-transform: "scale(3)"; 
   }
 }
 
