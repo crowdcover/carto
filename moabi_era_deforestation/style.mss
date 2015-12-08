@@ -2,8 +2,8 @@
   a/marker-width: 12;
    a/marker-fill: #fff;
   a/marker-line-width:0.6;
-  a/marker-line-color: #c93807;
-  a/marker-line-opacity: 0.7;
+  a/marker-line-color: #999999;
+  a/marker-line-opacity: 0.5;
   a/marker-allow-overlap: true;
   a/marker-fill-opacity:0.7;
   marker-file: url('../img/icon/chainsaw.svg');
