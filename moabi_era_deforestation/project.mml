@@ -29,7 +29,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select osm_id, \n(tags->'Village') AS village,\n(tags->'Type') AS type,\n(tags->'photo_url') AS photo_url,\n(tags->'Picture') AS picture,\nway, 'point' as elementType\nfrom planet_osm_point where place = 'deforestation_point') as data",
+        "table": "(select osm_id, \n(tags->'Village') AS village,\n(tags->'Type') AS type,\n(tags->'Date') AS date,\n(tags->'photo_url') AS photo_url,\n(tags->'Picture') AS picture,\nway, 'point' as elementType\nfrom planet_osm_point where place = 'deforestation_point') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
