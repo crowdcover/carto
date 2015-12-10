@@ -30,7 +30,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(SELECT osm_id, name, (tags->'proposed') AS proposed, way, 'node' as elementType\n FROM planet_osm_point\n WHERE (tags->'energy')='dam') as data",
+        "table": "(SELECT osm_id, name, \n(tags->'proposed') AS proposed, \n(tags->'%_pour_la_population') AS \"% pour la population\", \n(tags->'Bénéficiaires') AS \"Bénéficiaires\", \n(tags->'Capacité_de_production_effective_(MW)') AS \"Capacité de production effective (MW)\", \n(tags->'Capacité_potentielle_installée_(MW)') AS \"Capacité potentielle installée (MW)\",\n (tags->'Capacité_potentielle_maximum_(MW)') AS \"Capacité potentielle maximum (MW)\", \n(tags->'Date_1ère_mise_en_service') AS \"Date 1ère mise en service\", \n(tags->'Entreprises/_Responsables_travaux') AS \"Entreprises/ Responsables travaux\", \n(tags->'Fin_prévue_des_travaux') AS \"Fin prévue des travaux\", \n(tags->'Investisseurs') AS \"Investisseurs\", \n(tags->'Localisation') AS \"Localisation\", \n(tags->'Montant_des_investissements') AS \"Montant des investissements\", \n(tags->'Production_(TWh/an)') AS \"Production (TWh/an)\", \n(tags->'Projet') AS \"Projet\", \n(tags->'Sources') AS \"Sources\", \n(tags->'Statut') AS \"Statut\", \n(tags->'Travaux') AS \"Travaux\", \nway, 'node' as elementType\n FROM planet_osm_point\n WHERE (tags->'energy')='dam') as data",
         "key_field": "osm_id",
         "geometry_field": "way",
         "extent_cache": "auto",
